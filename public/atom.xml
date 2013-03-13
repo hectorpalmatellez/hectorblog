@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2013-03-13T10:03:28-04:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[Un blog bacán usando Octopress]]></title>
+  <link href="http://o.tiuque.cl/atom.xml" rel="self"/>
+  <link href="http://o.tiuque.cl/"/>
+  <updated>2013-03-13T18:59:17-04:00</updated>
+  <id>http://o.tiuque.cl/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Avión y árbol, con ñandú y un pingüino]]></title>
-    <link href="http://yoursite.com/blog/2013/03/13/avion-y-arbol-con-nandu-y-un-pinguino/"/>
+    <link href="http://o.tiuque.cl/avion-y-arbol-con-nandu-y-un-pinguino/"/>
     <updated>2013-03-13T10:00:00-04:00</updated>
-    <id>http://yoursite.com/blog/2013/03/13/avion-y-arbol-con-nandu-y-un-pinguino</id>
+    <id>http://o.tiuque.cl/avion-y-arbol-con-nandu-y-un-pinguino</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Este es un post de prueba]]></title>
-    <link href="http://yoursite.com/blog/2013/03/13/este-es-un-post-de-prueba/"/>
+    <link href="http://o.tiuque.cl/este-es-un-post-de-prueba/"/>
     <updated>2013-03-13T09:50:00-04:00</updated>
-    <id>http://yoursite.com/blog/2013/03/13/este-es-un-post-de-prueba</id>
+    <id>http://o.tiuque.cl/este-es-un-post-de-prueba</id>
     <content type="html"><![CDATA[<h1>HOLA</h1>
 
 <h2>esto</h2>
