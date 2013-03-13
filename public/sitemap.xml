@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://yoursite.com/blog/2013/03/13/este-es-un-post-de-prueba/</loc>
+        <lastmod>2013-03-13T10:02:05-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/2013/03/13/avion-y-arbol-con-nandu-y-un-pinguino/</loc>
+        <lastmod>2013-03-13T10:00:51-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2013-03-12T22:56:27-04:00</lastmod>
+        <lastmod>2013-03-13T10:02:05-04:00</lastmod>
     </url>
     <url>
         <loc>http://yoursite.com/</loc>
-        <lastmod>2013-03-12T22:56:27-04:00</lastmod>
+        <lastmod>2013-03-13T10:02:05-04:00</lastmod>
     </url>
     <url>
         <loc>http://yoursite.com/robots.txt</loc>
