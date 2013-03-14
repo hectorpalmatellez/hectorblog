@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Un blog bacán usando Octopress]]></title>
   <link href="http://o.tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-14T02:53:46-04:00</updated>
+  <updated>2013-03-14T03:23:00-04:00</updated>
   <id>http://o.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -18,23 +18,53 @@
     <link href="http://o.tiuque.cl/aprendiendo/octopress/"/>
     <updated>2013-03-14T01:15:00-04:00</updated>
     <id>http://o.tiuque.cl/aprendiendo/octopress</id>
-    <content type="html"><![CDATA[<h2>Aprendamos a usar Octopress</h2>
+    <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
 <pre><code>Es bacán.
 </code></pre>
 
-<p><a href="http://twitter.com/Kyuumeitai">Álex</a></p>
+<p>– <a href="http://twitter.com/Kyuumeitai" title="Twitter del Álex">Álex</a></p>
 
-<p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
+<p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
 
 <!-- more -->
 
 
-<p>Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.</p>
+<p>Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
+Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
 
-<h3>Investigación (o <em>googleo</em> común)</h3>
+<h2>Investigación (o <em>googleo</em> común)</h2>
 
-<p>Resulta que me molesta un poquitín que no se pueda traducir todo de una, ya que, si se cree tan bacán, Octopress debería tener algo para moverse con la <a href="http://es.wikipedia.org/wiki/Internacionalizaci%C3%B3n_y_localizaci%C3%B3n">i18n</a>. <strong>¿Por qué no tendrá un .MO y un .PO?</strong> Con <a href="http://www.poedit.net/">Poedit</a> se podría arreglar todo bonito rápidamente. <a href="https://github.com/imathis/octopress/issues/451">Hace 17 días</a> se dijo que no va a ir en una versión próxima, ASÍ QUE NO IMPORTA, TOTAL IGUAL SE PUEDE METER MANO A TODO Y ESPERAR QUE NO EXPLOTE.</p>
+<p>Resulta que me molesta un poquitín que no se pueda traducir todo de una, ya que, si se cree tan bacán, Octopress debería tener algo para moverse con la <a href="http://es.wikipedia.org/wiki/Internacionalizaci%C3%B3n_y_localizaci%C3%B3n" title="Artículo en Wikipedia donde se explica qué es la internacionalización">i18n</a>. <strong>¿Por qué no tendrá un .MO y un .PO?</strong> Con <a href="http://www.poedit.net/" title="Herramienta usada en traducción de plugins y themes de WordPress y otras cuestiones que vengan hechos para ser traducidos">Poedit</a> se podría arreglar todo bonito rápidamente. <a href="https://github.com/imathis/octopress/issues/451" title="Issue de un alemán que quiere traducir su instalación de Octopress">Hace 17 días</a> se dijo que no va a ir en una versión próxima, ASÍ QUE NO IMPORTA, TOTAL IGUAL SE PUEDE METER MANO A TODO Y ESPERAR QUE NO EXPLOTE.</p>
+
+<h3>Cosas bacanes</h3>
+
+<ul>
+<li>Es <em>responsive</em> (¡Eeeeeeeh!).</li>
+<li>Es fácil entender cómo funciona y qué crea al regenerarse con los últimos cambios aplicados.</li>
+<li>Los <em>widgets</em> que trae son fáciles de activar y configurar.</li>
+<li>Configurar el dominio no fue tan complejo, sólo tuve que usar <a href="http://www.heroku.com/" title="Hosting de aplicaciones muy bonito y simpático">Heroku</a>, creando la aplicación desde el Terminal, <a href="http://octopress.org/docs/deploying/heroku/">como te indican en la documentación</a> y en <a href="https://devcenter.heroku.com/articles/custom-domains">la documentación de Heroku</a> está la explicación para que el dominio apunte para allá y todo se vea profesionalmente bacán.</li>
+</ul>
+
+
+<h3>Cosas que le faltan (o <em>no bacanes</em>)</h3>
+
+<ul>
+<li>¿Podría tener una imagen destacada por cada post? No encontré que se abordara el tema en lo básico.</li>
+<li>No me gustó que lo de los tags no viniera activado por defecto. Espero que no sea tan difícil de aplicar/configurar.</li>
+<li>ESONOMÁS.</li>
+</ul>
+
+
+<h2>Cambios agregaos a la mala</h2>
+
+<ul>
+<li>Traducir detalles en <code>source/_layouts/post.html</code>. Con eso ahora dice «Comentarios», «Escrito por» y… otras cosas.</li>
+<li>Crear el <code>twitter.html</code> en <code>asides</code> para insertar los últimos tuiteos.</li>
+<li>Creación de <code>tags.html</code> en <code>source/_includes/post/</code> para llamar a los tags incluidos en el <code>.markdown</code> del post, aunque todavía no enlazan como las categorías. <strong>Falta esfuerzo</strong>.</li>
+<li>En <code>source/_includes/custom/navigation.html</code> está el menú principal. Traduje los enlaces que habían y le agregué mi Twitter, porsiaca.</li>
+</ul>
+
 ]]></content>
   </entry>
   
