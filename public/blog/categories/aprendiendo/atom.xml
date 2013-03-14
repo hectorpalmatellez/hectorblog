@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Un blog bacán usando Octopress]]></title>
-  <link href="http://o.tiuque.cl/atom.xml" rel="self"/>
+  <title><![CDATA[Category: aprendiendo | Un blog bacán usando Octopress]]></title>
+  <link href="http://o.tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://o.tiuque.cl/"/>
   <updated>2013-03-14T02:22:33-04:00</updated>
   <id>http://o.tiuque.cl/</id>
