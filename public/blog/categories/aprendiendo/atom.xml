@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Un blog bacán usando Octopress]]></title>
   <link href="http://o.tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-14T02:24:52-04:00</updated>
+  <updated>2013-03-14T02:34:20-04:00</updated>
   <id>http://o.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
-    <link href="http://o.tiuque.cl/aprendiendo/aprendiendo-a-usar-octopress/"/>
+    <link href="http://o.tiuque.cl/aprendiendo/octopress/"/>
     <updated>2013-03-14T01:15:00-04:00</updated>
-    <id>http://o.tiuque.cl/aprendiendo/aprendiendo-a-usar-octopress</id>
+    <id>http://o.tiuque.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Aprendamos a usar Octopress</h2>
 
 <pre><code>Es bacán.
