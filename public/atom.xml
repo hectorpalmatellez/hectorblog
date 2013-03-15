@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor aprendiendo a usar Octopress]]></title>
   <link href="http://tiuque.cl/atom.xml" rel="self"/>
   <link href="http://tiuque.cl/"/>
-  <updated>2013-03-15T01:59:10-04:00</updated>
+  <updated>2013-03-15T16:16:44-04:00</updated>
   <id>http://tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -117,6 +117,51 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
 <li>En <code>source/_includes/custom/navigation.html</code> está el menú principal. Traduje los enlaces que habían y le agregué mi Twitter, porsiaca.</li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress]]></title>
+    <link href="http://tiuque.cl/aprendiendo/aprendiendo-a-usar-octopress/"/>
+    <updated>2013-03-14T01:15:00-04:00</updated>
+    <id>http://tiuque.cl/aprendiendo/aprendiendo-a-usar-octopress</id>
+    <content type="html"><![CDATA[<h2>Aprendamos a usar Octopress</h2>
+
+<pre><code>Es bacán.
+</code></pre>
+
+<p><a href="http://twitter.com/Kyuumeitai">Álex</a></p>
+
+<p>Y antes de eso ni cachaba que existía Octopress. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
+
+<!-- more -->
+
+
+<p>El texto es bonito.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Avión y árbol, con ñandú y un pingüino]]></title>
+    <link href="http://tiuque.cl/avion-y-arbol-con-nandu-y-un-pinguino/"/>
+    <updated>2013-03-13T10:00:00-04:00</updated>
+    <id>http://tiuque.cl/avion-y-arbol-con-nandu-y-un-pinguino</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Este es un post de prueba]]></title>
+    <link href="http://tiuque.cl/este-es-un-post-de-prueba/"/>
+    <updated>2013-03-13T09:50:00-04:00</updated>
+    <id>http://tiuque.cl/este-es-un-post-de-prueba</id>
+    <content type="html"><![CDATA[<h1>HOLA</h1>
+
+<h2>esto</h2>
+
+<h3>es</h3>
+
+<h4>una prueba</h4>
 ]]></content>
   </entry>
   
