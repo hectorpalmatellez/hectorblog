@@ -21,9 +21,9 @@ tags:
 Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había [leído sobre Jekyll](http://ajipirijou.com/blog/ahora-usamos-jekyll "Artículo de @elJOjo cuando se pasó de WordPress a Jekyll"), pero hasta ahí nomás entendía.
 
 <!-- more -->
-{% img left http://placekitten.com/320/250 Place Kitten #2 %}
-![Neil Smithline](/assets/images/NS-Keycaps.png "Website Homepage")
-![Octopress](http://o.tiuque.cl/images/octopress.png "Imagen de Octopress")
+{% img left https://fbstatic-a.akamaihd.net/rsrc.php/v2/y4/r/-PAXP-deijE.gif Place Kitten #2 %}
+![Neil Smithline](https://fbstatic-a.akamaihd.net/rsrc.php/v2/y4/r/-PAXP-deijE.gif "Website Homepage")
+![Octopress](https://fbstatic-a.akamaihd.net/rsrc.php/v2/y4/r/-PAXP-deijE.gif "Imagen de Octopress")
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del *rake generate*.
 Aparte de eso, **tengo que aprender a escribir en [Markdown](http://daringfireball.net/projects/markdown/basics "Artículo sobre el Markdown")**, menos mal que [Mou](http://mouapp.com/) ayuda harto.
 
