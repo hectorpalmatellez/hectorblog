@@ -22,6 +22,7 @@ Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachab
 
 <!-- more -->
 
+![Octopress](http://o.tiuque.cl/images/octopress.png "Imagen de Octopress")
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del *rake generate*.
 Aparte de eso, **tengo que aprender a escribir en [Markdown](http://daringfireball.net/projects/markdown/basics "Artículo sobre el Markdown")**, menos mal que [Mou](http://mouapp.com/) ayuda harto.
 
