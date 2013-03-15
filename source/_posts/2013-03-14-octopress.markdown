@@ -23,7 +23,7 @@ Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachab
  
 <!-- more -->
 
-{% img left /images/octopress.png 600 400 'Pantallazo del proceso de este post' 'Escribiendo en Octopress usando Mou' %} 
+{% img left /images/octopress.png 360 'Pantallazo del proceso de este post' 'Escribiendo en Octopress usando Mou' %} 
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del *rake generate*.
 Aparte de eso, **tengo que aprender a escribir en [Markdown](http://daringfireball.net/projects/markdown/basics "Artículo sobre el Markdown")**, menos mal que [Mou](http://mouapp.com/) ayuda harto.
 

@@ -33,7 +33,7 @@ Si el resultado se parece a lo siguiente, estamos bien:
 	LC_NUMERIC="es_ES.utf-8"
 	LC_TIME="es_ES.utf-8"
 	LC_ALL=
-{% img /images/utf8-locale.png center %}
+{% img center /images/utf8-locale.png 'Pantallazo al Terminal' 'Pantallazo a lo ya comentado' %}
 
 ##¿Y entonces? ¿Cómo se hace?
 Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el _plugin_ que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en [su documentación](http://octopress.org/docs/plugins/image-tag/ "Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress"). Básicamente se trata de:

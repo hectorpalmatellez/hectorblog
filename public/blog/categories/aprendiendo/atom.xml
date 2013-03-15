@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Un blog bacán usando Octopress]]></title>
   <link href="http://o.tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-15T00:21:46-04:00</updated>
+  <updated>2013-03-15T00:24:55-04:00</updated>
   <id>http://o.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -49,7 +49,7 @@ LC_TIME="es_ES.utf-8"
 LC_ALL=
 </code></pre>
 
-<p><img src="/images/utf8-locale.png" title="center" ></p>
+<p><img class="center" src="/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
 
 <h2>¿Y entonces? ¿Cómo se hace?</h2>
 
@@ -81,7 +81,7 @@ LC_ALL=
 <!-- more -->
 
 
-<p><img class="left" src="/images/octopress.png" width="600" height="400" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
+<p><img class="left" src="/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
 Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
 
