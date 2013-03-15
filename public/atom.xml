@@ -4,7 +4,7 @@
   <title><![CDATA[Un blog bacán usando Octopress]]></title>
   <link href="http://o.tiuque.cl/atom.xml" rel="self"/>
   <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-15T00:01:38-04:00</updated>
+  <updated>2013-03-15T00:21:46-04:00</updated>
   <id>http://o.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
+    <link href="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <updated>2013-03-15T00:08:00-04:00</updated>
+    <id>http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <content type="html"><![CDATA[<h2>La complicación</h2>
+
+<p>Resulta que al intentar agregarle imágenes al <a href="http://o.tiuque.cl/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
+
+<!--more-->
+
+
+<h3>Caracteres bonitos</h3>
+
+<p>Los hispanohablantes tenemos caracteres bonitos, como la todopoderosa <strong>eñe</strong>, <strong><em>las vocales con tilde</em></strong> y la <strong>u con cremillas</strong> (ü). Estos caracteres le hacen problema al universo en línea cuando se meten en nombres de archivos y… en todo. Por eso, al configurar el repositorio donde alojes Octopress debes adelantarte, querido hispanohablante. Esto se hace con lo siguiente:</p>
+
+<pre><code>export LANG=es_ES.utf8
+</code></pre>
+
+<p>Luego, para verificar que quedó bien, hay que darle a:</p>
+
+<pre><code>locale
+</code></pre>
+
+<p>Si el resultado se parece a lo siguiente, estamos bien:</p>
+
+<pre><code>LANG="es_ES.utf-8"
+LC_COLLATE="es_ES.utf-8"
+LC_CTYPE="es_ES.utf-8"
+LC_MESSAGES="es_ES.utf-8"
+LC_MONETARY="es_ES.utf-8"
+LC_NUMERIC="es_ES.utf-8"
+LC_TIME="es_ES.utf-8"
+LC_ALL=
+</code></pre>
+
+<p><img src="http://o.tiuque.cl/images/utf8-locale.png" title="center" ></p>
+
+<h2>¿Y entonces? ¿Cómo se hace?</h2>
+
+<p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
+
+<pre><code>&lt;img class="[clases asignadas]" src="http://o.tiuque.cl/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
+</code></pre>
+
+<p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
+
+<p>Eso nomás, por ahora.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
@@ -27,12 +78,11 @@
 
 <p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
 
-<p> <img class="center" src="http://www.moviequotesandmore.com/image-files/avatar-6.jpg"></p>
-
 <!-- more -->
 
 
-<p>Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
+<p><img class="left" src="http://o.tiuque.cl/images/octopress.png" width="600" height="400" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
+Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
 Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
 
 <h2>Investigación (o <em>googleo</em> común)</h2>

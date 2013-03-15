@@ -20,10 +20,10 @@ tags:
 
 Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había [leído sobre Jekyll](http://ajipirijou.com/blog/ahora-usamos-jekyll "Artículo de @elJOjo cuando se pasó de WordPress a Jekyll"), pero hasta ahí nomás entendía.
 
- {% img center http://www.moviequotesandmore.com/image-files/avatar-6.jpg %} 
  
 <!-- more -->
 
+{% img left /images/octopress.png 600 400 'Pantallazo del proceso de este post' 'Escribiendo en Octopress usando Mou' %} 
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del *rake generate*.
 Aparte de eso, **tengo que aprender a escribir en [Markdown](http://daringfireball.net/projects/markdown/basics "Artículo sobre el Markdown")**, menos mal que [Mou](http://mouapp.com/) ayuda harto.
 

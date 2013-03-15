@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Un blog bacán usando Octopress</title>
+  <title>Usando imágenes en Octopress - Un blog bacán usando Octopress</title>
   <meta name="author" content="Héctor Palma Téllez">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://o.tiuque.cl">
+  <link rel="canonical" href="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Un blog bacán usando Octopress" type="application/atom+xml">
@@ -64,15 +64,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/aprendiendo/usando-imagenes-en-octopress/">Usando Imágenes en Octopress</a></h1>
+      <h1 class="entry-title">Usando Imágenes en Octopress</h1>
     
     
       <p class="meta">
@@ -90,82 +87,129 @@
 
 <time datetime="2013-03-15T00:08:00-04:00" pubdate data-updated="true">Friday 15 de March 2013</time>
         
-         | <a href="/aprendiendo/usando-imagenes-en-octopress/#disqus_thread">Comentarios</a>
+         | <a href="#disqus_thread">Comentarios</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h2>La complicación</h2>
+<div class="entry-content"><h2>La complicación</h2>
 
 <p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
 
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/usando-imagenes-en-octopress/">Seguir leyendo &rarr;</a>
-    </footer>
-  
+<!--more-->
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/octopress/">Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
+<h3>Caracteres bonitos</h3>
 
+<p>Los hispanohablantes tenemos caracteres bonitos, como la todopoderosa <strong>eñe</strong>, <strong><em>las vocales con tilde</em></strong> y la <strong>u con cremillas</strong> (ü). Estos caracteres le hacen problema al universo en línea cuando se meten en nombres de archivos y… en todo. Por eso, al configurar el repositorio donde alojes Octopress debes adelantarte, querido hispanohablante. Esto se hace con lo siguiente:</p>
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-14T01:15:00-04:00" pubdate data-updated="true">Thursday 14 de March 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Cachando cómo usar Octopress</h2>
-
-<pre><code>Es bacán.
+<pre><code>export LANG=es_ES.utf8
 </code></pre>
 
-<p>– <a href="http://twitter.com/Kyuumeitai" title="Twitter del Álex">Álex</a></p>
+<p>Luego, para verificar que quedó bien, hay que darle a:</p>
 
-<p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
+<pre><code>locale
+</code></pre>
+
+<p>Si el resultado se parece a lo siguiente, estamos bien:</p>
+
+<pre><code>LANG="es_ES.utf-8"
+LC_COLLATE="es_ES.utf-8"
+LC_CTYPE="es_ES.utf-8"
+LC_MESSAGES="es_ES.utf-8"
+LC_MONETARY="es_ES.utf-8"
+LC_NUMERIC="es_ES.utf-8"
+LC_TIME="es_ES.utf-8"
+LC_ALL=
+</code></pre>
+
+<p><img src="/images/utf8-locale.png" title="center" ></p>
+
+<h2>¿Y entonces? ¿Cómo se hace?</h2>
+
+<p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
+
+<pre><code>&lt;img class="[clases asignadas]" src="/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
+</code></pre>
+
+<p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
+
+<p>Eso nomás, por ahora.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Escrito por <span class="fn">Héctor Palma Téllez</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-15T00:08:00-04:00" pubdate data-updated="true">Friday 15 de March 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aprendiendo/'>aprendiendo</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    imágenesimgUTF-8es_ESCodificación
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/" data-via="Zentaurus" data-counturl="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/aprendiendo/octopress/" title="Anterior: Octopress">&laquo; Octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h4>Comentarios</h4>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/octopress/">Seguir leyendo &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -188,7 +232,7 @@
 
 <section>
   <h1>My Pinboard</h1>
-  <ul id="pinboard_linkroll">Fetching linkroll&#8230;</ul>
+  <ul id="pinboard_linkroll">Fetching linkroll...</ul>
   <p><a href="http://pinboard.in/u:hectorpalmatellez">My Pinboard Bookmarks &raquo;</a></p>
 </section>
 <script type="text/javascript">
@@ -210,6 +254,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -224,7 +269,10 @@
       var disqus_shortname = 'tiuque';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/';
+        var disqus_url = 'http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
