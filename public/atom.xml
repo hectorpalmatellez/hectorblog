@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Un blog bacán usando Octopress]]></title>
-  <link href="http://o.tiuque.cl/atom.xml" rel="self"/>
-  <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-15T00:24:55-04:00</updated>
-  <id>http://o.tiuque.cl/</id>
+  <title><![CDATA[Héctor aprendiendo a usar Octopress]]></title>
+  <link href="http://tiuque.cl/atom.xml" rel="self"/>
+  <link href="http://tiuque.cl/"/>
+  <updated>2013-03-15T01:59:10-04:00</updated>
+  <id>http://tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
     
@@ -15,12 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
-    <link href="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <link href="http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
     <updated>2013-03-15T00:08:00-04:00</updated>
-    <id>http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <id>http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
-<p>Resulta que al intentar agregarle imágenes al <a href="http://o.tiuque.cl/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
+<p>Resulta que al intentar agregarle imágenes al <a href="http://tiuque.cl/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
 
 <!--more-->
 
@@ -49,13 +49,13 @@ LC_TIME="es_ES.utf-8"
 LC_ALL=
 </code></pre>
 
-<p><img class="center" src="http://o.tiuque.cl/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
+<p><img class="center" src="http://tiuque.cl/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
 
 <h2>¿Y entonces? ¿Cómo se hace?</h2>
 
 <p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
 
-<pre><code>&lt;img class="[clases asignadas]" src="http://o.tiuque.cl/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
+<pre><code>&lt;img class="[clases asignadas]" src="http://tiuque.cl/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
 </code></pre>
 
 <p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
@@ -66,9 +66,9 @@ LC_ALL=
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
-    <link href="http://o.tiuque.cl/aprendiendo/octopress/"/>
+    <link href="http://tiuque.cl/aprendiendo/octopress/"/>
     <updated>2013-03-14T01:15:00-04:00</updated>
-    <id>http://o.tiuque.cl/aprendiendo/octopress</id>
+    <id>http://tiuque.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
 <pre><code>Es bacán.
@@ -81,7 +81,7 @@ LC_ALL=
 <!-- more -->
 
 
-<p><img class="left" src="http://o.tiuque.cl/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
+<p><img class="left" src="http://tiuque.cl/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
 Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
 

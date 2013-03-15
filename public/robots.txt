@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://o.tiuque.cl/sitemap.xml 
+Sitemap: http://tiuque.cl/sitemap.xml 

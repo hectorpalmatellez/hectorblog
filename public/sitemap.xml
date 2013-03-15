@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://o.tiuque.cl/aprendiendo/octopress/</loc>
+        <loc>http://tiuque.cl/aprendiendo/octopress/</loc>
         <lastmod>2013-03-15T00:24:16-04:00</lastmod>
     </url>
     <url>
-        <loc>http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
+        <loc>http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
         <lastmod>2013-03-15T00:24:50-04:00</lastmod>
     </url>
     <url>
-        <loc>http://o.tiuque.cl/blog/archives/</loc>
+        <loc>http://tiuque.cl/blog/archives/</loc>
         <lastmod>2013-03-15T00:24:50-04:00</lastmod>
     </url>
     <url>
-        <loc>http://o.tiuque.cl/</loc>
+        <loc>http://tiuque.cl/</loc>
         <lastmod>2013-03-15T00:24:50-04:00</lastmod>
     </url>
     <url>
-        <loc>http://o.tiuque.cl/new-page/</loc>
+        <loc>http://tiuque.cl/new-page/</loc>
         <lastmod>2013-03-14T03:26:33-04:00</lastmod>
     </url>
     <url>
-        <loc>http://o.tiuque.cl/robots.txt</loc>
+        <loc>http://tiuque.cl/robots.txt</loc>
         <lastmod>2013-03-12T22:56:27-04:00</lastmod>
     </url>
 </urlset>

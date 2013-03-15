@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: aprendiendo | Un blog bacán usando Octopress]]></title>
-  <link href="http://o.tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
-  <link href="http://o.tiuque.cl/"/>
-  <updated>2013-03-15T00:24:55-04:00</updated>
-  <id>http://o.tiuque.cl/</id>
+  <title><![CDATA[Category: aprendiendo | Héctor aprendiendo a usar Octopress]]></title>
+  <link href="http://tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
+  <link href="http://tiuque.cl/"/>
+  <updated>2013-03-15T01:59:10-04:00</updated>
+  <id>http://tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
-    <link href="http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <link href="http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
     <updated>2013-03-15T00:08:00-04:00</updated>
-    <id>http://o.tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <id>http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
 <p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
@@ -66,9 +66,9 @@ LC_ALL=
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
-    <link href="http://o.tiuque.cl/aprendiendo/octopress/"/>
+    <link href="http://tiuque.cl/aprendiendo/octopress/"/>
     <updated>2013-03-14T01:15:00-04:00</updated>
-    <id>http://o.tiuque.cl/aprendiendo/octopress</id>
+    <id>http://tiuque.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
 <pre><code>Es bacán.
