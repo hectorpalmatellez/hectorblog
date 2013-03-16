@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Usando Pinboard para la vida"
+date: 2013-03-15 21:35
+comments: true
+categories: 
+- herramientas
+tags:
+- redes-sociales
+- contenido
+- feeds
+- RSS
+
+
+---
+##Aprendiendo a usar Pinboard para la vida
+
+Para ser serio, voy a partir con una cita:
+> Pinboard es bacán
+
+>– Yo
+
+{% img /images/pinboard.png right 'Home de Pinboard' 'Descripción del servicio' %} Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa' tener algún tema de conversación y no quedarse callao con cara de no cachar na'. Hay que tener cara de que se cacha, aunque el tema sea medio fome.
+
+**Por eso siento que [Pinboard](http://pinboard.in "Bookmarking for introverts") es un buen aliado para nunca estar desenchufao del mundo.** 
+
+<!--more-->
+
+###«Ah, pero es pagao y yo soy pobre»
+Sí, eso debe ser una de las cosas que hacen que no cualquiera llegue y se haga una cuenta, pero, al mismo tiempo, garantiza varias cosas como:
+
+* Nada de publicidad
+* Interfaz ultra rápida.
+* 
