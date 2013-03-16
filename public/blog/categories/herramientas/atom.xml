@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: herramientas | Héctor aprendiendo a usar Octopress]]></title>
+  <link href="http://tiuque.cl/blog/categories/herramientas/atom.xml" rel="self"/>
+  <link href="http://tiuque.cl/"/>
+  <updated>2013-03-15T21:55:03-04:00</updated>
+  <id>http://tiuque.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Usando Pinboard para la vida]]></title>
+    <link href="http://tiuque.cl/herramientas/pinboard/"/>
+    <updated>2013-03-15T21:35:00-04:00</updated>
+    <id>http://tiuque.cl/herramientas/pinboard</id>
+    <content type="html"><![CDATA[<h2>Aprendiendo a usar Pinboard para la vida</h2>
+
+<p>Para ser serio, voy a partir con una cita:</p>
+
+<blockquote><p>Pinboard es bacán</p>
+
+<p>– Yo</p></blockquote>
+
+<p><img src="/images/pinboard.png" title="Home de Pinboard" alt="Descripción del servicio"> Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa' tener algún tema de conversación y no quedarse callao con cara de no cachar na'. Hay que tener cara de que se cacha, aunque el tema sea medio fome.</p>
+
+<p><strong>Por eso siento que <a href="http://pinboard.in" title="Bookmarking for introverts">Pinboard</a> es un buen aliado para nunca estar desenchufao del mundo.</strong></p>
+
+<!--more-->
+
+
+<h3>«Ah, pero es pagao y yo soy pobre»</h3>
+
+<p>Sí, eso debe ser una de las cosas que hacen que no cualquiera llegue y se haga una cuenta, pero, al mismo tiempo, garantiza varias cosas como:</p>
+
+<ul>
+<li>Nada de publicidad</li>
+<li>Interfaz ultra rápida.</li>
+<li></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
