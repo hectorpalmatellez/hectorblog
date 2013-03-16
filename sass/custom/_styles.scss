@@ -4,7 +4,8 @@
 html {
 	background: url("/images/line-tile.png?1363143387") repeat scroll left top #CCCCCC;
 }
-	header {
+	// Apuntando al header del sitio y no al header de cada artículo
+	body > header {
 		text-align: center;
-		background: url("http://666.tiuque.cl/images/tiuque.png");
+		background: url("http://666.tiuque.cl/images/tiuque.png") left center no-repeat #2D75C8 !important;
 	}
