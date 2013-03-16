@@ -6,29 +6,49 @@ comments: true
 categories: 
 - herramientas
 tags:
-- redes-sociales
-- contenido
-- feeds
-- RSS
+- redes-sociales, contenido, feeds, RSS
 
 
 ---
-##Aprendiendo a usar Pinboard para la vida
-
 Para ser serio, voy a partir con una cita:
 > Pinboard es bacán
 
->– Yo
+> – Yo, Santiago, 15 de marzo del 2013. 
 
-{% img /images/pinboard.png right 'Home de Pinboard' 'Descripción del servicio' %} Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa' tener algún tema de conversación y no quedarse callao con cara de no cachar na'. Hay que tener cara de que se cacha, aunque el tema sea medio fome.
+[{% img right /images/pinboard.png 400 'Home de Pinboard' 'Descripción del servicio' %}](http://pinboard.in "Ir a Pinboard") Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa' tener algún tema de conversación y no quedarse callao con cara de no cachar na'. Hay que tener cara de que se cacha, aunque el tema sea medio fome.
 
 **Por eso siento que [Pinboard](http://pinboard.in "Bookmarking for introverts") es un buen aliado para nunca estar desenchufao del mundo.** 
 
 <!--more-->
 
-###«Ah, pero es pagao y yo soy pobre»
+##«Ah, pero es pagao y yo soy pobre»
 Sí, eso debe ser una de las cosas que hacen que no cualquiera llegue y se haga una cuenta, pero, al mismo tiempo, garantiza varias cosas como:
 
 * Nada de publicidad
 * Interfaz ultra rápida.
-* 
+* La conexión con otras herramientas como:
+	* Pocket (anteriormente conocido como _Read It Later_).
+	* Twitter
+	* Delicious
+	* Otros que no cacho ni uso como Instapaper.
+* Control sobre los datos, es decir, puedes exportarlos cuando quieras.
+* No me ha tocado necesitarlo, pero he visto que [la cuenta en Twitter](http://twitter.com/Pinboard "@Pinboard en Twitter") trata bien a sus usuarios respondiendo bien y a tiempo.
+
+El costo (10.05 USD, que equivale a 4738 pesos, [según Google hoy](https://www.google.cl/search?q=10.05+usd+in+clp&aq=f&oq=10.05+usd+in+clp&aqs=chrome.0.57.3947&sourceid=chrome&ie=UTF-8)) es bajito, considerando todo lo bacán que ofrece. Ese **se paga una vez por vida**. Tienen otro costo, si deseas consumir el siguiente servicio que ofrece que es **guardar en caché todos tus marcadores**, es decir, si por cualquier razón dejasen de estar ahí, puedes acceder a ellos mediante tu cuenta de Pinboard. **Este último costo es anual y corresponde a 25 USD** (~11786 pesos chilenos). Al terminar el año, si no quieres renovar, puedes descargar todo lo que hayas guardado y tengas en el caché. Así que igual bacán.
+
+##Siendo parte de Pinboard
+Después de un par de días como usuario de Pinboard he llegado a las siguientes conclusiones sobre la plataforma y su método:
+
+* Es muy rápido en indexar el contenido nuevo.
+* La conexión con Twitter vale **mucho** la pena ya que se pueden conseguir cosas como: 
+	* Guardar en Pinboard todos los enlaces de los favoritos de Twitter.
+	* Guardar todos los enlaces compartidos por uno mismo. Esto incluye los RTs.
+* Puedo hacer RT si estoy de acuerdo o no, sólo pa' _recompartir_ y además dejar el enlace guardado para el futuro, ese futuro donde todos los enlaces podrán ser leídos e interiorizados. 
+
+##Como lector de Feeds
+A propósito de [la muerte de Google Reader](http://tech.theswamp.in/post/2013/03/15/google-readers-forced-euthanasia/ "Análisis en inglés sobre la eutanasia forzada en esa plataforma"), he notado que también te sirve como lector de feeds. Esto yendo a `/popular` donde aparecen los más guardados. Confiando en el público objetivo de la plataforma, normalmente se encuentran buenas cosas ahí. Además, siempre se pueden hacer búsquedas por temas para encontrar sobre ciertas áreas de interés, aunque sean manuales, es bacán. Me recuerda mucho a [_Realtime_](http://rt.ly "Herramienta de bit.ly para buscar lo más compartido/acortado separado en temas varios de opción del usuario") de bit.ly.
+
+##Conclusión
+Si le sobran 11 dólares por ahí, pague Pinboard y después de un tiempo me da las gracias por la recomendá en los comentarios de más abajito.
+
+_Saludos Cordiales_ {% img http://static.timesjobs.com/images_cand//tj_images/insider_img/smiley_ico.gif "Chaíto" "Smiley" %}
