@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor aprendiendo a usar Octopress]]></title>
   <link href="http://tiuque.cl/blog/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://tiuque.cl/"/>
-  <updated>2013-03-15T22:47:02-04:00</updated>
+  <updated>2013-03-15T23:24:41-04:00</updated>
   <id>http://tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -71,10 +71,9 @@ LC_ALL=
     <id>http://tiuque.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
-<pre><code>Es bacán.
-</code></pre>
+<blockquote><p>Es bacán.</p>
 
-<p>– <a href="http://twitter.com/Kyuumeitai" title="Twitter del Álex">Álex</a></p>
+<p>– <a href="http://twitter.com/Kyuumeitai" title="Twitter del Álex">Álex</a></p></blockquote>
 
 <p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
 

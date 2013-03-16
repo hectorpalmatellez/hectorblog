@@ -15,8 +15,9 @@ tags:
 ---
 ##Cachando cómo usar Octopress
 
-	Es bacán.
-– [Álex](http://twitter.com/Kyuumeitai "Twitter del Álex")
+> Es bacán.
+
+> – [Álex](http://twitter.com/Kyuumeitai "Twitter del Álex")
 
 Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había [leído sobre Jekyll](http://ajipirijou.com/blog/ahora-usamos-jekyll "Artículo de @elJOjo cuando se pasó de WordPress a Jekyll"), pero hasta ahí nomás entendía.
 
