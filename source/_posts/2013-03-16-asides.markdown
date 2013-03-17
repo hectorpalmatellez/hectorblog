@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Poblando el sidebar con asides"
+date: 2013-03-16 16:31
+comments: true
+categories: aprendiendo
+tags: Octopress, asides, custom 
+
+---
+
+##¿Qué son los asides?
+Viniendo de la _cultura del WordPress_, siento que es acertado decir que los asides son como los _widgets_ del sidebar. Espero que nadie se enoje conmigo por escribir eso.
+
+Se guardan en `source/_includes/asides`, pero los que uno crea están en `source/_includes/custom/asides`.
+
+Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de [este blog](/).
+
+<!--more-->
+
+##Paso a paso hacia un nuevo aside
+{% img left /images/octopress-files.png 'Archivos de Octopress' 'Algunos de los archivos de Octopress' %}
+Si necesitamos añadir un _widget_ que no ha sido agregado o no existe, basta con ir a `source/_includes/custom/asides` y crear un nuevo HTML con el contenido que queremos que se visualice.
+{% pullquote %}
+ {" Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar "} 
+{% endpullquote %}
+
+Luego, en `_config.yml` en la línea `48` debería estar `default_asides` donde uno puede enlazarlos por nombre del `.html` que creamos.
+
+Eso nomás es–

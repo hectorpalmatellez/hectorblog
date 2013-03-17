@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Octopress - Héctor aprendiendo Octopress</title>
+  <title>Poblando el sidebar con asides - Héctor aprendiendo Octopress</title>
   <meta name="author" content="Héctor Palma Téllez">
 
   
-  <meta name="description" content="Cachando cómo usar Octopress Es bacán. – Álex Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había &hellip;">
+  <meta name="description" content="¿Qué son los asides? Viniendo de la cultura del WordPress, siento que es acertado decir que los asides son como los widgets del sidebar. Espero que &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://666.tiuque.cl/aprendiendo/octopress">
+  <link rel="canonical" href="http://666.tiuque.cl/aprendiendo/asides">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Héctor aprendiendo Octopress" type="application/atom+xml">
@@ -81,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Octopress</h1>
+      <h1 class="entry-title">Poblando El Sidebar Con Asides</h1>
     
     
       <p class="meta">
@@ -97,60 +97,37 @@
   
 
 
-<time datetime="2013-03-14T01:15:00-04:00" pubdate data-updated="true">Thursday 14 de March 2013</time>
+<time datetime="2013-03-16T16:31:00-04:00" pubdate data-updated="true">Saturday 16 de March 2013</time>
+        
+         | <a href="#disqus_thread">Comentarios</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Cachando cómo usar Octopress</h2>
+<div class="entry-content"><h2>¿Qué son los asides?</h2>
 
-<blockquote><p>Es bacán.</p>
+<p>Viniendo de la <em>cultura del WordPress</em>, siento que es acertado decir que los asides son como los <em>widgets</em> del sidebar. Espero que nadie se enoje conmigo por escribir eso.</p>
 
-<p>– <a href="http://twitter.com/Kyuumeitai" title="Twitter del Álex">Álex</a></p></blockquote>
+<p>Se guardan en <code>source/_includes/asides</code>, pero los que uno crea están en <code>source/_includes/custom/asides</code>.</p>
 
-<p>Esa fue la primera opinión que escuché sobre Octopress, antes de eso ni cachaba que existía. Había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero hasta ahí nomás entendía.</p>
+<p>Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de <a href="/">este blog</a>.</p>
 
-<!-- more -->
-
-
-<p><img class="left" src="/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
-Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
-Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
-
-<h2>Investigación (o <em>googleo</em> común)</h2>
-
-<p>Resulta que me molesta un poquitín que no se pueda traducir todo de una, ya que, si se cree tan bacán, Octopress debería tener algo para moverse con la <a href="http://es.wikipedia.org/wiki/Internacionalizaci%C3%B3n_y_localizaci%C3%B3n" title="Artículo en Wikipedia donde se explica qué es la internacionalización">i18n</a>. <strong>¿Por qué no tendrá un .MO y un .PO?</strong> Con <a href="http://www.poedit.net/" title="Herramienta usada en traducción de plugins y themes de WordPress y otras cuestiones que vengan hechos para ser traducidos">Poedit</a> se podría arreglar todo bonito rápidamente. <a href="https://github.com/imathis/octopress/issues/451" title="Issue de un alemán que quiere traducir su instalación de Octopress">Hace 17 días</a> se dijo que no va a ir en una versión próxima, ASÍ QUE NO IMPORTA, TOTAL IGUAL SE PUEDE METER MANO A TODO Y ESPERAR QUE NO EXPLOTE.</p>
-
-<h3>Cosas bacanes</h3>
-
-<ul>
-<li>Es <em>responsive</em> (¡Eeeeeeeh!).</li>
-<li>Es fácil entender cómo funciona y qué crea al regenerarse con los últimos cambios aplicados.</li>
-<li>Los <em>widgets</em> que trae son fáciles de activar y configurar.</li>
-<li>Configurar el dominio no fue tan complejo, sólo tuve que usar <a href="http://www.heroku.com/" title="Hosting de aplicaciones muy bonito y simpático">Heroku</a>, creando la aplicación desde el Terminal, <a href="http://octopress.org/docs/deploying/heroku/">como te indican en la documentación</a> y en <a href="https://devcenter.heroku.com/articles/custom-domains">la documentación de Heroku</a> está la explicación para que el dominio apunte para allá y todo se vea profesionalmente bacán.</li>
-</ul>
+<!--more-->
 
 
-<h3>Cosas que le faltan (o <em>no bacanes</em>)</h3>
+<h2>Paso a paso hacia un nuevo aside</h2>
 
-<ul>
-<li>¿Podría tener una imagen destacada por cada post? No encontré que se abordara el tema en lo básico.</li>
-<li>No me gustó que lo de los tags no viniera activado por defecto. Espero que no sea tan difícil de aplicar/configurar.</li>
-<li>ESONOMÁS.</li>
-</ul>
+<p><img class="left" src="/images/octopress-files.png" title="Archivos de Octopress" alt="Algunos de los archivos de Octopress">
+Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, basta con ir a <code>source/_includes/custom/asides</code> y crear un nuevo HTML con el contenido que queremos que se visualice.
+<span class='pullquote-right' data-pullquote='Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar'>
+ Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar
+</span></p>
 
+<p>Luego, en <code>_config.yml</code> en la línea <code>48</code> debería estar <code>default_asides</code> donde uno puede enlazarlos por nombre del <code>.html</code> que creamos.</p>
 
-<h2>Cambios agregaos a la mala</h2>
-
-<ul>
-<li>Traducir detalles en <code>source/_layouts/post.html</code>. Con eso ahora dice «Comentarios», «Escrito por» y… otras cosas.</li>
-<li>Crear el <code>twitter.html</code> en <code>asides</code> para insertar los últimos tuiteos.</li>
-<li>Creación de <code>tags.html</code> en <code>source/_includes/post/</code> para llamar a los tags incluidos en el <code>.markdown</code> del post, aunque todavía no enlazan como las categorías. <strong>Falta esfuerzo</strong>.</li>
-<li>En <code>source/_includes/custom/navigation.html</code> está el menú principal. Traduje los enlaces que habían y le agregué mi Twitter, porsiaca.</li>
-</ul>
-
+<p>Eso nomás es–</p>
 </div>
 
 
@@ -173,7 +150,7 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
   
 
 
-<time datetime="2013-03-14T01:15:00-04:00" pubdate data-updated="true">Thursday 14 de March 2013</time>
+<time datetime="2013-03-16T16:31:00-04:00" pubdate data-updated="true">Saturday 16 de March 2013</time>
       
 
 <span class="categories">
@@ -187,7 +164,7 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
 
 <span class="tags">
   
-    rubyJekyllOctopressTerminal
+    Octopress,asides,custom
   
 </span>
 
@@ -196,7 +173,7 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://666.tiuque.cl/aprendiendo/octopress/" data-via="Zentaurus" data-counturl="http://666.tiuque.cl/aprendiendo/octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://666.tiuque.cl/aprendiendo/asides/" data-via="Zentaurus" data-counturl="http://666.tiuque.cl/aprendiendo/asides/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -209,12 +186,18 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/herramientas/pinboard/" title="Anterior: Usando Pinboard para la vida">&laquo; Usando Pinboard para la vida</a>
       
-        <a class="basic-alignment right" href="/aprendiendo/usando-imagenes-en-octopress/" title="Siguiente: Usando imágenes en Octopress">Usando imágenes en Octopress &raquo;</a>
       
     </p>
   </footer>
 </article>
+
+  <section>
+    <h4>Comentarios</h4>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -298,6 +281,22 @@ Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfi
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'tiuque';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://666.tiuque.cl/aprendiendo/asides/';
+        var disqus_url = 'http://666.tiuque.cl/aprendiendo/asides/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

@@ -1,31 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://tiuque.cl/aprendiendo/octopress/</loc>
+        <loc>http://666.tiuque.cl/aprendiendo/octopress/</loc>
         <lastmod>2013-03-15T23:05:18-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
+        <loc>http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
         <lastmod>2013-03-15T00:24:50-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/herramientas/pinboard/</loc>
+        <loc>http://666.tiuque.cl/herramientas/pinboard/</loc>
         <lastmod>2013-03-15T22:46:51-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/blog/archives/</loc>
-        <lastmod>2013-03-15T23:05:18-04:00</lastmod>
+        <loc>http://666.tiuque.cl/aprendiendo/asides/</loc>
+        <lastmod>2013-03-17T02:21:42-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/</loc>
-        <lastmod>2013-03-15T23:05:18-04:00</lastmod>
+        <loc>http://666.tiuque.cl/blog/archives/</loc>
+        <lastmod>2013-03-17T02:21:42-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/new-page/</loc>
+        <loc>http://666.tiuque.cl/</loc>
+        <lastmod>2013-03-17T02:21:42-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://666.tiuque.cl/new-page/</loc>
         <lastmod>2013-03-14T03:26:33-04:00</lastmod>
     </url>
     <url>
-        <loc>http://tiuque.cl/robots.txt</loc>
+        <loc>http://666.tiuque.cl/robots.txt</loc>
         <lastmod>2013-03-12T22:56:27-04:00</lastmod>
     </url>
 </urlset>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Héctor aprendiendo Octopress]]></title>
-  <link href="http://666.tiuque.cl/atom.xml" rel="self"/>
+  <title><![CDATA[Category: aprendiendo | Héctor aprendiendo Octopress]]></title>
+  <link href="http://666.tiuque.cl//categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://666.tiuque.cl/"/>
   <updated>2013-03-17T02:21:54-04:00</updated>
   <id>http://666.tiuque.cl/</id>
@@ -24,14 +24,14 @@
 
 <p>Se guardan en <code>source/_includes/asides</code>, pero los que uno crea están en <code>source/_includes/custom/asides</code>.</p>
 
-<p>Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de <a href="http://666.tiuque.cl/">este blog</a>.</p>
+<p>Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de <a href="/">este blog</a>.</p>
 
 <!--more-->
 
 
 <h2>Paso a paso hacia un nuevo aside</h2>
 
-<p><img class="left" src="http://666.tiuque.cl/images/octopress-files.png" title="Archivos de Octopress" alt="Algunos de los archivos de Octopress">
+<p><img class="left" src="/images/octopress-files.png" title="Archivos de Octopress" alt="Algunos de los archivos de Octopress">
 Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, basta con ir a <code>source/_includes/custom/asides</code> y crear un nuevo HTML con el contenido que queremos que se visualice.
 <span class='pullquote-right' data-pullquote='Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar'>
  Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar
@@ -44,83 +44,13 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Usando Pinboard para la vida]]></title>
-    <link href="http://666.tiuque.cl/herramientas/pinboard/"/>
-    <updated>2013-03-15T21:35:00-04:00</updated>
-    <id>http://666.tiuque.cl/herramientas/pinboard</id>
-    <content type="html"><![CDATA[<p>Para ser serio, voy a partir con una cita:</p>
-
-<blockquote><p>Pinboard es bacán</p>
-
-<p>– Yo, Santiago, 15 de marzo del 2013.</p></blockquote>
-
-<p><a href="http://pinboard.in" title="Ir a Pinboard"><img class="right" src="http://666.tiuque.cl/images/pinboard.png" width="400" title="Home de Pinboard" alt="Descripción del servicio"></a> Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa&#8217; tener algún tema de conversación y no quedarse callao con cara de no cachar na&#8217;. Hay que tener cara de que se cacha, aunque el tema sea medio fome.</p>
-
-<p><strong>Por eso siento que <a href="http://pinboard.in" title="Bookmarking for introverts">Pinboard</a> es un buen aliado para nunca estar desenchufao del mundo.</strong></p>
-
-<!--more-->
-
-
-<h2>«Ah, pero es pagao y yo soy pobre»</h2>
-
-<p>Sí, eso debe ser una de las cosas que hacen que no cualquiera llegue y se haga una cuenta, pero, al mismo tiempo, garantiza varias cosas como:</p>
-
-<ul>
-<li>Nada de publicidad</li>
-<li>Interfaz ultra rápida.</li>
-<li>La conexión con otras herramientas como:
-
-<ul>
-<li>Pocket (anteriormente conocido como <em>Read It Later</em>).</li>
-<li>Twitter</li>
-<li>Delicious</li>
-<li>Otros que no cacho ni uso como Instapaper.</li>
-</ul>
-</li>
-<li>Control sobre los datos, es decir, puedes exportarlos cuando quieras.</li>
-<li>No me ha tocado necesitarlo, pero he visto que <a href="http://twitter.com/Pinboard" title="@Pinboard en Twitter">la cuenta en Twitter</a> trata bien a sus usuarios respondiendo bien y a tiempo.</li>
-</ul>
-
-
-<p>El costo (10.05 USD, que equivale a 4738 pesos, <a href="https://www.google.cl/search?q=10.05+usd+in+clp&amp;aq=f&amp;oq=10.05+usd+in+clp&amp;aqs=chrome.0.57.3947&amp;sourceid=chrome&amp;ie=UTF-8">según Google hoy</a>) es bajito, considerando todo lo bacán que ofrece. Ese <strong>se paga una vez por vida</strong>. Tienen otro costo, si deseas consumir el siguiente servicio que ofrece que es <strong>guardar en caché todos tus marcadores</strong>, es decir, si por cualquier razón dejasen de estar ahí, puedes acceder a ellos mediante tu cuenta de Pinboard. <strong>Este último costo es anual y corresponde a 25 USD</strong> (~11786 pesos chilenos). Al terminar el año, si no quieres renovar, puedes descargar todo lo que hayas guardado y tengas en el caché. Así que igual bacán.</p>
-
-<h2>Siendo parte de Pinboard</h2>
-
-<p>Después de un par de días como usuario de Pinboard he llegado a las siguientes conclusiones sobre la plataforma y su método:</p>
-
-<ul>
-<li>Es muy rápido en indexar el contenido nuevo.</li>
-<li>La conexión con Twitter vale <strong>mucho</strong> la pena ya que se pueden conseguir cosas como:
-
-<ul>
-<li>Guardar en Pinboard todos los enlaces de los favoritos de Twitter.</li>
-<li>Guardar todos los enlaces compartidos por uno mismo. Esto incluye los RTs.</li>
-</ul>
-</li>
-<li>Puedo hacer RT si estoy de acuerdo o no, sólo pa&#8217; <em>recompartir</em> y además dejar el enlace guardado para el futuro, ese futuro donde todos los enlaces podrán ser leídos e interiorizados.</li>
-</ul>
-
-
-<h2>Como lector de Feeds</h2>
-
-<p>A propósito de <a href="http://tech.theswamp.in/post/2013/03/15/google-readers-forced-euthanasia/" title="Análisis en inglés sobre la eutanasia forzada en esa plataforma">la muerte de Google Reader</a>, he notado que también te sirve como lector de feeds. Esto yendo a <code>/popular</code> donde aparecen los más guardados. Confiando en el público objetivo de la plataforma, normalmente se encuentran buenas cosas ahí. Además, siempre se pueden hacer búsquedas por temas para encontrar sobre ciertas áreas de interés, aunque sean manuales, es bacán. Me recuerda mucho a <a href="http://rt.ly" title="Herramienta de bit.ly para buscar lo más compartido/acortado separado en temas varios de opción del usuario"><em>Realtime</em></a> de bit.ly.</p>
-
-<h2>Conclusión</h2>
-
-<p>Si le sobran 11 dólares por ahí, pague Pinboard y después de un tiempo me da las gracias por la recomendá en los comentarios de más abajito.</p>
-
-<p><em>Saludos Cordiales</em> <img src="http://static.timesjobs.com/images_cand//tj_images/insider_img/smiley_ico.gif" title="Chaíto" alt="Smiley"></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
     <link href="http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
     <updated>2013-03-15T00:08:00-04:00</updated>
     <id>http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
-<p>Resulta que al intentar agregarle imágenes al <a href="http://666.tiuque.cl/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
+<p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
 
 <!--more-->
 
@@ -149,13 +79,13 @@ LC_TIME="es_ES.utf-8"
 LC_ALL=
 </code></pre>
 
-<p><img class="center" src="http://666.tiuque.cl/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
+<p><img class="center" src="/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
 
 <h2>¿Y entonces? ¿Cómo se hace?</h2>
 
 <p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
 
-<pre><code>&lt;img class="[clases asignadas]" src="http://666.tiuque.cl/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
+<pre><code><img class="[clases asignadas]" src="/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" >
 </code></pre>
 
 <p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
@@ -180,7 +110,7 @@ LC_ALL=
 <!-- more -->
 
 
-<p><img class="left" src="http://666.tiuque.cl/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
+<p><img class="left" src="/images/octopress.png" width="360" title="Pantallazo del proceso de este post" alt="Escribiendo en Octopress usando Mou">
 Le estoy haciendo modificaciones, para entender bien cómo es la estructura de los archivos que componen el resultado final, lo que viene después del <em>rake generate</em>.
 Aparte de eso, <strong>tengo que aprender a escribir en <a href="http://daringfireball.net/projects/markdown/basics" title="Artículo sobre el Markdown">Markdown</a></strong>, menos mal que <a href="http://mouapp.com/">Mou</a> ayuda harto.</p>
 
