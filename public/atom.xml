@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor aprendiendo Octopress]]></title>
   <link href="http://666.tiuque.cl/atom.xml" rel="self"/>
   <link href="http://666.tiuque.cl/"/>
-  <updated>2013-03-17T02:25:58-04:00</updated>
+  <updated>2013-03-18T12:00:08-04:00</updated>
   <id>http://666.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -24,7 +24,7 @@
 
 <p>Se guardan en <code>source/_includes/asides</code>, pero los que uno crea están en <code>source/_includes/custom/asides</code>.</p>
 
-<p>Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de <a href="http://666.tiuque.cl/">este blog</a>.</p>
+<p>Un ejemplo práctico es el widget del timeline de Twitter que está en el sidebar de <a href="http://666.tiuque.cl/">este blog</a>.</p>
 
 <!--more-->
 
