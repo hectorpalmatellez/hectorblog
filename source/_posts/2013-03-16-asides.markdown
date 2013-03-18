@@ -13,7 +13,7 @@ Viniendo de la _cultura del WordPress_, siento que es acertado decir que los asi
 
 Se guardan en `source/_includes/asides`, pero los que uno crea están en `source/_includes/custom/asides`.
 
-Un ejemplo práctico en mi blog es el widget del timeline de Twitter que está en el sidebar de [este blog](/).
+Un ejemplo práctico es el widget del timeline de Twitter que está en el sidebar de [este blog](/).
 
 <!--more-->
 
