@@ -4,7 +4,7 @@ title: "Poblando el sidebar con asides"
 date: 2013-03-16 16:31
 comments: true
 categories: aprendiendo
-tags: Octopress, asides, custom 
+tags: Octopress, asides, custom
 
 ---
 

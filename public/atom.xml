@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor aprendiendo Octopress]]></title>
   <link href="http://666.tiuque.cl/atom.xml" rel="self"/>
   <link href="http://666.tiuque.cl/"/>
-  <updated>2013-03-18T12:00:08-04:00</updated>
+  <updated>2013-03-19T02:49:05-04:00</updated>
   <id>http://666.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
+    <link href="http://666.tiuque.cl/aprendiendo/custom-fields/"/>
+    <updated>2013-03-19T02:00:00-04:00</updated>
+    <id>http://666.tiuque.cl/aprendiendo/custom-fields</id>
+    <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
+
+<blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
+
+<p>Resulta que un poco de lógica y varios intentos de <em>googleo</em> me llevaron a intentar algo parecido a lo que sale <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter#custom-variables" title="YAML Front Matter en GitHub">acá</a>, en el apartado de «variables personalizadas» se explica con el siguiente ejemplo:</p>
+
+<figure class='code'><figcaption><span>Ejemplo  (custom.rb)</span> <a href='http://666.tiuque.cl/downloads/code/custom.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="sr">/title&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p><img class="left" src="http://666.tiuque.cl/images/campo-customizado.png" title="Ejemplo de campo personalizado" alt="Campo customizado en el header del archivo markdown"> Así que decidí probar un poquito y creé <code>customizado</code> en el encabezado del archivo .markdown
+El paso siguiente es hacer que desde la plantilla pueda ser visible, para esto hay que ir a <code>source/_layouts/post.html</code> (porque el layout que tengo para los posts es ese, obviamente). Eso se puede ver en la segunda imagen de este post.
+<img class="left" src="http://666.tiuque.cl/images/layout-customizado.png" title="Ubicación de donde se mostrará el campo" alt="Ubicación en post.html donde va el campo personalizado"></p>
+
+<p>Entonces, los pasos se reducen a lo siguiente:</p>
+
+<ul>
+<li>Definir el nombre y valor del campo en el encabezado del artículo <code>.markdown</code>.</li>
+<li>Editar el <em>layout</em> correspondiente para mostrar el valor del campo personalizado.</li>
+<li>Queda opcional, obviamente, el estilo que se le quiera dar, por si le querís poner una clase.</li>
+</ul>
+
+
+<h2>Probando</h2>
+
+<ul>
+<li>Si el campo personalizado va a tener HTML, como para darle una clase o alguna etiqueta específica (cosa que también se puede predefinir desde el <em>layout</em>), el valor debe ir entre apóstrofos:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Ejemplo  (custom-html.html)</span> <a href='http://666.tiuque.cl/downloads/code/custom-html.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>customizado: &#39;<span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;color: red&quot;</span><span class="nt">&gt;</span>las vacas son bonitas<span class="nt">&lt;/span&gt;</span>&#39;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Deben ser apóstrofos porque con comillas dobles no me funcionó. Quizás algún día sepa por qué).</p>
+
+<ul>
+<li>El campo puede ser utilizado en el cuerpo del artículo como se hace en el ejemplo en Ruby usado más arriba. Tan simple como añadir lo siguiente entre el texto escrito:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>customizado2  (customizado2.rb)</span> <a href='http://666.tiuque.cl/downloads/code/customizado2.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">{{</span><span class="n">page</span><span class="o">.</span><span class="n">customizado2</span><span class="p">}}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta es la razón por la que encontré más fácil llamar los pedazos de código desde archivos externos a escribirlos de la forma corriente en la que se escribe código dentro de un post.</p>
+
+<h3>ALGO TERRIBLE</h3>
+
+<p>Todavía no hago funcionar los tags. Los agrego en cada post, pero quedan feítos. De ahí veo si los logro corregir de alguna forma más <em>kawaii</em>~</p>
+
+<p>Eso nomás por ahora–</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
