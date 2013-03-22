@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Jekyll es el núcleo"
+date: 2013-03-21 20:55
+comments: true
+categories: aprendiendo
+tags: [jekyll, octopress, ruby]
+
+---
+
+{% img left /images/jekyll.png 280 "Logo de Jekyll" "Jekyll logo" %} Como dije en [el primer post](/aprendiendo/octopress/), había [leído sobre Jekyll](http://ajipirijou.com/blog/ahora-usamos-jekyll "Artículo de @elJOjo cuando se pasó de WordPress a Jekyll"), pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que **hay haaaaaarto diferente a Octopress**. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.
+
+{% img left http://www.your3dsource.com/images/redhandpointingdown.gif %} Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.
+
+<!--more-->
+
+###Hay que estar preparado
+
+Si probaste Octopress primero y después pruebas Jekyll, luego de la correcta ejecución del `gem install jekyll`, encontrarás que tu carpeta escogida tiene **nada**. Hay que aprenderse, por lo tanto, la estructura de Jekyll que básicamente es así:
+
+	[raíz]/index.html
+		  /archive.html
+		  /img/
+		  /js/
+		  /css/
+		  /_posts/
+		  /_includes/
+		  /_layouts/
+		  /_site/
+		  /Rakefile
+		  /_config.yml
+		  										
+La descripción sobre estos elementos a continuación:
+
+* Así como en Octopress existe `rake generate` para regenerar el sitio de `source` a `public`, acá existe `jekyll --server`, que hace lo mismo, a diferencia que el _output_ de la operación queda en `_site`.
+*  Entre `img`,`js` y `css` repartí los archivos de [Bootstrap](twitter.github.com/bootstrap/) que escogí para el _front-end_.
+*  En `_posts` están los archivos en `.markdown` antes de ser generados como posts.
+*  La carpeta `_layouts`, al igual que en Octopress, guarda los _layouts_ de publicaciones que uno genera.
+*  En `_includes` dejé todos los archivos que reutilizo cada vez que genero una página, como:
+	* head.html
+	* header.html
+	* footer.html
+	* Entre otros.
+	
+##Recursos
+
+En [mi Pinboard](https://pinboard.in/search/u:hectorpalmatellez?query=jekyll "Recursos sobre Jekyll") estoy guardando todo lo que encuentre sobre Jekyll. La mayoría de lo listado acá lo he ido implementando de a poco en el proyecto que estoy armando, que todavía no haré público, hasta que se vea decente.
+
+###Agradecimientos
+
+Gracias a [@elJOjo](http://joselbornoz.cl) por su tiempo explicándome por correo temas conceptuales que me han servido harto.
+																																																																																																																																																																																																																																																																																																																						

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor aprendiendo Octopress]]></title>
   <link href="http://666.tiuque.cl/categories/aprendiendo/atom.xml" rel="self"/>
   <link href="http://666.tiuque.cl/"/>
-  <updated>2013-03-19T02:49:05-04:00</updated>
+  <updated>2013-03-22T00:11:01-04:00</updated>
   <id>http://666.tiuque.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
+    <link href="http://666.tiuque.cl/aprendiendo/jekyll/"/>
+    <updated>2013-03-21T20:55:00-04:00</updated>
+    <id>http://666.tiuque.cl/aprendiendo/jekyll</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
+
+<p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
+
+<!--more-->
+
+
+<h3>Hay que estar preparado</h3>
+
+<p>Si probaste Octopress primero y después pruebas Jekyll, luego de la correcta ejecución del <code>gem install jekyll</code>, encontrarás que tu carpeta escogida tiene <strong>nada</strong>. Hay que aprenderse, por lo tanto, la estructura de Jekyll que básicamente es así:</p>
+
+<pre><code>[raíz]/index.html
+      /archive.html
+      /img/
+      /js/
+      /css/
+      /_posts/
+      /_includes/
+      /_layouts/
+      /_site/
+      /Rakefile
+      /_config.yml
+</code></pre>
+
+<p>La descripción sobre estos elementos a continuación:</p>
+
+<ul>
+<li>Así como en Octopress existe <code>rake generate</code> para regenerar el sitio de <code>source</code> a <code>public</code>, acá existe <code>jekyll --server</code>, que hace lo mismo, a diferencia que el <em>output</em> de la operación queda en <code>_site</code>.</li>
+<li>Entre <code>img</code>,<code>js</code> y <code>css</code> repartí los archivos de <a href="twitter.github.com/bootstrap/">Bootstrap</a> que escogí para el <em>front-end</em>.</li>
+<li>En <code>_posts</code> están los archivos en <code>.markdown</code> antes de ser generados como posts.</li>
+<li>La carpeta <code>_layouts</code>, al igual que en Octopress, guarda los <em>layouts</em> de publicaciones que uno genera.</li>
+<li>En <code>_includes</code> dejé todos los archivos que reutilizo cada vez que genero una página, como:
+
+<ul>
+<li>head.html</li>
+<li>header.html</li>
+<li>footer.html</li>
+<li>Entre otros.</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Recursos</h2>
+
+<p>En <a href="https://pinboard.in/search/u:hectorpalmatellez?query=jekyll" title="Recursos sobre Jekyll">mi Pinboard</a> estoy guardando todo lo que encuentre sobre Jekyll. La mayoría de lo listado acá lo he ido implementando de a poco en el proyecto que estoy armando, que todavía no haré público, hasta que se vea decente.</p>
+
+<h3>Agradecimientos</h3>
+
+<p>Gracias a <a href="http://joselbornoz.cl">@elJOjo</a> por su tiempo explicándome por correo temas conceptuales que me han servido harto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
