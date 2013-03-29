@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://666.tiuque.cl
-title: Héctor aprendiendo Octopress
-subtitle: El tiuque es un pájaro bacán que vuela bonito
+url: http://hector.palmatellez.cl
+title: Héctor Palma Téllez
+subtitle: Pensamientos en .markdown
 author: Héctor Palma Téllez
 simple_search: http://google.com/search
-description: Prueba en Octopress de un blog.
+description: "Blog personal de Héctor Palma Téllez"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

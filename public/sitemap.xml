@@ -1,43 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://666.tiuque.cl/aprendiendo/octopress/</loc>
+        <loc>http://hector.palmatellez.cl/aprendiendo/octopress/</loc>
         <lastmod>2013-03-19T02:45:59-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
+        <loc>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
         <lastmod>2013-03-19T02:45:59-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/herramientas/pinboard/</loc>
+        <loc>http://hector.palmatellez.cl/herramientas/pinboard/</loc>
         <lastmod>2013-03-19T02:45:59-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/aprendiendo/asides/</loc>
+        <loc>http://hector.palmatellez.cl/aprendiendo/asides/</loc>
         <lastmod>2013-03-19T02:45:59-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/aprendiendo/custom-fields/</loc>
+        <loc>http://hector.palmatellez.cl/aprendiendo/custom-fields/</loc>
         <lastmod>2013-03-19T02:48:53-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/aprendiendo/jekyll/</loc>
+        <loc>http://hector.palmatellez.cl/aprendiendo/jekyll/</loc>
         <lastmod>2013-03-22T00:10:14-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/blog/archives/</loc>
+        <loc>http://hector.palmatellez.cl/blog/archives/</loc>
         <lastmod>2013-03-22T00:10:14-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/</loc>
+        <loc>http://hector.palmatellez.cl/</loc>
         <lastmod>2013-03-22T00:10:14-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/new-page/</loc>
+        <loc>http://hector.palmatellez.cl/new-page/</loc>
         <lastmod>2013-03-14T03:26:33-04:00</lastmod>
     </url>
     <url>
-        <loc>http://666.tiuque.cl/robots.txt</loc>
+        <loc>http://hector.palmatellez.cl/robots.txt</loc>
         <lastmod>2013-03-12T22:56:27-04:00</lastmod>
     </url>
 </urlset>

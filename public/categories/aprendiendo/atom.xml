@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: aprendiendo | Héctor aprendiendo Octopress]]></title>
-  <link href="http://666.tiuque.cl/categories/aprendiendo/atom.xml" rel="self"/>
-  <link href="http://666.tiuque.cl/"/>
-  <updated>2013-03-29T01:54:56-04:00</updated>
-  <id>http://666.tiuque.cl/</id>
+  <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/categories/aprendiendo/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2013-03-29T15:49:42-04:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
-    <link href="http://666.tiuque.cl/aprendiendo/jekyll/"/>
+    <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
     <updated>2013-03-21T20:55:00-04:00</updated>
-    <id>http://666.tiuque.cl/aprendiendo/jekyll</id>
+    <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
 
 <p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
@@ -73,9 +73,9 @@
   
   <entry>
     <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
-    <link href="http://666.tiuque.cl/aprendiendo/custom-fields/"/>
+    <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
     <updated>2013-03-19T02:00:00-04:00</updated>
-    <id>http://666.tiuque.cl/aprendiendo/custom-fields</id>
+    <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
     <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
 
 <blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
@@ -131,9 +131,9 @@ Esta es la razón por la que encontré más fácil llamar los pedazos de código
   
   <entry>
     <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
-    <link href="http://666.tiuque.cl/aprendiendo/asides/"/>
+    <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
     <updated>2013-03-16T16:31:00-04:00</updated>
-    <id>http://666.tiuque.cl/aprendiendo/asides</id>
+    <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
     <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
 
 <p>Viniendo de la <em>cultura del WordPress</em>, siento que es acertado decir que los asides son como los <em>widgets</em> del sidebar. Espero que nadie se enoje conmigo por escribir eso.</p>
@@ -161,9 +161,9 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   
   <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
-    <link href="http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
     <updated>2013-03-15T00:08:00-04:00</updated>
-    <id>http://666.tiuque.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
 <p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
@@ -212,9 +212,9 @@ LC_ALL=
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
-    <link href="http://666.tiuque.cl/aprendiendo/octopress/"/>
+    <link href="http://hector.palmatellez.cl/aprendiendo/octopress/"/>
     <updated>2013-03-14T01:15:00-04:00</updated>
-    <id>http://666.tiuque.cl/aprendiendo/octopress</id>
+    <id>http://hector.palmatellez.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
 <blockquote><p>Es bacán.</p>

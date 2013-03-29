@@ -4,11 +4,48 @@
 html {
 	background: url("/images/line-tile.png?1363143387") repeat scroll left top #CCCCCC;
 }
-	// Apuntando al header del sitio y no al header de cada artículo
 	body > header {
 		text-align: center;
 		background: url("/images/tiuque.png") left center no-repeat #2D75C8 !important;
+	// Apuntando al header del sitio y no al header de cada artículo
 	}
 	h1.entry-title {
 		font-size: 2.4em !important;
 	}
+	.right {
+		float: right;
+	}
+	aside.sidebar section.iconos {
+		width: 100%;
+	}
+		aside.sidebar section.iconos a {
+			white-space: normal;
+		}
+	section.iconos a {
+		text-decoration: none;
+	}
+		section.iconos .icon-bitbucket {
+			color: #205081;
+		}
+		section.iconos .icon-lastfm {
+			color: #C40D17;
+		}
+		section.iconos .icon-twitter {
+			color: #0C7EC6;
+		}
+		section.iconos .icon-facebook {
+			color: #6D84B4;
+		}
+		section.iconos .icon-foursquare {
+			color: #2091C7;
+		}
+		section.iconos .icon-linkedin {
+			color: #61AAD0;
+		}
+
+
+
+
+
+
+		
