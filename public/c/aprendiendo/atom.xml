@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2013-04-11T18:05:07-04:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
+    <updated>2013-04-03T09:07:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
+    <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
+
+<!--more-->
+
+
+<h2>Dentro del curso</h2>
+
+<p>La modalidad se reparte entre muchos videos y <em>quizzes</em>. Los videos tienen el plus de poder reproducirse hasta en el doble de su velocidad normal, además de poder activar subtítulos que en casi todos los videos hay para castellano, entre otros idiomas. El inglés, por lo menos, está en todos. Yo decidí ver los videos en <em>2x</em> con subtítulos en inglés, para no perder ideas o palabritas. Así los de 14 minutos se pasan rápido. Además, <strong>como ningún video sobrepasa los 15 minutos, hasta ahora, no se complica tanto</strong>.</p>
+
+<p>Aún no he llegado a los <em>quizzes</em>, por lo que no puedo opinar de eso. En los videos, cada ciertos minutos, hay una pregunta sobre el contenido pasado en el video, lo que te ayuda a ir <em>aterrizando</em> el contenido recién visto.</p>
+
+<h2>Ya, pero, en serio, ¿qué es «gamification»?</h2>
+
+<p>La <em>Gamification</em> es la <strong>aplicación de elementos de juegos en contextos que no son juegos</strong>, esto se utiliza para perseguir objetivos que pueden ir desde mejorar la producción de una empresa en ventas, por ejemplo, o para generar cambios en la sociedad, como la <a href="http://www.centroamericainnova.com/contenido/la-loteria-con-camaras-de-trafico-que-premia-a-quienes-cumplen-las-normas.aspx" title="Concurso que premiaba a los conductores que cumplen las normas de velocidad">lotería de Volkswagen en Suecia</a>.</p>
+
+<p>La idea de la teoría es aprender de casos de éxito y ejemplos posibles, en base a diferentes contextos, cómo se aplica el concepto, cómo enfocarlo en resolver problemas que pueden variar de acuerdo al contexto. La utilización del objetivo de crear que las tareas se conviertan en algo entretenido para catalizar procesos como crear conciencia sobre algún problema mediante la entrega de premios que pueden ser físicos o virtuales, además de la creación de las ganas de competir con conocidos, es decir, integrando <em>lo social</em> en una dinámica orientada a la resolución de problemas mediante la búsqueda de premios o certificados de algún tipo.</p>
+
+<h2>Certificado de completez del curso</h2>
+
+<p>Desde hace un tiempo, Coursera ofrece <a href="pilartarrino.wordpress.com/2013/01/11/coursera-introduce-signatura-track-una-forma-de-obtener-un-certificado-que-verifica-la-identidad-del-alumno/#content" title="Sistema de certificación de Coursera">Signature Tracking</a> que es la forma de certificar que has completado el curso satisfactoriamente. Este consiste en un certificado donde se enlaza tu fotografía y tu nombre, más la certificación competente al término exitoso del curso desde la universidad que lo ofrece. Este método de certificación es algo adicional al curso, por lo que <strong>cae en ser de pago</strong>. Para el curso de Gamification, el <em>signature tracking</em> <strong>cuesta 39 dólares</strong>, aunque este valor aparece como promocional, ya que debería costar 30 dólares sobre este precio.</p>
+
+<p>Todavía no decido si lo pagaría o no, aunque es una buena opción para complementar la formalidad de tu formación curricular y poder pedir un aumento en la vida, porque todos quieren jugar en todos lados.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
+    <updated>2013-03-21T20:55:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
+
+<p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
+
+<!--more-->
+
+
+<h3>Hay que estar preparado</h3>
+
+<p>Si probaste Octopress primero y después pruebas Jekyll, luego de la correcta ejecución del <code>gem install jekyll</code>, encontrarás que tu carpeta escogida tiene <strong>nada</strong>. Hay que aprenderse, por lo tanto, la estructura de Jekyll que básicamente es así:</p>
+
+<pre><code>[raíz]/index.html
+      /archive.html
+      /img/
+      /js/
+      /css/
+      /_posts/
+      /_includes/
+      /_layouts/
+      /_site/
+      /Rakefile
+      /_config.yml
+</code></pre>
+
+<p>La descripción sobre estos elementos a continuación:</p>
+
+<ul>
+<li>Así como en Octopress existe <code>rake generate</code> para regenerar el sitio de <code>source</code> a <code>public</code>, acá existe <code>jekyll --server</code>, que hace lo mismo, a diferencia que el <em>output</em> de la operación queda en <code>_site</code>.</li>
+<li>Entre <code>img</code>,<code>js</code> y <code>css</code> repartí los archivos de <a href="twitter.github.com/bootstrap/">Bootstrap</a> que escogí para el <em>front-end</em>.</li>
+<li>En <code>_posts</code> están los archivos en <code>.markdown</code> antes de ser generados como posts.</li>
+<li>La carpeta <code>_layouts</code>, al igual que en Octopress, guarda los <em>layouts</em> de publicaciones que uno genera.</li>
+<li>En <code>_includes</code> dejé todos los archivos que reutilizo cada vez que genero una página, como:
+
+<ul>
+<li>head.html</li>
+<li>header.html</li>
+<li>footer.html</li>
+<li>Entre otros.</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Recursos</h2>
+
+<p>En <a href="https://pinboard.in/search/u:hectorpalmatellez?query=jekyll" title="Recursos sobre Jekyll">mi Pinboard</a> estoy guardando todo lo que encuentre sobre Jekyll. La mayoría de lo listado acá lo he ido implementando de a poco en el proyecto que estoy armando, que todavía no haré público, hasta que se vea decente.</p>
+
+<h3>Agradecimientos</h3>
+
+<p>Gracias a <a href="http://joselbornoz.cl">@elJOjo</a> por su tiempo explicándome por correo temas conceptuales que me han servido harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
+    <updated>2013-03-19T02:00:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
+    <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
+
+<blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
+
+<p>Resulta que un poco de lógica y varios intentos de <em>googleo</em> me llevaron a intentar algo parecido a lo que sale <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter#custom-variables" title="YAML Front Matter en GitHub">acá</a>, en el apartado de «variables personalizadas» se explica con el siguiente ejemplo:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Ejemplo  (custom.rb)</span> <a href='/downloads/code/custom.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="sr">/title&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<!--more-->
+
+
+<p><img class="left" src="/images/campo-customizado.png" title="Ejemplo de campo personalizado" alt="Campo customizado en el header del archivo markdown"> Así que decidí probar un poquito y creé <code>customizado</code> en el encabezado del archivo .markdown
+El paso siguiente es hacer que desde la plantilla pueda ser visible, para esto hay que ir a <code>source/_layouts/post.html</code> (porque el layout que tengo para los posts es ese, obviamente). Eso se puede ver en la segunda imagen de este post.
+<img class="left" src="/images/layout-customizado.png" title="Ubicación de donde se mostrará el campo" alt="Ubicación en post.html donde va el campo personalizado"></p>
+
+<p>Entonces, los pasos se reducen a lo siguiente:</p>
+
+<ul>
+<li>Definir el nombre y valor del campo en el encabezado del artículo <code>.markdown</code>.</li>
+<li>Editar el <em>layout</em> correspondiente para mostrar el valor del campo personalizado.</li>
+<li>Queda opcional, obviamente, el estilo que se le quiera dar, por si le querís poner una clase.</li>
+</ul>
+
+
+<h2>Probando</h2>
+
+<ul>
+<li><p>Si el campo personalizado va a tener HTML, como para darle una clase o alguna etiqueta específica (cosa que también se puede predefinir desde el <em>layout</em>), el valor debe ir entre apóstrofos:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Ejemplo  (custom-html.html)</span> <a href='/downloads/code/custom-html.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>customizado: &#39;<span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;color: red&quot;</span><span class="nt">&gt;</span>las vacas son bonitas<span class="nt">&lt;/span&gt;</span>&#39;
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+(Deben ser apóstrofos porque con comillas dobles no me funcionó. Quizás algún día sepa por qué).</p></li>
+<li><p>El campo puede ser utilizado en el cuerpo del artículo como se hace en el ejemplo en Ruby usado más arriba. Tan simple como añadir lo siguiente entre el texto escrito:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>customizado2  (customizado2.rb)</span> <a href='/downloads/code/customizado2.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">{{</span><span class="n">page</span><span class="o">.</span><span class="n">customizado2</span><span class="p">}}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Esta es la razón por la que encontré más fácil llamar los pedazos de código desde archivos externos a escribirlos de la forma corriente en la que se escribe código dentro de un post.</p></li>
+</ul>
+
+
+<h3>ALGO TERRIBLE</h3>
+
+<p>Todavía no hago funcionar los tags. Los agrego en cada post, pero quedan feítos. De ahí veo si los logro corregir de alguna forma más <em>kawaii</em>~</p>
+
+<p>Eso nomás por ahora–</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
+    <updated>2013-03-16T16:31:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
+    <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
+
+<p>Viniendo de la <em>cultura del WordPress</em>, siento que es acertado decir que los asides son como los <em>widgets</em> del sidebar. Espero que nadie se enoje conmigo por escribir eso.</p>
+
+<p>Se guardan en <code>source/_includes/asides</code>, pero los que uno crea están en <code>source/_includes/custom/asides</code>.</p>
+
+<p>Un ejemplo práctico es el widget del timeline de Twitter que está en el sidebar de <a href="/">este blog</a>.</p>
+
+<!--more-->
+
+
+<h2>Paso a paso hacia un nuevo aside</h2>
+
+<p><img class="left" src="/images/octopress-files.png" title="Archivos de Octopress" alt="Algunos de los archivos de Octopress">
+Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, basta con ir a <code>source/_includes/custom/asides</code> y crear un nuevo HTML con el contenido que queremos que se visualice.
+<span class='pullquote-right' data-pullquote='Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar'>
+ Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar
+</span></p>
+
+<p>Luego, en <code>_config.yml</code> en la línea <code>48</code> debería estar <code>default_asides</code> donde uno puede enlazarlos por nombre del <code>.html</code> que creamos.</p>
+
+<p>Eso nomás es–</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <updated>2013-03-15T00:08:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <content type="html"><![CDATA[<h2>La complicación</h2>
+
+<p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
+
+<!--more-->
+
+
+<h3>Caracteres bonitos</h3>
+
+<p>Los hispanohablantes tenemos caracteres bonitos, como la todopoderosa <strong>eñe</strong>, <strong><em>las vocales con tilde</em></strong> y la <strong>u con cremillas</strong> (ü). Estos caracteres le hacen problema al universo en línea cuando se meten en nombres de archivos y… en todo. Por eso, al configurar el repositorio donde alojes Octopress debes adelantarte, querido hispanohablante. Esto se hace con lo siguiente:</p>
+
+<pre><code>export LANG=es_ES.utf8
+</code></pre>
+
+<p>Luego, para verificar que quedó bien, hay que darle a:</p>
+
+<pre><code>locale
+</code></pre>
+
+<p>Si el resultado se parece a lo siguiente, estamos bien:</p>
+
+<pre><code>LANG="es_ES.utf-8"
+LC_COLLATE="es_ES.utf-8"
+LC_CTYPE="es_ES.utf-8"
+LC_MESSAGES="es_ES.utf-8"
+LC_MONETARY="es_ES.utf-8"
+LC_NUMERIC="es_ES.utf-8"
+LC_TIME="es_ES.utf-8"
+LC_ALL=
+</code></pre>
+
+<p><img class="center" src="/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
+
+<h2>¿Y entonces? ¿Cómo se hace?</h2>
+
+<p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
+
+<pre><code><img class="[clases asignadas]" src="/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" >
+</code></pre>
+
+<p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
+
+<p>Eso nomás, por ahora.</p>
+]]></content>
+  </entry>
+  
+</feed>

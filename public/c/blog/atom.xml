@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/c/blog/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2013-04-11T18:05:07-04:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cambio de URL]]></title>
+    <link href="http://hector.palmatellez.cl/blog/cambio-de-url/"/>
+    <updated>2013-04-11T02:23:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/blog/cambio-de-url</id>
+    <content type="html"><![CDATA[<p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
+También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>
+
+<!--more-->
+
+
+<p><img src="/images/settings-heroku.png"></p>
+
+<h2>Detalles sobre el cambio de URL</h2>
+
+<p>Cosas a tomar en cuenta a la hora de cambiar de URL un Octopress alojado en Heroku:</p>
+
+<ul>
+<li>Cambio desde las <strong>opciones de la app en Heroku</strong>. En la sección <em>Domains</em> hay que agregar el subdominio que escojamos.</li>
+<li>Crear <a href="https://devcenter.heroku.com/articles/custom-domains" title="Documentación de Heroku explicando cambios en DNS para apuntar a Heroku">cambio en los DNS</a> de nuestro administrador del dominio. En mi caso, el hosting. Es fácil y rápido el cambio, pero no instantáneo. A mí me desesperó que fuera más de 6 horas. Obviamente, el sitio seguirá pudiendo ser visto desde <strong>[nombredelaapp].herokuapp.com</strong>.</li>
+<li><strong>Disqus</strong> — es importante porque los comentarios dejan de funcionar cuando estás en el nuevo dominio, por lo que hay que ir nuevamente.</li>
+</ul>
+
+
+<h2>¿Y ahora qué viene?</h2>
+
+<p>Ahora yo quiero tratar de escribir más. De cualquier cosa relacionada con lo que me tinque escribir.
+Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de visitas.</p>
+]]></content>
+  </entry>
+  
+</feed>
