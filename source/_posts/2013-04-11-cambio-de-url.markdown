@@ -4,7 +4,6 @@ title: "Cambio de URL"
 date: 2013-04-11 02:23
 comments: true
 categories: blog
-published: false
 
 ---
 Originalmente este blog estaba en cualquier subdominio de **tiuque.cl**. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
