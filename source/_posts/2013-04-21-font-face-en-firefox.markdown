@@ -18,6 +18,7 @@ El contenido de este `.htaccess` es el siguiente:
 {% include_code .htacccess a crear lang:apache font-face-firefox.html %}
 
 Luego de eso, Firefox debería dejar que se haga **@font-face** desde cualquier dominio.
+Si no quedó claro, puede revisar [en este otro artículo](http://www.red-team-design.com/firefox-doesnt-allow-cross-domain-fonts-by-default "Firefox doesn’t allow cross-domain fonts") (en inglés).
 
 ###Recursos
 {% img left /images/fontello.png 240 "Fontello" "Pantallazo de Fontello" %} Si necesitas fuentes con íconos, recomiendo [Fontello](http://www.fontello.com/) donde puedes crear un archivo con los caracteres que necesites. Después exportas lo necesario para hacer el proceso donde necesites.

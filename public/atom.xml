@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-21T17:56:09-03:00</updated>
+  <updated>2013-04-21T19:17:19-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -105,7 +105,8 @@ El contenido de este <code>.htaccess</code> es el siguiente:</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.</p>
+<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.
+Si no quedó claro, puede revisar <a href="http://www.red-team-design.com/firefox-doesnt-allow-cross-domain-fonts-by-default" title="Firefox doesn’t allow cross-domain fonts">en este otro artículo</a> (en inglés).</p>
 
 <h3>Recursos</h3>
 
