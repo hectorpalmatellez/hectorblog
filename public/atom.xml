@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-21T16:53:20-03:00</updated>
+  <updated>2013-04-21T17:56:09-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Usando Heroku accounts]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/heroku-accounts/"/>
+    <updated>2013-04-21T17:21:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/heroku-accounts</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/ddollar/heroku-accounts"><img class="left" src="http://hector.palmatellez.cl/images/heroku-accounts.png" width="320" title="Heroku Accounts en GitHub" alt="Pantallazo a Heroku Accounts en GitHub"></a> Este blog está <em>hosteado</em> en <a href="https://www.heroku.com/" title="Ofrece hosting gratuito para aplicaciones en varios lenguajes">Heroku</a>. Heroku es bacán, <strong>pero</strong>, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en estas cosas, está la de <strong>máximo de 5 aplicaciones por cuenta</strong>. Una vez hasta envié un correo a soporte preguntando cómo puedo hacer para poder tener más, pero ni me pescaron.
+Bueno, como sea, la opción existe y se llama <a href="https://github.com/ddollar/heroku-accounts" title="Heroku Accounts en GitHub">heroku accounts</a>.</p>
+
+<!--more-->
+
+
+<h2>Paso a paso</h2>
+
+<p>Entonces, el problema es el siguiente:</p>
+
+<p>Tienes una cuenta de Heroku, pero eres muy activo, así que ya ocupaste tu límite de aplicaciones. <strong>¿Qué hacer?</strong> Podría ser pagar para tener más aplicaciones, pero no encontré en el sitio dónde estaba eso más explícito, así que llegué a la herramienta que le da el título a este post.
+Lo que hace <code>heroku accounts</code> es dejarte usar más de una cuenta de Heroku, así tienes muchas posibilidades de 5 aplicaciones a la vez. Esta <em>partición</em> puede ser hecha por si tienes diferentes clientes o por si tienes varias aplicaciones que se quedan dentro de un mismo proyecto, por ejemplo.</p>
+
+<p>Luego de haberte creado las cuentas e instalado <code>heroku accounts</code>, debes tener ciertos archivos siempre en mente. Creo que el que más problemas me dio por haberlo olvidado fue <code>~/.ssh/config</code>, que es donde defines la información para cada cuenta:</p>
+
+<ul>
+<li>Cómo se llama la cuenta</li>
+<li>Dónde está la llave</li>
+<li>El Hostname</li>
+<li>El nombre de usuario</li>
+</ul>
+
+
+<p>Un ejemplo de cómo sería este archivo a continuación:</p>
+
+<figure class='code'><figcaption><span>Ejemplo de config para heroku accounts (config.rb)</span> <a href='http://hector.palmatellez.cl/downloads/code/config.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="no">Host</span> <span class="n">heroku</span><span class="o">.</span><span class="n">nombre</span>
+</span><span class='line'>  <span class="no">HostName</span> <span class="n">heroku</span><span class="o">.</span><span class="n">com</span>
+</span><span class='line'>  <span class="no">IdentityFile</span> <span class="o">~</span><span class="sr">/.ssh/</span><span class="n">dondevalallave</span>
+</span><span class='line'>  <span class="no">IdentitiesOnly</span> <span class="n">yes</span>
+</span><span class='line'>  <span class="no">User</span> <span class="n">nombredeusuario</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Me parece que es bastante claro qué va en qué lugar, ¿cierto?</p>
+
+<h2>Comandos útiles</h2>
+
+<ul>
+<li>Para saber qué cuentas tienes en tu archivo <code>config</code> (o sea, que ya has configurado). Debes escribir <code>heroku accounts</code>.</li>
+<li>Para cambiar de cuenta, simplemente debes utilizar <code>heroku accounts:set nombre-de-cuenta</code>.</li>
+<li>Más hay en <a href="https://github.com/ddollar/heroku-accounts">la documentación</a>.</li>
+</ul>
+
+
+<p>Con eso, ya hay para hacer los cambios pertinentes, tomando en cuenta que las autentificaciones funcionan. Si no funcionsen, es cosa de ir a <a href="https://devcenter.heroku.com/articles/keys" title="Sobre las llaves en Heroku">revisar la documentación de Heroku sobre las llaves</a>.</p>
+
+<p>¿Te sirve? ¿No? Puedes decirme algo en los comentarios, si toca.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[@font-face en Firefox]]></title>
