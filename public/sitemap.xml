@@ -2,50 +2,54 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/octopress/</loc>
-        <lastmod>2013-03-19T02:45:59-04:00</lastmod>
+        <lastmod>2013-03-19T03:45:59-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/</loc>
-        <lastmod>2013-03-19T02:45:59-04:00</lastmod>
+        <lastmod>2013-03-19T03:45:59-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/herramientas/pinboard/</loc>
-        <lastmod>2013-03-19T02:45:59-04:00</lastmod>
+        <lastmod>2013-03-19T03:45:59-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/asides/</loc>
-        <lastmod>2013-03-19T02:45:59-04:00</lastmod>
+        <lastmod>2013-03-19T03:45:59-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/custom-fields/</loc>
-        <lastmod>2013-03-19T02:48:53-04:00</lastmod>
+        <lastmod>2013-03-19T03:48:53-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/jekyll/</loc>
-        <lastmod>2013-03-22T00:10:14-04:00</lastmod>
+        <lastmod>2013-03-22T01:10:14-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/aprendiendo/gamification-coursera/</loc>
-        <lastmod>2013-04-03T10:41:20-04:00</lastmod>
+        <lastmod>2013-04-03T11:41:20-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/blog/cambio-de-url/</loc>
-        <lastmod>2013-04-11T16:41:27-04:00</lastmod>
+        <lastmod>2013-04-11T17:41:27-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/</loc>
+        <lastmod>2013-04-21T16:53:06-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/blog/archives/</loc>
-        <lastmod>2013-04-11T16:41:27-04:00</lastmod>
+        <lastmod>2013-04-21T16:53:06-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/</loc>
-        <lastmod>2013-04-11T16:41:27-04:00</lastmod>
+        <lastmod>2013-04-21T16:53:06-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/robots.txt</loc>
-        <lastmod>2013-03-12T22:56:27-04:00</lastmod>
+        <lastmod>2013-03-12T23:56:27-03:00</lastmod>
     </url>
     <url>
         <loc>http://hector.palmatellez.cl/tiuque/</loc>
-        <lastmod>2013-04-04T02:14:05-04:00</lastmod>
+        <lastmod>2013-04-04T03:14:05-03:00</lastmod>
     </url>
 </urlset>

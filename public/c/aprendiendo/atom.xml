@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-11T18:05:07-04:00</updated>
+  <updated>2013-04-21T16:53:20-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -14,9 +14,56 @@
 
   
   <entry>
+    <title type="html"><![CDATA[@font-face en Firefox]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/"/>
+    <updated>2013-04-21T15:11:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox</id>
+    <content type="html"><![CDATA[<p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
+Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
+
+<!--more-->
+
+
+<h2>La solución</h2>
+
+<p>Resulta que cuando usas un CDN, como hago en el sitio que menciono, cambia la URL desde donde llamas a los archivos que crean y <em>pintan</em> la página que se visita, por lo que cuenta como un dominio externo, cosa que Firefox no permite.
+Para solucionarlo, debes crear un <code>.htaccess</code> en la carpeta donde están todas las fuentes que estés llamando, en todas sus extensiones (te apuesto que la tuya se llama <code>fonts</code>, como la mía).
+El contenido de este <code>.htaccess</code> es el siguiente:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>.htacccess a crear  (font-face-firefox.html)</span> <a href='/downloads/code/font-face-firefox.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="nt">&lt;FilesMatch</span> <span class="s">&quot;\.(ttf|otf|eot|woff)$&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;IfModule</span> <span class="s">mod_headers.c</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nb">Header</span> set Access-Control-Allow-Origin <span class="s2">&quot;*&quot;</span>
+</span><span class='line'>  <span class="nt">&lt;/IfModule&gt;</span>
+</span><span class='line'><span class="nt">&lt;/FilesMatch&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.</p>
+
+<h3>Recursos</h3>
+
+<p><img class="left" src="/images/fontello.png" width="240" title="Fontello" alt="Pantallazo de Fontello"> Si necesitas fuentes con íconos, recomiendo <a href="http://www.fontello.com/">Fontello</a> donde puedes crear un archivo con los caracteres que necesites. Después exportas lo necesario para hacer el proceso donde necesites.
+Por ejemplo, <a href="/">en este mismo sitio</a> lo tengo para los íconos de redes donde tengo cuentas (visible a la derecha, en el <em>sidebar</em> y en el <em>footer</em>).</p>
+
+<h4>CDN</h4>
+
+<p>En CDN no tengo mucha experiencia, pero una vez leí que es bacán para sitios con harto tráfico. Otra vez, varios meses después, caché que había una oferta para comprar 1 TB de tráfico en MaxCDN por 1 dólar, así que usé algo de lo poquito que me quedaba en Paypal para eso. Meses después, me di cuenta que en realidad nunca lo necesité, porque no he gastado ni 1 GB. De todas maneras, lo tengo a mano para usarlo cuando me salga algo en donde necesite que se cargue todo más rápido (porque sí comprobé que acelera la descarga de un sitio).</p>
+
+<h2>Conclusión</h2>
+
+<p>Si queda alguna duda, están los comentarios y las otras vías por donde contactarme. Saludos cordiales y un abrazo a todos. <em>Carpe Diem</em>, <em>Memento mori</em>, <em>Wingardium leviosa</em> y esas cosas bonitas que dice la gente que lee harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
-    <updated>2013-04-03T09:07:00-04:00</updated>
+    <updated>2013-04-03T09:07:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
     <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
 
@@ -46,7 +93,7 @@
   <entry>
     <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
-    <updated>2013-03-21T20:55:00-04:00</updated>
+    <updated>2013-03-21T20:55:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
 
@@ -104,7 +151,7 @@
   <entry>
     <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
-    <updated>2013-03-19T02:00:00-04:00</updated>
+    <updated>2013-03-19T02:00:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
     <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
 
@@ -162,7 +209,7 @@ Esta es la razón por la que encontré más fácil llamar los pedazos de código
   <entry>
     <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
-    <updated>2013-03-16T16:31:00-04:00</updated>
+    <updated>2013-03-16T16:31:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
     <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
 
@@ -186,57 +233,6 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
 <p>Luego, en <code>_config.yml</code> en la línea <code>48</code> debería estar <code>default_asides</code> donde uno puede enlazarlos por nombre del <code>.html</code> que creamos.</p>
 
 <p>Eso nomás es–</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
-    <updated>2013-03-15T00:08:00-04:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
-    <content type="html"><![CDATA[<h2>La complicación</h2>
-
-<p>Resulta que al intentar agregarle imágenes al <a href="/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
-
-<!--more-->
-
-
-<h3>Caracteres bonitos</h3>
-
-<p>Los hispanohablantes tenemos caracteres bonitos, como la todopoderosa <strong>eñe</strong>, <strong><em>las vocales con tilde</em></strong> y la <strong>u con cremillas</strong> (ü). Estos caracteres le hacen problema al universo en línea cuando se meten en nombres de archivos y… en todo. Por eso, al configurar el repositorio donde alojes Octopress debes adelantarte, querido hispanohablante. Esto se hace con lo siguiente:</p>
-
-<pre><code>export LANG=es_ES.utf8
-</code></pre>
-
-<p>Luego, para verificar que quedó bien, hay que darle a:</p>
-
-<pre><code>locale
-</code></pre>
-
-<p>Si el resultado se parece a lo siguiente, estamos bien:</p>
-
-<pre><code>LANG="es_ES.utf-8"
-LC_COLLATE="es_ES.utf-8"
-LC_CTYPE="es_ES.utf-8"
-LC_MESSAGES="es_ES.utf-8"
-LC_MONETARY="es_ES.utf-8"
-LC_NUMERIC="es_ES.utf-8"
-LC_TIME="es_ES.utf-8"
-LC_ALL=
-</code></pre>
-
-<p><img class="center" src="/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
-
-<h2>¿Y entonces? ¿Cómo se hace?</h2>
-
-<p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
-
-<pre><code><img class="[clases asignadas]" src="/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" >
-</code></pre>
-
-<p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
-
-<p>Eso nomás, por ahora.</p>
 ]]></content>
   </entry>
   

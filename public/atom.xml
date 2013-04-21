@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-11T18:05:07-04:00</updated>
+  <updated>2013-04-21T16:53:20-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -14,9 +14,57 @@
 
   
   <entry>
+    <title type="html"><![CDATA[@font-face en Firefox]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/"/>
+    <updated>2013-04-21T15:11:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox</id>
+    <content type="html"><![CDATA[<p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
+Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
+
+<!--more-->
+
+
+<h2>La solución</h2>
+
+<p>Resulta que cuando usas un CDN, como hago en el sitio que menciono, cambia la URL desde donde llamas a los archivos que crean y <em>pintan</em> la página que se visita, por lo que cuenta como un dominio externo, cosa que Firefox no permite.
+Para solucionarlo, debes crear un <code>.htaccess</code> en la carpeta donde están todas las fuentes que estés llamando, en todas sus extensiones (te apuesto que la tuya se llama <code>fonts</code>, como la mía).
+El contenido de este <code>.htaccess</code> es el siguiente:</p>
+
+<figure class='code'><figcaption><span>.htacccess a crear  (font-face-firefox.html)</span> <a href='http://hector.palmatellez.cl/downloads/code/font-face-firefox.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="nt">&lt;FilesMatch</span> <span class="s">&quot;\.(ttf|otf|eot|woff)$&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;IfModule</span> <span class="s">mod_headers.c</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nb">Header</span> set Access-Control-Allow-Origin <span class="s2">&quot;*&quot;</span>
+</span><span class='line'>  <span class="nt">&lt;/IfModule&gt;</span>
+</span><span class='line'><span class="nt">&lt;/FilesMatch&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.</p>
+
+<h3>Recursos</h3>
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/fontello.png" width="240" title="Fontello" alt="Pantallazo de Fontello"> Si necesitas fuentes con íconos, recomiendo <a href="http://www.fontello.com/">Fontello</a> donde puedes crear un archivo con los caracteres que necesites. Después exportas lo necesario para hacer el proceso donde necesites.
+Por ejemplo, <a href="http://hector.palmatellez.cl/">en este mismo sitio</a> lo tengo para los íconos de redes donde tengo cuentas (visible a la derecha, en el <em>sidebar</em> y en el <em>footer</em>).</p>
+
+<h4>CDN</h4>
+
+<p>En CDN no tengo mucha experiencia, pero una vez leí que es bacán para sitios con harto tráfico. Otra vez, varios meses después, caché que había una oferta para comprar 1 TB de tráfico en MaxCDN por 1 dólar, así que usé algo de lo poquito que me quedaba en Paypal para eso. Meses después, me di cuenta que en realidad nunca lo necesité, porque no he gastado ni 1 GB. De todas maneras, lo tengo a mano para usarlo cuando me salga algo en donde necesite que se cargue todo más rápido (porque sí comprobé que acelera la descarga de un sitio).</p>
+
+<h2>Conclusión</h2>
+
+<p>Si queda alguna duda, están los comentarios y las otras vías por donde contactarme. Saludos cordiales y un abrazo a todos. <em>Carpe Diem</em>, <em>Memento mori</em>, <em>Wingardium leviosa</em> y esas cosas bonitas que dice la gente que lee harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Cambio de URL]]></title>
     <link href="http://hector.palmatellez.cl/blog/cambio-de-url/"/>
-    <updated>2013-04-11T02:23:00-04:00</updated>
+    <updated>2013-04-11T02:23:00-03:00</updated>
     <id>http://hector.palmatellez.cl/blog/cambio-de-url</id>
     <content type="html"><![CDATA[<p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
 También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>
@@ -47,7 +95,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
-    <updated>2013-04-03T09:07:00-04:00</updated>
+    <updated>2013-04-03T09:07:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
     <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="http://hector.palmatellez.cl/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
 
@@ -77,7 +125,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
-    <updated>2013-03-21T20:55:00-04:00</updated>
+    <updated>2013-03-21T20:55:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="http://hector.palmatellez.cl/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
 
@@ -135,7 +183,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
-    <updated>2013-03-19T02:00:00-04:00</updated>
+    <updated>2013-03-19T02:00:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
     <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
 
@@ -204,7 +252,7 @@ El paso siguiente es hacer que desde la plantilla pueda ser visible, para esto h
   <entry>
     <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
-    <updated>2013-03-16T16:31:00-04:00</updated>
+    <updated>2013-03-16T16:31:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
     <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
 
@@ -234,7 +282,7 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   <entry>
     <title type="html"><![CDATA[Usando Pinboard para la vida]]></title>
     <link href="http://hector.palmatellez.cl/herramientas/pinboard/"/>
-    <updated>2013-03-15T21:35:00-04:00</updated>
+    <updated>2013-03-15T21:35:00-03:00</updated>
     <id>http://hector.palmatellez.cl/herramientas/pinboard</id>
     <content type="html"><![CDATA[<p>Para ser serio, voy a partir con una cita:</p>
 
@@ -304,7 +352,7 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
-    <updated>2013-03-15T00:08:00-04:00</updated>
+    <updated>2013-03-15T00:08:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
@@ -355,7 +403,7 @@ LC_ALL=
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/octopress/"/>
-    <updated>2013-03-14T01:15:00-04:00</updated>
+    <updated>2013-03-14T01:15:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
