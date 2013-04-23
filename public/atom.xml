@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-21T19:17:19-03:00</updated>
+  <updated>2013-04-23T02:41:13-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
+    <updated>2013-04-23T00:37:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/administrador.png" title="&#34;Así se ve el administrador&#34;" alt="&#34;Así se ve el administrador&#34;">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
+
+<p>Viendo el <strong>crecimiento explosivo</strong> de la página <a href="https://www.facebook.com/somoslaspupas">Las Pupas</a>, se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.</p>
+
+<!--more-->
+
+
+<h2>El experimento</h2>
+
+<p>La página que escogí es <a href="http://fb.me/Cursodemapudungun" title="Página para difusión de un curso presencial de mapudungun en Santiago">Curso de mapudungun</a>, administrada por <a href="http://cursodemapudungun.cl/martin-raguileo/" title="Perfil del profesor">Martin Raguileo</a>, profesor de mapudungun desde hace algunos años en Santiago. Le he estado ayudando desde hace harto tiempo en la difusión mediante Internet de su curso, con el sitio, una cuenta de Twitter y el Facebook, siendo este último el que más resultados ha dado.</p>
+
+<h3>El aviso en cuestión</h3>
+
+<p>Escogí dos modadlidades:</p>
+
+<ul>
+<li><strong>Aviso de Facebook</strong>, de esos que yo considero <em>spam</em>. Y que, hasta ahora, no ha funcionado tanto.</li>
+<li>La magia de <strong>Boost</strong> o «difundir publicación», creo que se llama en castellano. Este es el que más me gustó y explicaré a continuación el porqué.</li>
+</ul>
+
+
+<h4>Difundiendo una publicación de la página</h4>
+
+<p><a href="https://www.facebook.com/Cursodemapudungun/posts/467500443319717" title="Enlace a la publicación"><img class="left" src="http://hector.palmatellez.cl/images/curso-de-mapudungun-boost.png" width="300" title="Publicación con difusión pagada" alt="Post con 5 dólares para difusión"></a> La publicación de la imagen a la izquierda es la que elegí, ya que es algo que merecía difusión y es algo que sucederá pronto.
+Los objetivos y sus resultados después de un día:</p>
+
+<ul>
+<li><strong>Aumentar la base de fans de la página</strong>: Se aumentó de 777 a 853, es decir, <strong>76 fans en menos de 1 día</strong>, con sólo una publicación, más 1 aviso.</li>
+<li><strong>Conseguir más contactos mediante Facebook o el sitio</strong>: Normalmente no se reciben muchos mensajes privados por la página, me aventuraría a decir que no superan los 3 semanales, pero esta vez conseguimos 3 en un día, más 12 contactos utilizando el formulario desde el sitio web. Para ser primer intento, lo consideramos un éxito en <em>leads</em>.</li>
+<li><img class="right" src="http://hector.palmatellez.cl/images/paid-reach-aviso.png" width="310"> <strong>Aumentar la difusión del contenido</strong>: Para este punto es mejor mirar la imagen a la derecha. Con sólo 5 dólares (el mínimo posible a invertir en este ítem), la publicación casi llegó a las 10.000 vistas (incluyendo lo pagado y lo orgánico). Yo creo que es súper bacán.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<ul>
+<li>En la historia de la página, nunca una publicación había sido tan vista, tan compartida, sumado tantos <em>likes</em> ni tantos comentarios. En total, 9.368 personas vieron el <em>post</em>. <a href="https://www.facebook.com/105913216145110/posts/453035444766217">El post con más visitas antes de este</a>, suma en total 726. Nada po&#8217;.</li>
+<li><strong>Si se inscribiera 1 alumno, la inversión se recupera en más de 200%</strong>.</li>
+<li>Intentaré hacer más posts con la evolución del aviso que queda todavía dando vueltas. Quizás todavía tenga esperanza y potencial.</li>
+</ul>
+
+
+<h2>Aparte</h2>
+
+<p>Escogí esta causa porque siempre me ha interesado que se difunda, ya que va más allá de ser un negocio. Es cultura que debería ser más compartida y conocida. Si bien yo hice el curso básico hace varios años, todavía recuerdo las historias explicadas en clases y algo de vocabulario. Me gustaría que más personas estuvieran interesadas en experimentar eso, por último para que sirva en alguna conversación entre jóvenes que tratan de decidir quién es más interesante y culto.
+<em>Peukayal</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Usando Heroku accounts]]></title>
