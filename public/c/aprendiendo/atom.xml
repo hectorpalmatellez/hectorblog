@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-23T02:45:40-03:00</updated>
+  <updated>2013-04-24T03:29:37-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -14,11 +14,56 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Facebook ads para likes]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
+    <updated>2013-04-24T02:51:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/aviso-preview-curso-mapudungun.png"> <a href="/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
+
+<!--more-->
+
+
+<h2>Sobre el post difundido</h2>
+
+<p>Al final, cuando se agotó la plata, el post difundido fue visto por <strong>9.608 usuarios</strong>, de estos:</p>
+
+<ul>
+<li>7900 son pagados.</li>
+<li>1584 son virales.</li>
+<li>200 son orgánicos.</li>
+</ul>
+
+
+<p>El post ha sido <strong>compartido 39 veces</strong>, cuenta con <strong>87 <em>likes</em></strong> y casi 20 comentarios.</p>
+
+<h2>El aviso, no el post</h2>
+
+<p><img class="right" src="/images/preview-sponsored-story.png"> El aviso fue creado enfocándose en generar más likes en base al tema de la página. Este se divide en dos modalidades:</p>
+
+<ul>
+<li><strong>Aviso corriente</strong>, esos del sidebar en Facebook.</li>
+<li><strong>Historia patrocinada</strong>, como la imagen de la derecha.</li>
+</ul>
+
+
+<p>La última es la que ha generado más <em>likes</em> (62), mientras que el aviso normal sólo ha atraído 3 personas a la página. Todo esto con un presupuesto máximo de 3 dólares los dos primeros días y 2 dólares de ahora en adelante.</p>
+
+<h2>Todo suma</h2>
+
+<p>En este momento, ya se superaron los 100 nuevos fans desde el inicio del experimento con Facebook (ahora hay 890 fans, cuando se empezó eran 777).</p>
+
+<p><img src="/images/fans-por-dia-aviso-fb.png" title="Gráfico de fans por el aviso" alt="Avance en fans nuevos por aviso"></p>
+
+<p>Hasta ahora, creo que la inversión (o gasto) no ha sido lo suficiente como para considerar el experimento como fallido.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
     <updated>2013-04-23T00:37:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/administrador.png" title="&#34;Así se ve el administrador&#34;" alt="&#34;Así se ve el administrador&#34;">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
 
 <p>Viendo el <strong>crecimiento explosivo</strong> de la página <a href="https://www.facebook.com/somoslaspupas">Las Pupas</a>, se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.</p>
 
@@ -202,64 +247,6 @@ Por ejemplo, <a href="/">en este mismo sitio</a> lo tengo para los íconos de re
 <p>Desde hace un tiempo, Coursera ofrece <a href="pilartarrino.wordpress.com/2013/01/11/coursera-introduce-signatura-track-una-forma-de-obtener-un-certificado-que-verifica-la-identidad-del-alumno/#content" title="Sistema de certificación de Coursera">Signature Tracking</a> que es la forma de certificar que has completado el curso satisfactoriamente. Este consiste en un certificado donde se enlaza tu fotografía y tu nombre, más la certificación competente al término exitoso del curso desde la universidad que lo ofrece. Este método de certificación es algo adicional al curso, por lo que <strong>cae en ser de pago</strong>. Para el curso de Gamification, el <em>signature tracking</em> <strong>cuesta 39 dólares</strong>, aunque este valor aparece como promocional, ya que debería costar 30 dólares sobre este precio.</p>
 
 <p>Todavía no decido si lo pagaría o no, aunque es una buena opción para complementar la formalidad de tu formación curricular y poder pedir un aumento en la vida, porque todos quieren jugar en todos lados.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
-    <updated>2013-03-21T20:55:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
-
-<p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
-
-<!--more-->
-
-
-<h3>Hay que estar preparado</h3>
-
-<p>Si probaste Octopress primero y después pruebas Jekyll, luego de la correcta ejecución del <code>gem install jekyll</code>, encontrarás que tu carpeta escogida tiene <strong>nada</strong>. Hay que aprenderse, por lo tanto, la estructura de Jekyll que básicamente es así:</p>
-
-<pre><code>[raíz]/index.html
-      /archive.html
-      /img/
-      /js/
-      /css/
-      /_posts/
-      /_includes/
-      /_layouts/
-      /_site/
-      /Rakefile
-      /_config.yml
-</code></pre>
-
-<p>La descripción sobre estos elementos a continuación:</p>
-
-<ul>
-<li>Así como en Octopress existe <code>rake generate</code> para regenerar el sitio de <code>source</code> a <code>public</code>, acá existe <code>jekyll --server</code>, que hace lo mismo, a diferencia que el <em>output</em> de la operación queda en <code>_site</code>.</li>
-<li>Entre <code>img</code>,<code>js</code> y <code>css</code> repartí los archivos de <a href="twitter.github.com/bootstrap/">Bootstrap</a> que escogí para el <em>front-end</em>.</li>
-<li>En <code>_posts</code> están los archivos en <code>.markdown</code> antes de ser generados como posts.</li>
-<li>La carpeta <code>_layouts</code>, al igual que en Octopress, guarda los <em>layouts</em> de publicaciones que uno genera.</li>
-<li>En <code>_includes</code> dejé todos los archivos que reutilizo cada vez que genero una página, como:
-
-<ul>
-<li>head.html</li>
-<li>header.html</li>
-<li>footer.html</li>
-<li>Entre otros.</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>Recursos</h2>
-
-<p>En <a href="https://pinboard.in/search/u:hectorpalmatellez?query=jekyll" title="Recursos sobre Jekyll">mi Pinboard</a> estoy guardando todo lo que encuentre sobre Jekyll. La mayoría de lo listado acá lo he ido implementando de a poco en el proyecto que estoy armando, que todavía no haré público, hasta que se vea decente.</p>
-
-<h3>Agradecimientos</h3>
-
-<p>Gracias a <a href="http://joselbornoz.cl">@elJOjo</a> por su tiempo explicándome por correo temas conceptuales que me han servido harto.</p>
 ]]></content>
   </entry>
   

@@ -7,7 +7,7 @@ categories: aprendiendo
 tags: [facebook, ads, avisos, pagados, smm]
 
 ---
-{% img left /images/administrador.png "Así se ve el administrador" %}Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.
+{% img left /images/administrador.png "Así se ve el administrador" "Administrador de avisos en Facebook" %}Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.
 
 Viendo el **crecimiento explosivo** de la página [Las Pupas](https://www.facebook.com/somoslaspupas), se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.
 <!--more-->
