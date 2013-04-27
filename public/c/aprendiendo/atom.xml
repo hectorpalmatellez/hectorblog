@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-24T03:29:37-03:00</updated>
+  <updated>2013-04-27T00:52:56-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
+    <updated>2013-04-27T00:40:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
+Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
+
+<!--more-->
+
+
+<h2>Las torturas</h2>
+
+<p>Creo que <strong>lo peor de la Internet sin AdBlock Plus es YouTube</strong>. Esos avisos por todos lados, más el video fome que te ponen antes de poder ver tu video es como recrear la experiencia de ver tele con comerciales. ¡Estamos en el 2013! Si quiero ver una serie, la veo de corrido, los capítulos que yo quiera y le pongo pausa cuando quiero. O así me acostumbré a que sea, quizás no tiene que ser así para todos.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
+    <updated>2013-04-27T00:00:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
+    <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
+El resultado es el siguiente:</p>
+
+<p><img class="center" src="/images/resultados-facebook-publicidad.png" title="Resultados del experimento con publicidad en Facebook" alt="Resultados minicampaña de publicidad pagada"></p>
+
+<p>Aunque mejor ahondar más, ¿cierto?</p>
+
+<!--more-->
+
+
+<h2>Resultados que importan</h2>
+
+<p>Como principiante en esta materia, los resultados que más me importan son:</p>
+
+<ul>
+<li>Cantidad de likes conseguidos.</li>
+<li>Aumento en el alcance de las publicaciones de la página.</li>
+<li>Crear mayor interacción con los seguidores (mensajes y consultas sobre el servicio).</li>
+</ul>
+
+
+<p>Desglosado y con números queda:</p>
+
+<ul>
+<li><p>Fans conseguidos por aviso en el sidebar: <strong>147</strong>. En promedio con 3 dólares conseguí 30 fans. Los avisos se dividen en:</p>
+
+<ul>
+<li>Aviso invitando a informarse por el curso: <strong>49 likes</strong>.</li>
+<li><em>Sponsored stories</em>, comunicando que un amigo sigue la página, por ejemplo: <strong>98 likes</strong>.</li>
+<li>Importante consignar que este ítem de avisaje tuvo un costo total de <strong>10 dólares</strong> y se ejecutó por <strong>5 días</strong> (durante la semana). Además, tuvo un alcance de <strong>24.774 usuarios</strong> dentro del <em>target</em> seleccionado.</li>
+</ul>
+</li>
+<li><p>Fans conseguidos difundiendo una publicación de la página: <strong>38</strong>. Aunque es importante destacar que el objetivo principal de la difusión de esta publicación era aumentar la cantidad de personas que la iban a leer, cosa que se hizo, llegando a <strong>9.804 usuarios</strong>, entre lo pagado, lo viral y lo orgánico.</p></li>
+<li>El post fue compartido <strong>40 veces</strong>.</li>
+<li>El post tiene <strong>87 likes</strong>.</li>
+<li><strong>11 comentarios</strong> de personas diferentes buscando más información.</li>
+<li>La inversión para este ítem corresponde a <strong>5 dólares</strong> en alrededor de 24 horas.</li>
+</ul>
+
+
+<h2>Situación actual</h2>
+
+<p><img class="center" src="/images/aumento-alcance-curso-de-mapudungun-facebook.png" title="Aumento total de la actividad" alt="Resultados del experimento"></p>
+
+<p>Es importante poner énfasis en que el primer punto alto de la cadena del alcance corresponde al inicio de esta mini-campaña, es decir, el aviso y el post difundido con inversión. Luego de esto, sigue aumentando la visibilidad de la página.
+Antes del experimento, el alcance de la página llegaba a <strong>315 personas</strong>, el primer día de la campaña llegó a <strong>17.826</strong>, luego <strong>22.914</strong> y la última actualización muestra que ahora está en <strong>26.649</strong>.
+Destaquemos algo:</p>
+
+<pre><code>Según el reporte, el alcance de la página aumentó en un 3.790%
+</code></pre>
+
+<p>Me gustaría que a alguien le sirviera que yo comparta toda esta información. Si quedase alguna duda, <strong>los comentarios están para invocarme</strong>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Facebook ads para likes]]></title>
@@ -169,84 +246,6 @@ Lo que hace <code>heroku accounts</code> es dejarte usar más de una cuenta de H
 <p>Con eso, ya hay para hacer los cambios pertinentes, tomando en cuenta que las autentificaciones funcionan. Si no funcionsen, es cosa de ir a <a href="https://devcenter.heroku.com/articles/keys" title="Sobre las llaves en Heroku">revisar la documentación de Heroku sobre las llaves</a>.</p>
 
 <p>¿Te sirve? ¿No? Puedes decirme algo en los comentarios, si toca.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[@font-face en Firefox]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/"/>
-    <updated>2013-04-21T15:11:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox</id>
-    <content type="html"><![CDATA[<p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
-Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
-
-<!--more-->
-
-
-<h2>La solución</h2>
-
-<p>Resulta que cuando usas un CDN, como hago en el sitio que menciono, cambia la URL desde donde llamas a los archivos que crean y <em>pintan</em> la página que se visita, por lo que cuenta como un dominio externo, cosa que Firefox no permite.
-Para solucionarlo, debes crear un <code>.htaccess</code> en la carpeta donde están todas las fuentes que estés llamando, en todas sus extensiones (te apuesto que la tuya se llama <code>fonts</code>, como la mía).
-El contenido de este <code>.htaccess</code> es el siguiente:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>.htacccess a crear  (font-face-firefox.html)</span> <a href='/downloads/code/font-face-firefox.html'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="nt">&lt;FilesMatch</span> <span class="s">&quot;\.(ttf|otf|eot|woff)$&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;IfModule</span> <span class="s">mod_headers.c</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nb">Header</span> set Access-Control-Allow-Origin <span class="s2">&quot;*&quot;</span>
-</span><span class='line'>  <span class="nt">&lt;/IfModule&gt;</span>
-</span><span class='line'><span class="nt">&lt;/FilesMatch&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.
-Si no quedó claro, puede revisar <a href="http://www.red-team-design.com/firefox-doesnt-allow-cross-domain-fonts-by-default" title="Firefox doesn’t allow cross-domain fonts">en este otro artículo</a> (en inglés).</p>
-
-<h3>Recursos</h3>
-
-<p><img class="left" src="/images/fontello.png" width="240" title="Fontello" alt="Pantallazo de Fontello"> Si necesitas fuentes con íconos, recomiendo <a href="http://www.fontello.com/">Fontello</a> donde puedes crear un archivo con los caracteres que necesites. Después exportas lo necesario para hacer el proceso donde necesites.
-Por ejemplo, <a href="/">en este mismo sitio</a> lo tengo para los íconos de redes donde tengo cuentas (visible a la derecha, en el <em>sidebar</em> y en el <em>footer</em>).</p>
-
-<h4>CDN</h4>
-
-<p>En CDN no tengo mucha experiencia, pero una vez leí que es bacán para sitios con harto tráfico. Otra vez, varios meses después, caché que había una oferta para comprar 1 TB de tráfico en MaxCDN por 1 dólar, así que usé algo de lo poquito que me quedaba en Paypal para eso. Meses después, me di cuenta que en realidad nunca lo necesité, porque no he gastado ni 1 GB. De todas maneras, lo tengo a mano para usarlo cuando me salga algo en donde necesite que se cargue todo más rápido (porque sí comprobé que acelera la descarga de un sitio).</p>
-
-<h2>Conclusión</h2>
-
-<p>Si queda alguna duda, están los comentarios y las otras vías por donde contactarme. Saludos cordiales y un abrazo a todos. <em>Carpe Diem</em>, <em>Memento mori</em>, <em>Wingardium leviosa</em> y esas cosas bonitas que dice la gente que lee harto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
-    <updated>2013-04-03T09:07:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
-    <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
-
-<!--more-->
-
-
-<h2>Dentro del curso</h2>
-
-<p>La modalidad se reparte entre muchos videos y <em>quizzes</em>. Los videos tienen el plus de poder reproducirse hasta en el doble de su velocidad normal, además de poder activar subtítulos que en casi todos los videos hay para castellano, entre otros idiomas. El inglés, por lo menos, está en todos. Yo decidí ver los videos en <em>2x</em> con subtítulos en inglés, para no perder ideas o palabritas. Así los de 14 minutos se pasan rápido. Además, <strong>como ningún video sobrepasa los 15 minutos, hasta ahora, no se complica tanto</strong>.</p>
-
-<p>Aún no he llegado a los <em>quizzes</em>, por lo que no puedo opinar de eso. En los videos, cada ciertos minutos, hay una pregunta sobre el contenido pasado en el video, lo que te ayuda a ir <em>aterrizando</em> el contenido recién visto.</p>
-
-<h2>Ya, pero, en serio, ¿qué es «gamification»?</h2>
-
-<p>La <em>Gamification</em> es la <strong>aplicación de elementos de juegos en contextos que no son juegos</strong>, esto se utiliza para perseguir objetivos que pueden ir desde mejorar la producción de una empresa en ventas, por ejemplo, o para generar cambios en la sociedad, como la <a href="http://www.centroamericainnova.com/contenido/la-loteria-con-camaras-de-trafico-que-premia-a-quienes-cumplen-las-normas.aspx" title="Concurso que premiaba a los conductores que cumplen las normas de velocidad">lotería de Volkswagen en Suecia</a>.</p>
-
-<p>La idea de la teoría es aprender de casos de éxito y ejemplos posibles, en base a diferentes contextos, cómo se aplica el concepto, cómo enfocarlo en resolver problemas que pueden variar de acuerdo al contexto. La utilización del objetivo de crear que las tareas se conviertan en algo entretenido para catalizar procesos como crear conciencia sobre algún problema mediante la entrega de premios que pueden ser físicos o virtuales, además de la creación de las ganas de competir con conocidos, es decir, integrando <em>lo social</em> en una dinámica orientada a la resolución de problemas mediante la búsqueda de premios o certificados de algún tipo.</p>
-
-<h2>Certificado de completez del curso</h2>
-
-<p>Desde hace un tiempo, Coursera ofrece <a href="pilartarrino.wordpress.com/2013/01/11/coursera-introduce-signatura-track-una-forma-de-obtener-un-certificado-que-verifica-la-identidad-del-alumno/#content" title="Sistema de certificación de Coursera">Signature Tracking</a> que es la forma de certificar que has completado el curso satisfactoriamente. Este consiste en un certificado donde se enlaza tu fotografía y tu nombre, más la certificación competente al término exitoso del curso desde la universidad que lo ofrece. Este método de certificación es algo adicional al curso, por lo que <strong>cae en ser de pago</strong>. Para el curso de Gamification, el <em>signature tracking</em> <strong>cuesta 39 dólares</strong>, aunque este valor aparece como promocional, ya que debería costar 30 dólares sobre este precio.</p>
-
-<p>Todavía no decido si lo pagaría o no, aunque es una buena opción para complementar la formalidad de tu formación curricular y poder pedir un aumento en la vida, porque todos quieren jugar en todos lados.</p>
 ]]></content>
   </entry>
   
