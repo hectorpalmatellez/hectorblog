@@ -5,6 +5,7 @@ date: 2013-04-28 17:48
 comments: true
 categories: aprendiendo
 tags: [git, github, terminal, iterm]
+published: false
 
 ---
 
