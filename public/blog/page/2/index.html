@@ -9,7 +9,7 @@
   <meta name="author" content="Héctor Palma Téllez">
 
   
-  <meta name="description" content="Estaba revisando un sitio que armé en base a Foundation y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, &hellip;">
+  <meta name="description" content="Este blog está hosteado en Heroku. Heroku es bacán, pero, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,50 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/aprendiendo/heroku-accounts/">Usando Heroku Accounts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-21T17:21:00-04:00" pubdate data-updated="true">Sunday 21 de April 2013</time>
+        
+         | <a href="/aprendiendo/heroku-accounts/#disqus_thread">Comentarios</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/ddollar/heroku-accounts"><img class="left" src="/images/heroku-accounts.png" width="320" title="Heroku Accounts en GitHub" alt="Pantallazo a Heroku Accounts en GitHub"></a> Este blog está <em>hosteado</em> en <a href="https://www.heroku.com/" title="Ofrece hosting gratuito para aplicaciones en varios lenguajes">Heroku</a>. Heroku es bacán, <strong>pero</strong>, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en estas cosas, está la de <strong>máximo de 5 aplicaciones por cuenta</strong>. Una vez hasta envié un correo a soporte preguntando cómo puedo hacer para poder tener más, pero ni me pescaron.
+Bueno, como sea, la opción existe y se llama <a href="https://github.com/ddollar/heroku-accounts" title="Heroku Accounts en GitHub">heroku accounts</a>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/aprendiendo/heroku-accounts/">Seguir leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/aprendiendo/font-face-en-firefox/">@font-face en Firefox</a></h1>
     
     
@@ -100,7 +144,7 @@
   
 
 
-<time datetime="2013-04-21T15:11:00-03:00" pubdate data-updated="true">Sunday 21 de April 2013</time>
+<time datetime="2013-04-21T15:11:00-04:00" pubdate data-updated="true">Sunday 21 de April 2013</time>
         
          | <a href="/aprendiendo/font-face-en-firefox/#disqus_thread">Comentarios</a>
         
@@ -144,7 +188,7 @@ Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questio
   
 
 
-<time datetime="2013-04-11T02:23:00-03:00" pubdate data-updated="true">Thursday 11 de April 2013</time>
+<time datetime="2013-04-11T02:23:00-04:00" pubdate data-updated="true">Thursday 11 de April 2013</time>
         
          | <a href="/blog/cambio-de-url/#disqus_thread">Comentarios</a>
         
@@ -188,7 +232,7 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
   
 
 
-<time datetime="2013-04-03T09:07:00-03:00" pubdate data-updated="true">Wednesday 03 de April 2013</time>
+<time datetime="2013-04-03T09:07:00-04:00" pubdate data-updated="true">Wednesday 03 de April 2013</time>
         
          | <a href="/aprendiendo/gamification-coursera/#disqus_thread">Comentarios</a>
         
@@ -231,7 +275,7 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
   
 
 
-<time datetime="2013-03-21T20:55:00-03:00" pubdate data-updated="true">Thursday 21 de March 2013</time>
+<time datetime="2013-03-21T20:55:00-04:00" pubdate data-updated="true">Thursday 21 de March 2013</time>
         
          | <a href="/aprendiendo/jekyll/#disqus_thread">Comentarios</a>
         
@@ -249,59 +293,6 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
   
     <footer>
       <a rel="full-article" href="/aprendiendo/jekyll/">Seguir leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/custom-fields/">Custom Fields O Campos Personalizados en Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-19T02:00:00-03:00" pubdate data-updated="true">Tuesday 19 de March 2013</time>
-        
-         | <a href="/aprendiendo/custom-fields/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>La pregunta que se me ocurrió era como:</p>
-
-<blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
-
-<p>Resulta que un poco de lógica y varios intentos de <em>googleo</em> me llevaron a intentar algo parecido a lo que sale <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter#custom-variables" title="YAML Front Matter en GitHub">acá</a>, en el apartado de «variables personalizadas» se explica con el siguiente ejemplo:</p>
-
-<figure class='code'><figcaption><span>Ejemplo  (custom.rb)</span> <a href='/downloads/code/custom.rb'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="sr">/title&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/custom-fields/">Seguir leyendo &rarr;</a>
     </footer>
   
 
@@ -361,6 +352,10 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/aprendiendo/push-diferentes-remotes-git/">Push diferentes remotes Git</a>
+      </li>
+    
+      <li class="post">
         <a href="/aprendiendo/3-dias-sin-adblock-plus/">3 días sin AdBlock Plus</a>
       </li>
     
@@ -394,10 +389,6 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
     
       <li class="post">
         <a href="/aprendiendo/jekyll/">Jekyll es el núcleo</a>
-      </li>
-    
-      <li class="post">
-        <a href="/aprendiendo/custom-fields/">Custom fields o campos personalizados en Octopress</a>
       </li>
     
   </ul>

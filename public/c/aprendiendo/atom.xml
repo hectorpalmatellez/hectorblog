@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-04-27T01:05:51-03:00</updated>
+  <updated>2013-04-30T01:27:55-04:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -14,9 +14,49 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Push diferentes remotes Git]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
+    <updated>2013-04-28T17:48:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
+    <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
+Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
+
+<p>No es tan difícil.</p>
+
+<!--more-->
+
+
+<h2>Preparación psicológica</h2>
+
+<p>Como ya se ha iniciado Git en tu proyecto (<strong>¿CIERTO?</strong>), es cosa de ir al Terminal, o <a href="http://iterm.sourceforge.net/">iTerm</a>, dependiendo de qué tan bacán erís. Allí veremos si existe <code>.git/config</code>. Si no existiera, hay que crearlo.</p>
+
+<p>En mi caso, el <code>.git/config</code> existía porque <a href="/aprendiendo/heroku-accounts" title="Explicación sobre cómo ocupar Heroku Accounts">uso Heroku Accounts</a>, así que fue cosa de añadirle sólo lo siguiente:</p>
+
+<pre><code>[remote "todo"]
+url = https://github.com/USUARIO/REPOSITORIO.git
+url = git@heroku.USUARIO:REPOSITORIO.git
+</code></pre>
+
+<p>El segundo tiene la sintaxis que ocupa Heroku Accounts, por eso se ve así… creo.</p>
+
+<h2>Referencias</h2>
+
+<p>Por si no se entendiera, acá dejo dos referencias:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4255865/git-push-to-multiple-repositories-simultaneously/4255934#4255934"><strong>git to multiple repositories simultaneously</strong></a> en Stack Overflow.</li>
+<li><a href="http://stackoverflow.com/questions/165092/can-i-push-to-more-than-one-repository-in-a-single-command-in-git/166043#166043"><strong>Can I push to more than one repository in a single command in git?</strong></a>, en el mismo sitio del anterior.</li>
+</ul>
+
+
+<p>En el próximo capítulo haremos magia negra.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
-    <updated>2013-04-27T00:40:00-03:00</updated>
+    <updated>2013-04-27T00:40:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
 Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
@@ -38,7 +78,7 @@ Me gustó el resultado de mi experimento con Facebook Ads, pero no sé si tolera
   <entry>
     <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
-    <updated>2013-04-27T00:00:00-03:00</updated>
+    <updated>2013-04-27T00:00:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
     <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
 El resultado es el siguiente:</p>
@@ -98,7 +138,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[Facebook ads para likes]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
-    <updated>2013-04-24T02:51:00-03:00</updated>
+    <updated>2013-04-24T02:51:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/aviso-preview-curso-mapudungun.png"> <a href="/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
 
@@ -143,7 +183,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
-    <updated>2013-04-23T00:37:00-03:00</updated>
+    <updated>2013-04-23T00:37:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
 
@@ -191,66 +231,6 @@ Los objetivos y sus resultados después de un día:</p>
 
 <p>Escogí esta causa porque siempre me ha interesado que se difunda, ya que va más allá de ser un negocio. Es cultura que debería ser más compartida y conocida. Si bien yo hice el curso básico hace varios años, todavía recuerdo las historias explicadas en clases y algo de vocabulario. Me gustaría que más personas estuvieran interesadas en experimentar eso, por último para que sirva en alguna conversación entre jóvenes que tratan de decidir quién es más interesante y culto.
 <em>Peukayal</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Usando Heroku accounts]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/heroku-accounts/"/>
-    <updated>2013-04-21T17:21:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/heroku-accounts</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/ddollar/heroku-accounts"><img class="left" src="/images/heroku-accounts.png" width="320" title="Heroku Accounts en GitHub" alt="Pantallazo a Heroku Accounts en GitHub"></a> Este blog está <em>hosteado</em> en <a href="https://www.heroku.com/" title="Ofrece hosting gratuito para aplicaciones en varios lenguajes">Heroku</a>. Heroku es bacán, <strong>pero</strong>, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en estas cosas, está la de <strong>máximo de 5 aplicaciones por cuenta</strong>. Una vez hasta envié un correo a soporte preguntando cómo puedo hacer para poder tener más, pero ni me pescaron.
-Bueno, como sea, la opción existe y se llama <a href="https://github.com/ddollar/heroku-accounts" title="Heroku Accounts en GitHub">heroku accounts</a>.</p>
-
-<!--more-->
-
-
-<h2>Paso a paso</h2>
-
-<p>Entonces, el problema es el siguiente:</p>
-
-<p>Tienes una cuenta de Heroku, pero eres muy activo, así que ya ocupaste tu límite de aplicaciones. <strong>¿Qué hacer?</strong> Podría ser pagar para tener más aplicaciones, pero no encontré en el sitio dónde estaba eso más explícito, así que llegué a la herramienta que le da el título a este post.
-Lo que hace <code>heroku accounts</code> es dejarte usar más de una cuenta de Heroku, así tienes muchas posibilidades de 5 aplicaciones a la vez. Esta <em>partición</em> puede ser hecha por si tienes diferentes clientes o por si tienes varias aplicaciones que se quedan dentro de un mismo proyecto, por ejemplo.</p>
-
-<p>Luego de haberte creado las cuentas e instalado <code>heroku accounts</code>, debes tener ciertos archivos siempre en mente. Creo que el que más problemas me dio por haberlo olvidado fue <code>~/.ssh/config</code>, que es donde defines la información para cada cuenta:</p>
-
-<ul>
-<li>Cómo se llama la cuenta</li>
-<li>Dónde está la llave</li>
-<li>El Hostname</li>
-<li>El nombre de usuario</li>
-</ul>
-
-
-<p>Un ejemplo de cómo sería este archivo a continuación:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Ejemplo de config para heroku accounts (config.rb)</span> <a href='/downloads/code/config.rb'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="no">Host</span> <span class="n">heroku</span><span class="o">.</span><span class="n">nombre</span>
-</span><span class='line'>  <span class="no">HostName</span> <span class="n">heroku</span><span class="o">.</span><span class="n">com</span>
-</span><span class='line'>  <span class="no">IdentityFile</span> <span class="o">~</span><span class="sr">/.ssh/</span><span class="n">dondevalallave</span>
-</span><span class='line'>  <span class="no">IdentitiesOnly</span> <span class="n">yes</span>
-</span><span class='line'>  <span class="no">User</span> <span class="n">nombredeusuario</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Me parece que es bastante claro qué va en qué lugar, ¿cierto?</p>
-
-<h2>Comandos útiles</h2>
-
-<ul>
-<li>Para saber qué cuentas tienes en tu archivo <code>config</code> (o sea, que ya has configurado). Debes escribir <code>heroku accounts</code>.</li>
-<li>Para cambiar de cuenta, simplemente debes utilizar <code>heroku accounts:set nombre-de-cuenta</code>.</li>
-<li>Más hay en <a href="https://github.com/ddollar/heroku-accounts">la documentación</a>.</li>
-</ul>
-
-
-<p>Con eso, ya hay para hacer los cambios pertinentes, tomando en cuenta que las autentificaciones funcionan. Si no funcionsen, es cosa de ir a <a href="https://devcenter.heroku.com/articles/keys" title="Sobre las llaves en Heroku">revisar la documentación de Heroku sobre las llaves</a>.</p>
-
-<p>¿Te sirve? ¿No? Puedes decirme algo en los comentarios, si toca.</p>
 ]]></content>
   </entry>
   
