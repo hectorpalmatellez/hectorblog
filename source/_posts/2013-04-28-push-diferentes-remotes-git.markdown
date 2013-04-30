@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Push diferentes remotes Git"
+title: "Push desde diferentes remotes con Git"
 date: 2013-04-28 17:48
 comments: true
 categories: aprendiendo
