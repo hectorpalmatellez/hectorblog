@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: heroku | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/c/heroku/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2013-05-04T00:33:03-04:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>
+    <link href="http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku/"/>
+    <updated>2013-05-03T09:21:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku</id>
+    <content type="html"><![CDATA[<p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa' hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
+
+<ul>
+<li><strong>Heroku no tiene sqlite3</strong>, así que la base de datos no corre.</li>
+</ul>
+
+
+<p>La solución propuesta es utilizar la gema <code>pg</code>, de <a href="http://rubygems.org/gems/pg">PostgreSQL</a>. La explicación sobre cómo hacerlo la hallé en <a href="http://guides.railsgirls.com/heroku/" title="Instalar Ruby on Rails en Heroku">un tutorial de RailsGirls</a>.</p>
+
+<p><strong>Pero</strong> llegué a tener <strong>error H14</strong>, después de <code>heroku run rake db:migrate</code>. Y eso es...</p>
+
+<!--more-->
+
+
+<p><a href="https://devcenter.heroku.com/articles/error-codes#h14-no-web-processes-running">Según el DevCenter de Heroku</a> el Error H14 es:</p>
+
+<pre><code>This is most likely the result of scaling your web dynos down to 0 dynos. To fix it, scale your web dynos to 1 or more dynos.
+</code></pre>
+
+<p>Es decir, es porque no tiene suficiente «poder». Partamos con que Heroku entrega espacio y la capacidad para correr aplicaciones usando su sistema sin cobrarte. <strong>PERO</strong> si tu aplicación no es tan simple, hay que agregarle <em>dynos</em> a la ecuación y eso te cuesta plata. Lo gratuito es 1 <em>dyno</em> (los <em>dynos</em> son las «maquinitas» o <em>bots</em>, diría yo, que ejecutan tareas). Hay diferentes tipos, por lo que el de la base de datos no es el mismo que el que hace… otras cosas.</p>
+
+<h2>La solución</h2>
+
+<p>Lo que traté de hacer después de cachar lo que decía el log (<code>heroku logs</code>), fue, desde el panel de administración del navegador, editar la cantidad de <em>dynos</em>, pero el panel no funcionaba. Estuve a punto de borrar la aplicación nomás, pero probé el ejemplo:</p>
+
+<pre><code>$ heroku ps:scale web=1
+</code></pre>
+
+<p>Aunque resulta que yo necesitaba apagar el <code>worker</code> para prender el <code>web</code>, por lo que fue:</p>
+
+<pre><code>$ heroku ps:scale worker=0
+$ heroku ps:scale web=1
+</code></pre>
+
+<p>Confirmamos con un <code>heroku open</code>, que abre la aplicación en la que estamos trabajando y <em>listoco</em>.</p>
+
+<p>Por lo menos así solucioné mi problema.</p>
+]]></content>
+  </entry>
+  
+</feed>

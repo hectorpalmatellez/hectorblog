@@ -9,7 +9,7 @@
   <meta name="author" content="Héctor Palma Téllez">
 
   
-  <meta name="description" content="Actualmente este blog está hosteado en Heroku, eso quiere decir que los commits se hacen hacia allá, pero igual quería tener una copia con mayor &hellip;">
+  <meta name="description" content="Quería instalar Ruby on Rails en Heroku pa&#8217; hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/heroku/solucionando-error-h14-en-heroku/">Solucionando Error H14 en Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-03T09:21:00-04:00" pubdate data-updated="true">Friday 03 de May 2013</time>
+        
+         | <a href="/heroku/solucionando-error-h14-en-heroku/#disqus_thread">Comentarios</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa&#8217; hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
+
+<ul>
+<li><strong>Heroku no tiene sqlite3</strong>, así que la base de datos no corre.</li>
+</ul>
+
+
+<p>La solución propuesta es utilizar la gema <code>pg</code>, de <a href="http://rubygems.org/gems/pg">PostgreSQL</a>. La explicación sobre cómo hacerlo la hallé en <a href="http://guides.railsgirls.com/heroku/" title="Instalar Ruby on Rails en Heroku">un tutorial de RailsGirls</a>.</p>
+
+<p><strong>Pero</strong> llegué a tener <strong>error H14</strong>, después de <code>heroku run rake db:migrate</code>. Y eso es&#8230;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/heroku/solucionando-error-h14-en-heroku/">Seguir leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -260,51 +312,6 @@ El resultado es el siguiente:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/facebook-ads-dia-1/">#1 Aprendiendo a Usar Facebook Ads</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-23T00:37:00-04:00" pubdate data-updated="true">Tuesday 23 de April 2013</time>
-        
-         | <a href="/aprendiendo/facebook-ads-dia-1/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="left" src="/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
-
-<p>Viendo el <strong>crecimiento explosivo</strong> de la página <a href="https://www.facebook.com/somoslaspupas">Las Pupas</a>, se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/facebook-ads-dia-1/">Seguir leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -356,6 +363,10 @@ El resultado es el siguiente:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/heroku/solucionando-error-h14-en-heroku/">Solucionando error H14 en Heroku</a>
+      </li>
+    
+      <li class="post">
         <a href="/aprendiendo/push-diferentes-remotes-git/">Push desde diferentes remotes con Git</a>
       </li>
     
@@ -389,10 +400,6 @@ El resultado es el siguiente:</p>
     
       <li class="post">
         <a href="/aprendiendo/gamification-coursera/">Aprender de Gamification en Coursera</a>
-      </li>
-    
-      <li class="post">
-        <a href="/aprendiendo/jekyll/">Jekyll es el núcleo</a>
       </li>
     
   </ul>
