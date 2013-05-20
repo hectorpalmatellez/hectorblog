@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-05-04T00:33:03-04:00</updated>
+  <updated>2013-05-20T18:37:55-04:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configurar APN Entel]]></title>
+    <link href="http://hector.palmatellez.cl/celulares/configurar-apn-entel/"/>
+    <updated>2013-05-20T17:38:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/celulares/configurar-apn-entel</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
+
+<p>Como sea, el problema, al hacer restauración de fábrica, es que se pierden varios datos con una ROM no oficial, como el APN.</p>
+
+<!--more-->
+
+
+<h2>¿APN?</h2>
+
+<p>El <strong>APN</strong>, o <em>Access Point Name</em>, es la información con la que tu teléfono se conecta a Internet móvil de acuerdo a lo que tu proveedor de servicios da: Edge, 3G o alguna de esas que se parecen.</p>
+
+<h3>El problema</h3>
+
+<p>Al hacer la restauración de fábrica, el celular borra <strong>TODO</strong> y eso incluye la información que usaba para conectarse a Internet cuando uno anda en la micro. Para solucionarlo, hay que reingresar la información. El problema es que, por lo menos mi proveedor (<a href="http://www.entel.cl">Entel</a>), no entrega tan bien la información, según yo.</p>
+
+<p>Según Entel, la información a continuación es suficiente:</p>
+
+<ul>
+<li>Nombre: <strong>Internet Móvil</strong></li>
+<li>APN: <strong>bam.entelpcs.cl</strong></li>
+<li>Proxy: <strong>no definido</strong></li>
+<li>Puerto: <strong>no definido</strong></li>
+<li>Nombre de usuario: <strong>entelpcs</strong></li>
+<li>Contraseña: <strong>entelpcs</strong></li>
+<li>Servidor: no definido</li>
+<li>MMSC: no definido</li>
+<li>Proxy de mensaje multimedia: no definido</li>
+<li>Puerto de mensaje multimedia: no definido</li>
+<li>MCC: 730</li>
+<li>MNC: 01</li>
+<li>Tipo de autenticación: <strong>PAP</strong></li>
+<li>Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)</li>
+<li>Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</li>
+</ul>
+
+
+<p>Pero a mí no me funcionó.</p>
+
+<h2>Lo que me funcionó</h2>
+
+<p><img class="right" src="http://hector.palmatellez.cl/images/ss-apn2.png" title="imovil.entelpcs.cl" alt="APN que me funcionó">
+* Nombre: <strong>Internet Móvil</strong>
+* APN: <span style="color:red"><strong>imovil.entelpcs.cl</strong></span>
+* Proxy: <strong>no definido</strong>
+* Puerto: <strong>no definido</strong>
+* Nombre de usuario: <strong>entelpcs</strong>
+* Contraseña: <strong>entelpcs</strong>
+* Servidor: no definido
+* MMSC: no definido
+* Proxy de mensaje multimedia: no definido
+* Puerto de mensaje multimedia: no definido
+* MCC: 730
+* MNC: 01
+* Tipo de autenticación: <strong>PAP</strong>
+* Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)
+* Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</p>
+
+<p><strong>Bastó con poner imovil.entelpcs.cl en vez de bam.entelpcs.cl</strong></p>
+
+<p>Espero que a alguien del universo chileno le sirva alguna vez.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>

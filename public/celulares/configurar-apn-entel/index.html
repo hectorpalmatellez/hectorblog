@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>¿Por qué hay un tiuque? - Héctor Palma Téllez</title>
+  <title>Configurar APN Entel - Héctor Palma Téllez</title>
   <meta name="author" content="Héctor Palma Téllez">
 
   
-  <meta name="description" content="¿Por Qué Hay Un Tiuque? Thursday 14 de March 2013 El proyecto detrás del desarrollo de este blog, por lo menos desde el principio, llevaba el nombre &hellip;">
+  <meta name="description" content="Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://hector.palmatellez.cl/tiuque">
+  <link rel="canonical" href="http://hector.palmatellez.cl/celulares/configurar-apn-entel">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Héctor Palma Téllez" type="application/atom+xml">
@@ -77,11 +77,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">¿Por Qué Hay Un Tiuque?</h1>
-    <p class="meta">
+    
+      <h1 class="entry-title">Configurar APN Entel</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -93,54 +97,121 @@
   
 
 
-<time datetime="2013-03-14T03:26:00-04:00" pubdate data-updated="true">Thursday 14 de March 2013</time></p>
+<time datetime="2013-05-20T17:38:00-04:00" pubdate data-updated="true">Monday 20 de May 2013</time>
+        
+         | <a href="#disqus_thread">Comentarios</a>
+        
+      </p>
+    
   </header>
-  
-  <p><img class="left" src="/images/tiuque.jpg" width="280" title="Tiuque esperando una explicación" alt="foto de tiuque">El proyecto detrás del desarrollo de este blog, por lo menos desde el principio, llevaba el nombre de <strong>Tiuque</strong>, sólo porque tenía ese dominio comprado sin darle uso y me pareció una buena oportunidad de asignarle un nombre especial, como de proyecto secreto.</p>
 
-<h2>¿Cuál es la gracia del tiuque?</h2>
 
-<p>La gracia es que es bonito, es de la zona (de Sudamérica) y nadie había comprado el dominio antes, por eso me lo gané.</p>
+<div class="entry-content"><p><img class="left" src="/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
 
-<p>Hubiera preferido una bandurria, porque comen gusanos y me recuerdan los desayunos con <em>porridge</em> en inviernos helados en Villarrica.</p>
+<p>Como sea, el problema, al hacer restauración de fábrica, es que se pierden varios datos con una ROM no oficial, como el APN.</p>
 
-<p>Voy a tirar una foto de una bandurria, permiso.</p>
+<!--more-->
 
-<p><img class="center" src="/images/bandurria.jpg" title="Bandurria bacán" alt="Foto de una bandurria"></p>
 
-<h3>Fuentes</h3>
+<h2>¿APN?</h2>
 
-<p>Voy a enlazar las imágenes originales, porsiaca:</p>
+<p>El <strong>APN</strong>, o <em>Access Point Name</em>, es la información con la que tu teléfono se conecta a Internet móvil de acuerdo a lo que tu proveedor de servicios da: Edge, 3G o alguna de esas que se parecen.</p>
+
+<h3>El problema</h3>
+
+<p>Al hacer la restauración de fábrica, el celular borra <strong>TODO</strong> y eso incluye la información que usaba para conectarse a Internet cuando uno anda en la micro. Para solucionarlo, hay que reingresar la información. El problema es que, por lo menos mi proveedor (<a href="http://www.entel.cl">Entel</a>), no entrega tan bien la información, según yo.</p>
+
+<p>Según Entel, la información a continuación es suficiente:</p>
 
 <ul>
-<li>La primera foto viene de <a href="http://www.fotonaturaleza.cl/data/media/1/tiuque-9824.jpg">fotonaturaleza.cl</a>.</li>
-<li>La segunda foto viene de <a href="http://farm5.staticflickr.com/4017/4503010845_4fa19aa53d_z.jpg">un Flickr de alguien talentoso</a>.</li>
+<li>Nombre: <strong>Internet Móvil</strong></li>
+<li>APN: <strong>bam.entelpcs.cl</strong></li>
+<li>Proxy: <strong>no definido</strong></li>
+<li>Puerto: <strong>no definido</strong></li>
+<li>Nombre de usuario: <strong>entelpcs</strong></li>
+<li>Contraseña: <strong>entelpcs</strong></li>
+<li>Servidor: no definido</li>
+<li>MMSC: no definido</li>
+<li>Proxy de mensaje multimedia: no definido</li>
+<li>Puerto de mensaje multimedia: no definido</li>
+<li>MCC: 730</li>
+<li>MNC: 01</li>
+<li>Tipo de autenticación: <strong>PAP</strong></li>
+<li>Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)</li>
+<li>Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</li>
 </ul>
 
 
-  
-    <footer>
-      <p class="meta">
-        
-        
+<p>Pero a mí no me funcionó.</p>
+
+<h2>Lo que me funcionó</h2>
+
+<p><img class="right" src="/images/ss-apn2.png" title="imovil.entelpcs.cl" alt="APN que me funcionó">
+* Nombre: <strong>Internet Móvil</strong>
+* APN: <span style="color:red"><strong>imovil.entelpcs.cl</strong></span>
+* Proxy: <strong>no definido</strong>
+* Puerto: <strong>no definido</strong>
+* Nombre de usuario: <strong>entelpcs</strong>
+* Contraseña: <strong>entelpcs</strong>
+* Servidor: no definido
+* MMSC: no definido
+* Proxy de mensaje multimedia: no definido
+* Puerto de mensaje multimedia: no definido
+* MCC: 730
+* MNC: 01
+* Tipo de autenticación: <strong>PAP</strong>
+* Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)
+* Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</p>
+
+<p><strong>Bastó con poner imovil.entelpcs.cl en vez de bam.entelpcs.cl</strong></p>
+
+<p>Espero que a alguien del universo chileno le sirva alguna vez.</p>
+</div>
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-14T03:26:00-04:00" pubdate data-updated="true">Thursday 14 de March 2013</time>
-        
-      </p>
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hector.palmatellez.cl/tiuque/index.html" data-via="Zentaurus" data-counturl="http://hector.palmatellez.cl/tiuque/index.html" >Tweet</a>
+
+<span class="byline author vcard">Escrito por <span class="fn">Héctor Palma Téllez</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-20T17:38:00-04:00" pubdate data-updated="true">Monday 20 de May 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/c/celulares/'>celulares</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    APNentelInternet Móvil3G
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hector.palmatellez.cl/celulares/configurar-apn-entel/" data-via="Zentaurus" data-counturl="http://hector.palmatellez.cl/celulares/configurar-apn-entel/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -150,13 +221,18 @@
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/heroku/solucionando-error-h14-en-heroku/" title="Anterior: Solucionando error H14 en Heroku">&laquo; Solucionando error H14 en Heroku</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
   <section>
-    <h1>Comments</h1>
+    <h4>Comentarios</h4>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
   </section>
@@ -316,8 +392,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://hector.palmatellez.cl/tiuque/index.html';
-        var disqus_url = 'http://hector.palmatellez.cl/tiuque/index.html';
+        var disqus_identifier = 'http://hector.palmatellez.cl/celulares/configurar-apn-entel/';
+        var disqus_url = 'http://hector.palmatellez.cl/celulares/configurar-apn-entel/';
         var disqus_script = 'embed.js';
       
     (function () {
