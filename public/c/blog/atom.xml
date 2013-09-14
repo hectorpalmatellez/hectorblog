@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/blog/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-05-20T18:37:55-04:00</updated>
+  <updated>2013-09-14T14:45:58-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Cambio de URL]]></title>
     <link href="http://hector.palmatellez.cl/blog/cambio-de-url/"/>
-    <updated>2013-04-11T02:23:00-04:00</updated>
+    <updated>2013-04-11T02:23:00-03:00</updated>
     <id>http://hector.palmatellez.cl/blog/cambio-de-url</id>
     <content type="html"><![CDATA[<p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
 También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>

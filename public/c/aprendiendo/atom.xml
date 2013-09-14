@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-05-20T18:37:55-04:00</updated>
+  <updated>2013-09-14T14:45:58-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
-    <updated>2013-04-28T17:48:00-04:00</updated>
+    <updated>2013-04-28T17:48:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
     <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
 Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
@@ -56,7 +56,7 @@ url = git@heroku.USUARIO:REPOSITORIO.git
   <entry>
     <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
-    <updated>2013-04-27T00:40:00-04:00</updated>
+    <updated>2013-04-27T00:40:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
 Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
@@ -78,7 +78,7 @@ Me gustó el resultado de mi experimento con Facebook Ads, pero no sé si tolera
   <entry>
     <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
-    <updated>2013-04-27T00:00:00-04:00</updated>
+    <updated>2013-04-27T00:00:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
     <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
 El resultado es el siguiente:</p>
@@ -138,7 +138,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[Facebook ads para likes]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
-    <updated>2013-04-24T02:51:00-04:00</updated>
+    <updated>2013-04-24T02:51:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/aviso-preview-curso-mapudungun.png"> <a href="/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
 
@@ -183,7 +183,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
-    <updated>2013-04-23T00:37:00-04:00</updated>
+    <updated>2013-04-23T00:37:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
 

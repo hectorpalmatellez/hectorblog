@@ -4,7 +4,7 @@
   <title><![CDATA[Category: heroku | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/heroku/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-05-20T18:37:55-04:00</updated>
+  <updated>2013-09-14T14:45:58-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>
     <link href="http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku/"/>
-    <updated>2013-05-03T09:21:00-04:00</updated>
+    <updated>2013-05-03T09:21:00-03:00</updated>
     <id>http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku</id>
     <content type="html"><![CDATA[<p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa' hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
 

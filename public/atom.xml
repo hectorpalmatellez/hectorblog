@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-05-20T18:37:55-04:00</updated>
+  <updated>2013-09-14T14:45:58-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -14,9 +14,76 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Usar Gmail para que Devise en Rails envíe correos]]></title>
+    <link href="http://hector.palmatellez.cl/rails-mails-gmail/"/>
+    <updated>2013-09-07T12:41:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/rails-mails-gmail</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/development.rb-mailer-gmail.png" width="400"> Estuve buscando una solución simple para crear un sistema que funcione bien y no tan complejo de entender en una aplicación hecha en <strong>Ruby on Rails</strong>, así es como llegué a <code>devise</code>. Esta parece tener un nivel alto de aceptación, aunque no tiene actualizaciones hace harto rato. Obvio que saltan problemas y soluciones pre-armadas, como lo que pasa cuando olvidas tu contraseña y deseas re-crearla. <code>devise</code> ya trae todas las <em>views</em> que uno podría necesitar (en <code>app/views/devise/</code>, si hiciste <code>$ rails generate devise:views</code>).</p>
+
+<!-- more -->
+
+
+<h2>«Todo está listo, pero no»</h2>
+
+<p>Sin problema pude generar el sistema de registro y logueo, un par de comandos y listo. Casi <em>a prueba de tontos</em>. Luego vino la parte donde me pregunté sobre el botón de <strong>Recuperar Contraseña</strong>, porque las <code>views</code> lo incluyen, lo probé y no funcionó :(</p>
+
+<h3>Recuperar contraseña con <code>devise</code></h3>
+
+<p>La vista está en <code>app/views/devise/passwords/new.html.erb</code> y casi no hay que tocar nada. Yo traduje un par de cuestiones nomás, aunque hay cosas que se traducen usando el <a href="" title="https://github.com/plataformatec/devise/wiki/I18n">i18n de devise</a>.</p>
+
+<p>En <code>config/environments/development.rb</code> van los datos que se usan para acceder a Gmail, utilizando los datos de acceso (la primera imagen de este post). Para que funcionase en local (obvio, porque es <code>development.rb</code>). De acuerdo a la teoría que busqué, era posible no tener que poner la información en texto plano explícito en ese archivo, usando <em>environmental variables</em>, como dice <a href="http://stevechristie.tumblr.com/post/35158776548/how-to-set-up-local-environmental-variables">Old Man Coder</a>, sin embargo, me fue más fácil que funcionara en Heroku (<code>production.rb</code>), que en el local. Pa&#8217; qué darle tanta vuelta, si la cosa anda.</p>
+
+<p>El de producción queda así:</p>
+
+<pre><code>config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+}
+</code></pre>
+
+<p>Algo útil es que no necesariamente tiene que ser un correo <em>@gmail.com</em>, ya que yo probé con uno que utiliza Google Apps y anda súper igual.</p>
+
+<h2>Crear <em>environmental variables</em> para Heroku</h2>
+
+<p><strong>Heroku</strong> lo explica súper bien en <a href="" title="https://devcenter.heroku.com/articles/config-vars">su Devcenter</a>, pero el paso exacto dado por mí fue el siguiente:</p>
+
+<pre><code>heroku config:add GMAIL_USERNAME=CORREO@GMAIL.COM GMAIL_DOMAIN=gmail.com GMAIL_PASSWORD=CONTRASEÑA
+</code></pre>
+
+<p>Se explica solito.</p>
+
+<h2>Ya, ¿y?</h2>
+
+<p>Después de esos pasos, falta revisar que nuestro <code>production.rb</code> tenga lo siguiente:</p>
+
+<pre><code>config.action_mailer.default_url_options = { :host =&gt; 'http://APP.herokuapp.com' }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+}
+</code></pre>
+
+<p>En la primera debe ir el nombre con la URL de tu aplicación. Si utilizas un dominio asignado, sin el <code>herokuapp.com</code>, debe ir ese dominio ahí.</p>
+
+<p>Con eso ya debería funcionar todo. Gracias a Google y a todos los amiguitos que lo hicieron posible n.n</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Configurar APN Entel]]></title>
     <link href="http://hector.palmatellez.cl/celulares/configurar-apn-entel/"/>
-    <updated>2013-05-20T17:38:00-04:00</updated>
+    <updated>2013-05-20T17:38:00-03:00</updated>
     <id>http://hector.palmatellez.cl/celulares/configurar-apn-entel</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
 
@@ -84,7 +151,7 @@
   <entry>
     <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>
     <link href="http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku/"/>
-    <updated>2013-05-03T09:21:00-04:00</updated>
+    <updated>2013-05-03T09:21:00-03:00</updated>
     <id>http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku</id>
     <content type="html"><![CDATA[<p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa&#8217; hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
 
@@ -129,7 +196,7 @@ $ heroku ps:scale web=1
   <entry>
     <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
-    <updated>2013-04-28T17:48:00-04:00</updated>
+    <updated>2013-04-28T17:48:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
     <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
 Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
@@ -169,7 +236,7 @@ url = git@heroku.USUARIO:REPOSITORIO.git
   <entry>
     <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
-    <updated>2013-04-27T00:40:00-04:00</updated>
+    <updated>2013-04-27T00:40:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
 Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
@@ -191,7 +258,7 @@ Me gustó el resultado de mi experimento con Facebook Ads, pero no sé si tolera
   <entry>
     <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
-    <updated>2013-04-27T00:00:00-04:00</updated>
+    <updated>2013-04-27T00:00:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
     <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
 El resultado es el siguiente:</p>
@@ -251,7 +318,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[Facebook ads para likes]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
-    <updated>2013-04-24T02:51:00-04:00</updated>
+    <updated>2013-04-24T02:51:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/aviso-preview-curso-mapudungun.png"> <a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
 
@@ -296,7 +363,7 @@ Destaquemos algo:</p>
   <entry>
     <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
-    <updated>2013-04-23T00:37:00-04:00</updated>
+    <updated>2013-04-23T00:37:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
 
@@ -350,7 +417,7 @@ Los objetivos y sus resultados después de un día:</p>
   <entry>
     <title type="html"><![CDATA[Usando Heroku accounts]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/heroku-accounts/"/>
-    <updated>2013-04-21T17:21:00-04:00</updated>
+    <updated>2013-04-21T17:21:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/heroku-accounts</id>
     <content type="html"><![CDATA[<p><a href="https://github.com/ddollar/heroku-accounts"><img class="left" src="http://hector.palmatellez.cl/images/heroku-accounts.png" width="320" title="Heroku Accounts en GitHub" alt="Pantallazo a Heroku Accounts en GitHub"></a> Este blog está <em>hosteado</em> en <a href="https://www.heroku.com/" title="Ofrece hosting gratuito para aplicaciones en varios lenguajes">Heroku</a>. Heroku es bacán, <strong>pero</strong>, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en estas cosas, está la de <strong>máximo de 5 aplicaciones por cuenta</strong>. Una vez hasta envié un correo a soporte preguntando cómo puedo hacer para poder tener más, pero ni me pescaron.
 Bueno, como sea, la opción existe y se llama <a href="https://github.com/ddollar/heroku-accounts" title="Heroku Accounts en GitHub">heroku accounts</a>.</p>
@@ -411,7 +478,7 @@ Lo que hace <code>heroku accounts</code> es dejarte usar más de una cuenta de H
   <entry>
     <title type="html"><![CDATA[@font-face en Firefox]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/"/>
-    <updated>2013-04-21T15:11:00-04:00</updated>
+    <updated>2013-04-21T15:11:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox</id>
     <content type="html"><![CDATA[<p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
 Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
@@ -460,7 +527,7 @@ Por ejemplo, <a href="http://hector.palmatellez.cl/">en este mismo sitio</a> lo 
   <entry>
     <title type="html"><![CDATA[Cambio de URL]]></title>
     <link href="http://hector.palmatellez.cl/blog/cambio-de-url/"/>
-    <updated>2013-04-11T02:23:00-04:00</updated>
+    <updated>2013-04-11T02:23:00-03:00</updated>
     <id>http://hector.palmatellez.cl/blog/cambio-de-url</id>
     <content type="html"><![CDATA[<p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
 También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>
@@ -491,7 +558,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
-    <updated>2013-04-03T09:07:00-04:00</updated>
+    <updated>2013-04-03T09:07:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
     <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="http://hector.palmatellez.cl/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
 
@@ -521,7 +588,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
-    <updated>2013-03-21T20:55:00-04:00</updated>
+    <updated>2013-03-21T20:55:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="http://hector.palmatellez.cl/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
 
@@ -579,7 +646,7 @@ Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de vi
   <entry>
     <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
-    <updated>2013-03-19T02:00:00-04:00</updated>
+    <updated>2013-03-19T02:00:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
     <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
 
@@ -648,7 +715,7 @@ El paso siguiente es hacer que desde la plantilla pueda ser visible, para esto h
   <entry>
     <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
-    <updated>2013-03-16T16:31:00-04:00</updated>
+    <updated>2013-03-16T16:31:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
     <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
 
@@ -678,7 +745,7 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   <entry>
     <title type="html"><![CDATA[Usando Pinboard para la vida]]></title>
     <link href="http://hector.palmatellez.cl/herramientas/pinboard/"/>
-    <updated>2013-03-15T21:35:00-04:00</updated>
+    <updated>2013-03-15T21:35:00-03:00</updated>
     <id>http://hector.palmatellez.cl/herramientas/pinboard</id>
     <content type="html"><![CDATA[<p>Para ser serio, voy a partir con una cita:</p>
 
@@ -748,7 +815,7 @@ Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, b
   <entry>
     <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
-    <updated>2013-03-15T00:08:00-04:00</updated>
+    <updated>2013-03-15T00:08:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
     <content type="html"><![CDATA[<h2>La complicación</h2>
 
@@ -799,7 +866,7 @@ LC_ALL=
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/octopress/"/>
-    <updated>2013-03-14T01:15:00-04:00</updated>
+    <updated>2013-03-14T01:15:00-03:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/octopress</id>
     <content type="html"><![CDATA[<h2>Cachando cómo usar Octopress</h2>
 
