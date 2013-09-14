@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-09-14T14:45:58-03:00</updated>
+  <updated>2013-09-14T14:48:34-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Usar Gmail para que Devise en Rails envíe correos]]></title>
-    <link href="http://hector.palmatellez.cl/rails-mails-gmail/"/>
+    <link href="http://hector.palmatellez.cl/ror/rails-mails-gmail/"/>
     <updated>2013-09-07T12:41:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/rails-mails-gmail</id>
+    <id>http://hector.palmatellez.cl/ror/rails-mails-gmail</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/development.rb-mailer-gmail.png" width="400"> Estuve buscando una solución simple para crear un sistema que funcione bien y no tan complejo de entender en una aplicación hecha en <strong>Ruby on Rails</strong>, así es como llegué a <code>devise</code>. Esta parece tener un nivel alto de aceptación, aunque no tiene actualizaciones hace harto rato. Obvio que saltan problemas y soluciones pre-armadas, como lo que pasa cuando olvidas tu contraseña y deseas re-crearla. <code>devise</code> ya trae todas las <em>views</em> que uno podría necesitar (en <code>app/views/devise/</code>, si hiciste <code>$ rails generate devise:views</code>).</p>
 
 <!-- more -->

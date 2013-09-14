@@ -3,7 +3,7 @@ layout: post
 title: "Usar Gmail para que Devise en Rails envíe correos"
 date: 2013-09-07 12:41
 comments: true
-categories: 
+categories: ror
 
 ---
 
