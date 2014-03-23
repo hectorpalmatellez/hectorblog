@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-09-14T14:48:34-03:00</updated>
+  <updated>2014-03-23T02:22:35-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cosas que aprendí esta semana]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/"/>
+    <updated>2014-03-22T21:16:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana</id>
+    <content type="html"><![CDATA[<p>Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar de enumerarlas para que no se me olvide que las aprendí esta semana:</p>
+
+<!--more-->
+
+
+<h4>PHP tiene un servidor de desarrollo que se puede abrir desde Terminal</h4>
+
+<p><img class="left" src="/images/php-dev-server.png" width="350" title="&#34;Servidor de desarrollo de PHP&#34;" alt="&#34;Servidor de desarrollo de PHP&#34;">
+ Este se abre así <code>$ php -S localhost:8000</code>. Va <code>localhost</code> porque eso es lo que vamos a escribir en el navegador cuando estemos probando esos PHP con includes penquitas. Lo que va después de los dos puntos es el puerto que le designemos. Funciona altiro (por lo menos con <code>PHP 5.4.24</code> que es el que tengo ahora).</p>
+
+<h4>Hay una herramienta bacán y gratuita para armar mails</h4>
+
+<p><img class="right" src="/images/mailrox.png" width="350" title="&#34;Mailrox&#34;" alt="&#34;Mailrox&#34;">Está en Beta, por lo que probablemente algún día cercano cierre las cuentas existentes o las limite, por ahora, hay que aprovechar: <a href="https://www.mailrox.com/">Mailrox</a> se llama el servicio que permite en el mismo navegador hacer los cortes y arreglos necesarios para que el mail quede <em>armado</em> de acuerdo a los estándares necesarios para que se vea bien en todos lados. Además, tiene varias <em>features</em> que aún no he probado, como la de trabajo colaborativo. En caso de que uno sea fijón e incrédulo producto de haber trabajado con Dreamweaver, por poner un ejemplo traumático, también existe la posibilidad de meterle mano al código a través del <code>WYSIWYG</code>.</p>
+
+<h4>Sprites con SCSS</h4>
+
+<p>Entendía el concepto detrás de los sprites al usar <a href="http://compass-style.org/">Compass</a>, pero nunca me dediqué a entender cómo funcionaba y cómo y dónde aplicarlo. Creo ahora entenderlo y ya lo he usado en un par de miniproyectos personales. Porsiaca, se <a href="compass-style.org/help/tutorials/spriting/" title="Tutorial del uso de sprites en Compass">explica acá</a>.</p>
+
+<h4>Usar <em>includes</em> en HTML con Assemble</h4>
+
+<p>En los proyectos con <a href="http://yeoman.io/">Yeoman</a> siempre me daba un poquito de lata cuando necesitabas incluir el mismo header y el mismo footer en todas las páginas, después, si había una variación, había que andar buscando todos los <code>.html</code> para corregir. Una lata.
+Eso era al usar el generador llamado <code>webapp</code>, sin embargo, existen hartos <a href="http://yeoman.io/community-generators.html">generadores hechos por la comunidad</a>, además de <a href="http://yeoman.io/official-generators.html">los generadores oficiales</a>.</p>
+
+<p>Entre los de la comunidad se encuenta el <code>generator yawa</code><a href="https://github.com/p-j/generator-yawa">[1]</a>. Este incluye algo muy bonito llamado <a href="http://assemble.io/">Assemble</a>. <strong>Assemble</strong> hace algo similar a <a href="http://jekyllrb.com/">Jekyll</a>, pero utilizando magias de Javascript y no de Ruby. Lo más básico es la existencia de una carpeta dentro de <code>app</code> llamada <code>templates</code>, ahí hay: <code>layouts</code>, <code>pages</code> y <code>partials</code>.</p>
+
+<p>En <code>app/templates/layouts</code> estará la principal llamada <code>default.hbs</code>, en <code>app/templates/pages</code> debería estar <code>index.hbs</code> y las demás uno las va creando.</p>
+
+<p>Para llamar un <em>partial</em>, después de crearlo en su directorio correspondiente, debe hacerse el llamado desde la plantilla o página necesaria utilizando: <code></code>. O por lo menos así me funcionó a mí.</p>
+
+<hr />
+
+<p>De eso nomás me acuerdo que aprendí esta semana. No fue tan poco, ¿cierto?
+Ya, si fue poco, da lo mismo. Pa' mí fue harto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
@@ -177,60 +218,6 @@ Destaquemos algo:</p>
 <p><img src="/images/fans-por-dia-aviso-fb.png" title="Gráfico de fans por el aviso" alt="Avance en fans nuevos por aviso"></p>
 
 <p>Hasta ahora, creo que la inversión (o gasto) no ha sido lo suficiente como para considerar el experimento como fallido.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
-    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
-    <updated>2013-04-23T00:37:00-03:00</updated>
-    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
-
-<p>Viendo el <strong>crecimiento explosivo</strong> de la página <a href="https://www.facebook.com/somoslaspupas">Las Pupas</a>, se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.</p>
-
-<!--more-->
-
-
-<h2>El experimento</h2>
-
-<p>La página que escogí es <a href="http://fb.me/Cursodemapudungun" title="Página para difusión de un curso presencial de mapudungun en Santiago">Curso de mapudungun</a>, administrada por <a href="http://cursodemapudungun.cl/martin-raguileo/" title="Perfil del profesor">Martin Raguileo</a>, profesor de mapudungun desde hace algunos años en Santiago. Le he estado ayudando desde hace harto tiempo en la difusión mediante Internet de su curso, con el sitio, una cuenta de Twitter y el Facebook, siendo este último el que más resultados ha dado.</p>
-
-<h3>El aviso en cuestión</h3>
-
-<p>Escogí dos modadlidades:</p>
-
-<ul>
-<li><strong>Aviso de Facebook</strong>, de esos que yo considero <em>spam</em>. Y que, hasta ahora, no ha funcionado tanto.</li>
-<li>La magia de <strong>Boost</strong> o «difundir publicación», creo que se llama en castellano. Este es el que más me gustó y explicaré a continuación el porqué.</li>
-</ul>
-
-
-<h4>Difundiendo una publicación de la página</h4>
-
-<p><a href="https://www.facebook.com/Cursodemapudungun/posts/467500443319717" title="Enlace a la publicación"><img class="left" src="/images/curso-de-mapudungun-boost.png" width="300" title="Publicación con difusión pagada" alt="Post con 5 dólares para difusión"></a> La publicación de la imagen a la izquierda es la que elegí, ya que es algo que merecía difusión y es algo que sucederá pronto.
-Los objetivos y sus resultados después de un día:</p>
-
-<ul>
-<li><strong>Aumentar la base de fans de la página</strong>: Se aumentó de 777 a 853, es decir, <strong>76 fans en menos de 1 día</strong>, con sólo una publicación, más 1 aviso.</li>
-<li><strong>Conseguir más contactos mediante Facebook o el sitio</strong>: Normalmente no se reciben muchos mensajes privados por la página, me aventuraría a decir que no superan los 3 semanales, pero esta vez conseguimos 3 en un día, más 12 contactos utilizando el formulario desde el sitio web. Para ser primer intento, lo consideramos un éxito en <em>leads</em>.</li>
-<li><img class="right" src="/images/paid-reach-aviso.png" width="310"> <strong>Aumentar la difusión del contenido</strong>: Para este punto es mejor mirar la imagen a la derecha. Con sólo 5 dólares (el mínimo posible a invertir en este ítem), la publicación casi llegó a las 10.000 vistas (incluyendo lo pagado y lo orgánico). Yo creo que es súper bacán.</li>
-</ul>
-
-
-<h2>Conclusiones</h2>
-
-<ul>
-<li>En la historia de la página, nunca una publicación había sido tan vista, tan compartida, sumado tantos <em>likes</em> ni tantos comentarios. En total, 9.368 personas vieron el <em>post</em>. <a href="https://www.facebook.com/105913216145110/posts/453035444766217">El post con más visitas antes de este</a>, suma en total 726. Nada po'.</li>
-<li><strong>Si se inscribiera 1 alumno, la inversión se recupera en más de 200%</strong>.</li>
-<li>Intentaré hacer más posts con la evolución del aviso que queda todavía dando vueltas. Quizás todavía tenga esperanza y potencial.</li>
-</ul>
-
-
-<h2>Aparte</h2>
-
-<p>Escogí esta causa porque siempre me ha interesado que se difunda, ya que va más allá de ser un negocio. Es cultura que debería ser más compartida y conocida. Si bien yo hice el curso básico hace varios años, todavía recuerdo las historias explicadas en clases y algo de vocabulario. Me gustaría que más personas estuvieran interesadas en experimentar eso, por último para que sirva en alguna conversación entre jóvenes que tratan de decidir quién es más interesante y culto.
-<em>Peukayal</em></p>
 ]]></content>
   </entry>
   

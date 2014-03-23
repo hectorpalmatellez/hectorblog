@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2013-09-14T14:48:34-03:00</updated>
+  <updated>2014-03-23T02:22:35-03:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cosas que aprendí esta semana]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/"/>
+    <updated>2014-03-22T21:16:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana</id>
+    <content type="html"><![CDATA[<p>Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar de enumerarlas para que no se me olvide que las aprendí esta semana:</p>
+
+<!--more-->
+
+
+<h4>PHP tiene un servidor de desarrollo que se puede abrir desde Terminal</h4>
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/php-dev-server.png" width="350" title="&#34;Servidor de desarrollo de PHP&#34;" alt="&#34;Servidor de desarrollo de PHP&#34;">
+ Este se abre así <code>$ php -S localhost:8000</code>. Va <code>localhost</code> porque eso es lo que vamos a escribir en el navegador cuando estemos probando esos PHP con includes penquitas. Lo que va después de los dos puntos es el puerto que le designemos. Funciona altiro (por lo menos con <code>PHP 5.4.24</code> que es el que tengo ahora).</p>
+
+<h4>Hay una herramienta bacán y gratuita para armar mails</h4>
+
+<p><img class="right" src="http://hector.palmatellez.cl/images/mailrox.png" width="350" title="&#34;Mailrox&#34;" alt="&#34;Mailrox&#34;">Está en Beta, por lo que probablemente algún día cercano cierre las cuentas existentes o las limite, por ahora, hay que aprovechar: <a href="https://www.mailrox.com/">Mailrox</a> se llama el servicio que permite en el mismo navegador hacer los cortes y arreglos necesarios para que el mail quede <em>armado</em> de acuerdo a los estándares necesarios para que se vea bien en todos lados. Además, tiene varias <em>features</em> que aún no he probado, como la de trabajo colaborativo. En caso de que uno sea fijón e incrédulo producto de haber trabajado con Dreamweaver, por poner un ejemplo traumático, también existe la posibilidad de meterle mano al código a través del <code>WYSIWYG</code>.</p>
+
+<h4>Sprites con SCSS</h4>
+
+<p>Entendía el concepto detrás de los sprites al usar <a href="http://compass-style.org/">Compass</a>, pero nunca me dediqué a entender cómo funcionaba y cómo y dónde aplicarlo. Creo ahora entenderlo y ya lo he usado en un par de miniproyectos personales. Porsiaca, se <a href="compass-style.org/help/tutorials/spriting/" title="Tutorial del uso de sprites en Compass">explica acá</a>.</p>
+
+<h4>Usar <em>includes</em> en HTML con Assemble</h4>
+
+<p>En los proyectos con <a href="http://yeoman.io/">Yeoman</a> siempre me daba un poquito de lata cuando necesitabas incluir el mismo header y el mismo footer en todas las páginas, después, si había una variación, había que andar buscando todos los <code>.html</code> para corregir. Una lata.
+Eso era al usar el generador llamado <code>webapp</code>, sin embargo, existen hartos <a href="http://yeoman.io/community-generators.html">generadores hechos por la comunidad</a>, además de <a href="http://yeoman.io/official-generators.html">los generadores oficiales</a>.</p>
+
+<p>Entre los de la comunidad se encuenta el <code>generator yawa</code><a href="https://github.com/p-j/generator-yawa">[1]</a>. Este incluye algo muy bonito llamado <a href="http://assemble.io/">Assemble</a>. <strong>Assemble</strong> hace algo similar a <a href="http://jekyllrb.com/">Jekyll</a>, pero utilizando magias de Javascript y no de Ruby. Lo más básico es la existencia de una carpeta dentro de <code>app</code> llamada <code>templates</code>, ahí hay: <code>layouts</code>, <code>pages</code> y <code>partials</code>.</p>
+
+<p>En <code>app/templates/layouts</code> estará la principal llamada <code>default.hbs</code>, en <code>app/templates/pages</code> debería estar <code>index.hbs</code> y las demás uno las va creando.</p>
+
+<p>Para llamar un <em>partial</em>, después de crearlo en su directorio correspondiente, debe hacerse el llamado desde la plantilla o página necesaria utilizando: &#8220;. O por lo menos así me funcionó a mí.</p>
+
+<hr />
+
+<p>De eso nomás me acuerdo que aprendí esta semana. No fue tan poco, ¿cierto?
+Ya, si fue poco, da lo mismo. Pa&#8217; mí fue harto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Usar Gmail para que Devise en Rails envíe correos]]></title>

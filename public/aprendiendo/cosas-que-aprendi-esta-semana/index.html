@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Héctor Palma Téllez</title>
+  <title>Cosas que aprendí esta semana - Héctor Palma Téllez</title>
   <meta name="author" content="Héctor Palma Téllez">
 
   
-  <meta name="description" content="Estaba revisando un sitio que armé en base a Foundation y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, &hellip;">
+  <meta name="description" content="Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://hector.palmatellez.cl/blog/page/3">
+  <link rel="canonical" href="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Héctor Palma Téllez" type="application/atom+xml">
@@ -76,15 +76,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/aprendiendo/font-face-en-firefox/">@font-face en Firefox</a></h1>
+      <h1 class="entry-title">Cosas Que Aprendí Esta Semana</h1>
     
     
       <p class="meta">
@@ -100,83 +97,59 @@
   
 
 
-<time datetime="2013-04-21T15:11:00-03:00" pubdate data-updated="true">Sunday 21 de April 2013</time>
+<time datetime="2014-03-22T21:16:00-03:00" pubdate data-updated="true">Saturday 22 de March 2014</time>
         
-         | <a href="/aprendiendo/font-face-en-firefox/#disqus_thread">Comentarios</a>
+         | <a href="#disqus_thread">Comentarios</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
-Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
+<div class="entry-content"><p>Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar de enumerarlas para que no se me olvide que las aprendí esta semana:</p>
 
+<!--more-->
+
+
+<h4>PHP tiene un servidor de desarrollo que se puede abrir desde Terminal</h4>
+
+<p><img class="left" src="/images/php-dev-server.png" width="350" title="&#34;Servidor de desarrollo de PHP&#34;" alt="&#34;Servidor de desarrollo de PHP&#34;">
+ Este se abre así <code>$ php -S localhost:8000</code>. Va <code>localhost</code> porque eso es lo que vamos a escribir en el navegador cuando estemos probando esos PHP con includes penquitas. Lo que va después de los dos puntos es el puerto que le designemos. Funciona altiro (por lo menos con <code>PHP 5.4.24</code> que es el que tengo ahora).</p>
+
+<h4>Hay una herramienta bacán y gratuita para armar mails</h4>
+
+<p><img class="right" src="/images/mailrox.png" width="350" title="&#34;Mailrox&#34;" alt="&#34;Mailrox&#34;">Está en Beta, por lo que probablemente algún día cercano cierre las cuentas existentes o las limite, por ahora, hay que aprovechar: <a href="https://www.mailrox.com/">Mailrox</a> se llama el servicio que permite en el mismo navegador hacer los cortes y arreglos necesarios para que el mail quede <em>armado</em> de acuerdo a los estándares necesarios para que se vea bien en todos lados. Además, tiene varias <em>features</em> que aún no he probado, como la de trabajo colaborativo. En caso de que uno sea fijón e incrédulo producto de haber trabajado con Dreamweaver, por poner un ejemplo traumático, también existe la posibilidad de meterle mano al código a través del <code>WYSIWYG</code>.</p>
+
+<h4>Sprites con SCSS</h4>
+
+<p>Entendía el concepto detrás de los sprites al usar <a href="http://compass-style.org/">Compass</a>, pero nunca me dediqué a entender cómo funcionaba y cómo y dónde aplicarlo. Creo ahora entenderlo y ya lo he usado en un par de miniproyectos personales. Porsiaca, se <a href="compass-style.org/help/tutorials/spriting/" title="Tutorial del uso de sprites en Compass">explica acá</a>.</p>
+
+<h4>Usar <em>includes</em> en HTML con Assemble</h4>
+
+<p>En los proyectos con <a href="http://yeoman.io/">Yeoman</a> siempre me daba un poquito de lata cuando necesitabas incluir el mismo header y el mismo footer en todas las páginas, después, si había una variación, había que andar buscando todos los <code>.html</code> para corregir. Una lata.
+Eso era al usar el generador llamado <code>webapp</code>, sin embargo, existen hartos <a href="http://yeoman.io/community-generators.html">generadores hechos por la comunidad</a>, además de <a href="http://yeoman.io/official-generators.html">los generadores oficiales</a>.</p>
+
+<p>Entre los de la comunidad se encuenta el <code>generator yawa</code><a href="https://github.com/p-j/generator-yawa">[1]</a>. Este incluye algo muy bonito llamado <a href="http://assemble.io/">Assemble</a>. <strong>Assemble</strong> hace algo similar a <a href="http://jekyllrb.com/">Jekyll</a>, pero utilizando magias de Javascript y no de Ruby. Lo más básico es la existencia de una carpeta dentro de <code>app</code> llamada <code>templates</code>, ahí hay: <code>layouts</code>, <code>pages</code> y <code>partials</code>.</p>
+
+<p>En <code>app/templates/layouts</code> estará la principal llamada <code>default.hbs</code>, en <code>app/templates/pages</code> debería estar <code>index.hbs</code> y las demás uno las va creando.</p>
+
+<p>Para llamar un <em>partial</em>, después de crearlo en su directorio correspondiente, debe hacerse el llamado desde la plantilla o página necesaria utilizando: &#8220;. O por lo menos así me funcionó a mí.</p>
+
+<hr />
+
+<p>De eso nomás me acuerdo que aprendí esta semana. No fue tan poco, ¿cierto?
+Ya, si fue poco, da lo mismo. Pa&#8217; mí fue harto.</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/font-face-en-firefox/">Seguir leyendo &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/cambio-de-url/">Cambio De URL</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Escrito por <span class="fn">Héctor Palma Téllez</span></span>
 
-<time datetime="2013-04-11T02:23:00-03:00" pubdate data-updated="true">Thursday 11 de April 2013</time>
-        
-         | <a href="/blog/cambio-de-url/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
-También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/cambio-de-url/">Seguir leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/gamification-coursera/">Aprender De Gamification en Coursera</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -188,136 +161,57 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
   
 
 
-<time datetime="2013-04-03T09:07:00-03:00" pubdate data-updated="true">Wednesday 03 de April 2013</time>
-        
-         | <a href="/aprendiendo/gamification-coursera/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.coursera.org/course/gamification"><img class="left" src="/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/gamification-coursera/">Seguir leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-03-22T21:16:00-03:00" pubdate data-updated="true">Saturday 22 de March 2014</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/jekyll/">Jekyll Es El Núcleo</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
-
-
-<time datetime="2013-03-21T20:55:00-03:00" pubdate data-updated="true">Thursday 21 de March 2013</time>
-        
-         | <a href="/aprendiendo/jekyll/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="left" src="/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
-
-<p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
-
-</div>
+    <a class='category' href='/c/aprendiendo/'>aprendiendo</a>
   
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/jekyll/">Seguir leyendo &rarr;</a>
-    </footer>
-  
+</span>
 
 
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/aprendiendo/custom-fields/">Custom Fields O Campos Personalizados en Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="tags">
   
+    phpjekyllassemblescssspritesincludemailrox
+  
+</span>
 
 
-<time datetime="2013-03-19T02:00:00-03:00" pubdate data-updated="true">Tuesday 19 de March 2013</time>
-        
-         | <a href="/aprendiendo/custom-fields/#disqus_thread">Comentarios</a>
-        
-      </p>
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/" data-via="Zentaurus" data-counturl="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/ror/rails-mails-gmail/" title="Anterior: Usar Gmail para que Devise en Rails envíe correos">&laquo; Usar Gmail para que Devise en Rails envíe correos</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-  <div class="entry-content"><p>La pregunta que se me ocurrió era como:</p>
-
-<blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
-
-<p>Resulta que un poco de lógica y varios intentos de <em>googleo</em> me llevaron a intentar algo parecido a lo que sale <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter#custom-variables" title="YAML Front Matter en GitHub">acá</a>, en el apartado de «variables personalizadas» se explica con el siguiente ejemplo:</p>
-
-<figure class='code'><figcaption><span>Ejemplo  (custom.rb)</span> <a href='/downloads/code/custom.rb'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="sr">/title&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+  <section>
+    <h4>Comentarios</h4>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/aprendiendo/custom-fields/">Seguir leyendo &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/4/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section style="outline: 1px solid #000; background: #999999; color: #000; text-shadow: none; padding: 12px 8px 8px 8px; margin-top: 16px;">
@@ -408,7 +302,7 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
 
 <section>
   <h1>Mi Pinboard</h1>
-  <ul id="pinboard_linkroll">Llamando a los amiguitos&#8230;</ul>
+  <ul id="pinboard_linkroll">Llamando a los amiguitos...</ul>
   <p><a href="http://pinboard.in/u:hectorpalmatellez">Mis enlaces guardados &raquo;</a></p>
 </section>
 <script type="text/javascript">
@@ -429,6 +323,7 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
 
   
 </aside>
+
 
     </div>
   </div>
@@ -469,7 +364,10 @@ También en el principio la idea era usar el blog sólo para escribir de Octopre
       var disqus_shortname = 'tiuque';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/';
+        var disqus_url = 'http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
