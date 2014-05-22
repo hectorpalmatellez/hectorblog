@@ -4,7 +4,7 @@
   <title><![CDATA[Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2014-03-23T02:22:35-03:00</updated>
+  <updated>2014-05-21T23:30:00-04:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lorem Ipsums bacanes]]></title>
+    <link href="http://hector.palmatellez.cl/lorem-ipsums-bacanes/"/>
+    <updated>2014-05-21T23:06:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/lorem-ipsums-bacanes</id>
+    <content type="html"><![CDATA[<p>Estuve haciendo <a href="https://github.com/hectorpalmatellez/emmstrap">una cosa</a> (que quizás luego amerite un post) y llegué a encontrar unos links interesantes para hacer texto simulado, dejando de lado el de <a href="http://lipsum.com/feed">lipsum.com</a>.</p>
+
+<!--more-->
+
+
+<p>Alternativas a <strong>lipsum.com</strong>:</p>
+
+<ul>
+<li><a href="chrisvalleskey.com/fillerama/"><strong>Fillerama</strong></a> es un generador de texto que hace párrafos con citas de series y películas, entre las que tiene de <em>Arrested Development</em>, <em>Star Wars</em>, <em>The Simpsons</em> … y otras cosas fomes.</li>
+<li><a href="http://veggieipsum.com"><strong>Veggie Ipsum</strong></a> tiene nombres de vegetales en latín e inglés. Entrete para generar párrafos como <em>«Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.»</em></li>
+<li><a href="http://www.cipsum.com/"><strong>Corporate Ipsum</strong></a> para generar textos que parecen ser corporativos e incluyen conceptos como <em>B2C</em>, <em>ROI</em> y esas leseras fomes.</li>
+</ul>
+
+
+<p>Espero tener oportunidad de usarlos todos algún día.
+O quizás no.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cosas que aprendí esta semana]]></title>
@@ -57,7 +81,7 @@ Ya, si fue poco, da lo mismo. Pa&#8217; mí fue harto.</p>
   <entry>
     <title type="html"><![CDATA[Usar Gmail para que Devise en Rails envíe correos]]></title>
     <link href="http://hector.palmatellez.cl/ror/rails-mails-gmail/"/>
-    <updated>2013-09-07T12:41:00-03:00</updated>
+    <updated>2013-09-07T12:41:00-04:00</updated>
     <id>http://hector.palmatellez.cl/ror/rails-mails-gmail</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/development.rb-mailer-gmail.png" width="400"> Estuve buscando una solución simple para crear un sistema que funcione bien y no tan complejo de entender en una aplicación hecha en <strong>Ruby on Rails</strong>, así es como llegué a <code>devise</code>. Esta parece tener un nivel alto de aceptación, aunque no tiene actualizaciones hace harto rato. Obvio que saltan problemas y soluciones pre-armadas, como lo que pasa cuando olvidas tu contraseña y deseas re-crearla. <code>devise</code> ya trae todas las <em>views</em> que uno podría necesitar (en <code>app/views/devise/</code>, si hiciste <code>$ rails generate devise:views</code>).</p>
 
@@ -124,7 +148,7 @@ config.action_mailer.smtp_settings = {
   <entry>
     <title type="html"><![CDATA[Configurar APN Entel]]></title>
     <link href="http://hector.palmatellez.cl/celulares/configurar-apn-entel/"/>
-    <updated>2013-05-20T17:38:00-03:00</updated>
+    <updated>2013-05-20T17:38:00-04:00</updated>
     <id>http://hector.palmatellez.cl/celulares/configurar-apn-entel</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
 
@@ -192,7 +216,7 @@ config.action_mailer.smtp_settings = {
   <entry>
     <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>
     <link href="http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku/"/>
-    <updated>2013-05-03T09:21:00-03:00</updated>
+    <updated>2013-05-03T09:21:00-04:00</updated>
     <id>http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku</id>
     <content type="html"><![CDATA[<p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa&#8217; hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
 
@@ -237,7 +261,7 @@ $ heroku ps:scale web=1
   <entry>
     <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
-    <updated>2013-04-28T17:48:00-03:00</updated>
+    <updated>2013-04-28T17:48:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
     <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
 Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>

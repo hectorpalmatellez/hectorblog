@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
   <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
   <link href="http://hector.palmatellez.cl/"/>
-  <updated>2014-03-23T02:22:35-03:00</updated>
+  <updated>2014-05-21T23:30:00-04:00</updated>
   <id>http://hector.palmatellez.cl/</id>
   <author>
     <name><![CDATA[Héctor Palma Téllez]]></name>
@@ -57,7 +57,7 @@ Ya, si fue poco, da lo mismo. Pa' mí fue harto.</p>
   <entry>
     <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
     <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
-    <updated>2013-04-28T17:48:00-03:00</updated>
+    <updated>2013-04-28T17:48:00-04:00</updated>
     <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
     <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
 Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
