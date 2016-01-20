@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: aprendiendo | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/c/aprendiendo/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2016-01-20T17:06:47-03:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cosas que aprendí esta semana]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/"/>
+    <updated>2014-03-22T21:16:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana</id>
+    <content type="html"><![CDATA[<p>Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar de enumerarlas para que no se me olvide que las aprendí esta semana:</p>
+
+<!--more-->
+
+
+<h4>PHP tiene un servidor de desarrollo que se puede abrir desde Terminal</h4>
+
+<p><img class="left" src="/images/php-dev-server.png" width="350" title="&#34;Servidor de desarrollo de PHP&#34;" alt="&#34;Servidor de desarrollo de PHP&#34;">
+ Este se abre así <code>$ php -S localhost:8000</code>. Va <code>localhost</code> porque eso es lo que vamos a escribir en el navegador cuando estemos probando esos PHP con includes penquitas. Lo que va después de los dos puntos es el puerto que le designemos. Funciona altiro (por lo menos con <code>PHP 5.4.24</code> que es el que tengo ahora).</p>
+
+<h4>Hay una herramienta bacán y gratuita para armar mails</h4>
+
+<p><img class="right" src="/images/mailrox.png" width="350" title="&#34;Mailrox&#34;" alt="&#34;Mailrox&#34;">Está en Beta, por lo que probablemente algún día cercano cierre las cuentas existentes o las limite, por ahora, hay que aprovechar: <a href="https://www.mailrox.com/">Mailrox</a> se llama el servicio que permite en el mismo navegador hacer los cortes y arreglos necesarios para que el mail quede <em>armado</em> de acuerdo a los estándares necesarios para que se vea bien en todos lados. Además, tiene varias <em>features</em> que aún no he probado, como la de trabajo colaborativo. En caso de que uno sea fijón e incrédulo producto de haber trabajado con Dreamweaver, por poner un ejemplo traumático, también existe la posibilidad de meterle mano al código a través del <code>WYSIWYG</code>.</p>
+
+<h4>Sprites con SCSS</h4>
+
+<p>Entendía el concepto detrás de los sprites al usar <a href="http://compass-style.org/">Compass</a>, pero nunca me dediqué a entender cómo funcionaba y cómo y dónde aplicarlo. Creo ahora entenderlo y ya lo he usado en un par de miniproyectos personales. Porsiaca, se <a href="compass-style.org/help/tutorials/spriting/" title="Tutorial del uso de sprites en Compass">explica acá</a>.</p>
+
+<h4>Usar <em>includes</em> en HTML con Assemble</h4>
+
+<p>En los proyectos con <a href="http://yeoman.io/">Yeoman</a> siempre me daba un poquito de lata cuando necesitabas incluir el mismo header y el mismo footer en todas las páginas, después, si había una variación, había que andar buscando todos los <code>.html</code> para corregir. Una lata.
+Eso era al usar el generador llamado <code>webapp</code>, sin embargo, existen hartos <a href="http://yeoman.io/community-generators.html">generadores hechos por la comunidad</a>, además de <a href="http://yeoman.io/official-generators.html">los generadores oficiales</a>.</p>
+
+<p>Entre los de la comunidad se encuenta el <code>generator yawa</code><a href="https://github.com/p-j/generator-yawa">[1]</a>. Este incluye algo muy bonito llamado <a href="http://assemble.io/">Assemble</a>. <strong>Assemble</strong> hace algo similar a <a href="http://jekyllrb.com/">Jekyll</a>, pero utilizando magias de Javascript y no de Ruby. Lo más básico es la existencia de una carpeta dentro de <code>app</code> llamada <code>templates</code>, ahí hay: <code>layouts</code>, <code>pages</code> y <code>partials</code>.</p>
+
+<p>En <code>app/templates/layouts</code> estará la principal llamada <code>default.hbs</code>, en <code>app/templates/pages</code> debería estar <code>index.hbs</code> y las demás uno las va creando.</p>
+
+<p>Para llamar un <em>partial</em>, después de crearlo en su directorio correspondiente, debe hacerse el llamado desde la plantilla o página necesaria utilizando: <code></code>. O por lo menos así me funcionó a mí.</p>
+
+<hr />
+
+<p>De eso nomás me acuerdo que aprendí esta semana. No fue tan poco, ¿cierto?
+Ya, si fue poco, da lo mismo. Pa' mí fue harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
+    <updated>2013-04-28T17:48:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
+    <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
+Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
+
+<p>No es tan difícil.</p>
+
+<!--more-->
+
+
+<h2>Preparación psicológica</h2>
+
+<p>Como ya se ha iniciado Git en tu proyecto (<strong>¿CIERTO?</strong>), es cosa de ir al Terminal, o <a href="http://iterm.sourceforge.net/">iTerm</a>, dependiendo de qué tan bacán erís. Allí veremos si existe <code>.git/config</code>. Si no existiera, hay que crearlo.</p>
+
+<p>En mi caso, el <code>.git/config</code> existía porque <a href="/aprendiendo/heroku-accounts" title="Explicación sobre cómo ocupar Heroku Accounts">uso Heroku Accounts</a>, así que fue cosa de añadirle sólo lo siguiente:</p>
+
+<pre><code>[remote "todo"]
+url = https://github.com/USUARIO/REPOSITORIO.git
+url = git@heroku.USUARIO:REPOSITORIO.git
+</code></pre>
+
+<p>El segundo tiene la sintaxis que ocupa Heroku Accounts, por eso se ve así… creo.</p>
+
+<h2>Referencias</h2>
+
+<p>Por si no se entendiera, acá dejo dos referencias:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4255865/git-push-to-multiple-repositories-simultaneously/4255934#4255934"><strong>git to multiple repositories simultaneously</strong></a> en Stack Overflow.</li>
+<li><a href="http://stackoverflow.com/questions/165092/can-i-push-to-more-than-one-repository-in-a-single-command-in-git/166043#166043"><strong>Can I push to more than one repository in a single command in git?</strong></a>, en el mismo sitio del anterior.</li>
+</ul>
+
+
+<p>En el próximo capítulo haremos magia negra.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
+    <updated>2013-04-27T00:40:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
+Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
+
+<!--more-->
+
+
+<h2>Las torturas</h2>
+
+<p>Creo que <strong>lo peor de la Internet sin AdBlock Plus es YouTube</strong>. Esos avisos por todos lados, más el video fome que te ponen antes de poder ver tu video es como recrear la experiencia de ver tele con comerciales. ¡Estamos en el 2013! Si quiero ver una serie, la veo de corrido, los capítulos que yo quiera y le pongo pausa cuando quiero. O así me acostumbré a que sea, quizás no tiene que ser así para todos.</p>
+
+<h2>La promesa</h2>
+
+<p>Creo que no vale la pena sufrir tanto navegando, es mejor usar AdBlock Plus siempre.
+Me gustó el resultado de mi experimento con Facebook Ads, pero no sé si toleraría estar siempre viendo banners y cosas que no necesito ver, como los mismos avisos que creé.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
+    <updated>2013-04-27T00:00:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
+    <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
+El resultado es el siguiente:</p>
+
+<p><img class="center" src="/images/resultados-facebook-publicidad.png" title="Resultados del experimento con publicidad en Facebook" alt="Resultados minicampaña de publicidad pagada"></p>
+
+<p>Aunque mejor ahondar más, ¿cierto?</p>
+
+<!--more-->
+
+
+<h2>Resultados que importan</h2>
+
+<p>Como principiante en esta materia, los resultados que más me importan son:</p>
+
+<ul>
+<li>Cantidad de likes conseguidos.</li>
+<li>Aumento en el alcance de las publicaciones de la página.</li>
+<li>Crear mayor interacción con los seguidores (mensajes y consultas sobre el servicio).</li>
+</ul>
+
+
+<p>Desglosado y con números queda:</p>
+
+<ul>
+<li><p>Fans conseguidos por aviso en el sidebar: <strong>147</strong>. En promedio con 3 dólares conseguí 30 fans. Los avisos se dividen en:</p>
+
+<ul>
+<li>Aviso invitando a informarse por el curso: <strong>49 likes</strong>.</li>
+<li><em>Sponsored stories</em>, comunicando que un amigo sigue la página, por ejemplo: <strong>98 likes</strong>.</li>
+<li>Importante consignar que este ítem de avisaje tuvo un costo total de <strong>10 dólares</strong> y se ejecutó por <strong>5 días</strong> (durante la semana). Además, tuvo un alcance de <strong>24.774 usuarios</strong> dentro del <em>target</em> seleccionado.</li>
+</ul>
+</li>
+<li><p>Fans conseguidos difundiendo una publicación de la página: <strong>38</strong>. Aunque es importante destacar que el objetivo principal de la difusión de esta publicación era aumentar la cantidad de personas que la iban a leer, cosa que se hizo, llegando a <strong>9.804 usuarios</strong>, entre lo pagado, lo viral y lo orgánico.</p></li>
+<li>El post fue compartido <strong>40 veces</strong>.</li>
+<li>El post tiene <strong>87 likes</strong>.</li>
+<li><strong>11 comentarios</strong> de personas diferentes buscando más información.</li>
+<li>La inversión para este ítem corresponde a <strong>5 dólares</strong> en alrededor de 24 horas.</li>
+</ul>
+
+
+<h2>Situación actual</h2>
+
+<p><img class="center" src="/images/aumento-alcance-curso-de-mapudungun-facebook.png" title="Aumento total de la actividad" alt="Resultados del experimento"></p>
+
+<p>Es importante poner énfasis en que el primer punto alto de la cadena del alcance corresponde al inicio de esta mini-campaña, es decir, el aviso y el post difundido con inversión. Luego de esto, sigue aumentando la visibilidad de la página.
+Antes del experimento, el alcance de la página llegaba a <strong>315 personas</strong>, el primer día de la campaña llegó a <strong>17.826</strong>, luego <strong>22.914</strong> y la última actualización muestra que ahora está en <strong>26.649</strong>.
+Destaquemos algo:</p>
+
+<pre><code>Según el reporte, el alcance de la página aumentó en un 3.790%
+</code></pre>
+
+<p>Me gustaría que a alguien le sirviera que yo comparta toda esta información. Si quedase alguna duda, <strong>los comentarios están para invocarme</strong>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Facebook ads para likes]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
+    <updated>2013-04-24T02:51:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/aviso-preview-curso-mapudungun.png"> <a href="/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
+
+<!--more-->
+
+
+<h2>Sobre el post difundido</h2>
+
+<p>Al final, cuando se agotó la plata, el post difundido fue visto por <strong>9.608 usuarios</strong>, de estos:</p>
+
+<ul>
+<li>7900 son pagados.</li>
+<li>1584 son virales.</li>
+<li>200 son orgánicos.</li>
+</ul>
+
+
+<p>El post ha sido <strong>compartido 39 veces</strong>, cuenta con <strong>87 <em>likes</em></strong> y casi 20 comentarios.</p>
+
+<h2>El aviso, no el post</h2>
+
+<p><img class="right" src="/images/preview-sponsored-story.png"> El aviso fue creado enfocándose en generar más likes en base al tema de la página. Este se divide en dos modalidades:</p>
+
+<ul>
+<li><strong>Aviso corriente</strong>, esos del sidebar en Facebook.</li>
+<li><strong>Historia patrocinada</strong>, como la imagen de la derecha.</li>
+</ul>
+
+
+<p>La última es la que ha generado más <em>likes</em> (62), mientras que el aviso normal sólo ha atraído 3 personas a la página. Todo esto con un presupuesto máximo de 3 dólares los dos primeros días y 2 dólares de ahora en adelante.</p>
+
+<h2>Todo suma</h2>
+
+<p>En este momento, ya se superaron los 100 nuevos fans desde el inicio del experimento con Facebook (ahora hay 890 fans, cuando se empezó eran 777).</p>
+
+<p><img src="/images/fans-por-dia-aviso-fb.png" title="Gráfico de fans por el aviso" alt="Avance en fans nuevos por aviso"></p>
+
+<p>Hasta ahora, creo que la inversión (o gasto) no ha sido lo suficiente como para considerar el experimento como fallido.</p>
+]]></content>
+  </entry>
+  
+</feed>

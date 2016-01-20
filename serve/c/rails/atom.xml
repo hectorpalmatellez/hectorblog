@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/c/rails/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2016-01-20T17:06:47-03:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cómo usar Rails desde Koding]]></title>
+    <link href="http://hector.palmatellez.cl/rails/como-usar-rails-desde-koding/"/>
+    <updated>2015-07-11T15:07:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/rails/como-usar-rails-desde-koding</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/koding/create-vm.png" width="350" title="&#34;Crear VM&#34;" alt="&#34;Crear VM&#34;"> El problema inicial era cómo lograr instalar un entorno común de trabajo similar al que uno recrea en un Mac, pero desde Windows. Recordé que <a href="http://koding.com/">Koding</a> ofrece una <em>VM</em> gratis y se me ocurrió que podría funcionar, entonces algo así tuve que hacer:</p>
+
+<!-- more -->
+
+
+<p>En el plan gratuito de Koding se tiene libertad para instalar todo lo necesario. El tipo de aplicación a instalar demanda, además de Rails, tener instalado <a href="http://www.postgresql.org/">PostgreSQL</a>, que también coincide con ser lo gratuito que se puede tener en una aplicación en Heroku.</p>
+
+<p><img src="/images/koding/create-new-vm.png" title="&#34;Crear nueva VM&#34;" alt="&#34;Crear nueva VM&#34;"></p>
+
+<h4>1. Instalar PostgreSQL</h4>
+
+<p>Koding tiene un manejador propio de paquetes, a prueba de tontos, por lo que instalar PostgreSQL es súper simple:</p>
+
+<p><code>$ kpm install postgresql</code></p>
+
+<h4>2. Instalar Ruby y Rails</h4>
+
+<p>La VM en Koding ya trae Ruby instalado, pero, ya que utilizaremos una versión más actual de Rails, es necesario actualizarla, los pasos para esto son:</p>
+
+<p><code>$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</code></p>
+
+<p>Luego:</p>
+
+<p><code>$ curl -sSL https://get.rvm.io | bash -s stable --rails</code> (este se demora un poco más que los otros).</p>
+
+<p>Al terminar:</p>
+
+<p><code>$ source ~/.rvm/scripts/rvm</code> para actualizar lo instalado.</p>
+
+<p><img src="/images/koding/ruby-rails-installed.png" title="&#34;Ruby y Rails instalado&#34;" alt="&#34;Ruby y Rails instalado&#34;"></p>
+
+<h4>3. Configurar Git</h4>
+
+<p>El proyecto en Rails ya está alojado en GitHub, por lo que parte de lo pensado es realizar cambios y hacer <em>commits</em> desde Koding. Para identificarse en GitHub se utilizan los pasos que ellos detallan en <a href="https://help.github.com/articles/generating-ssh-keys/">Generating SSH Keys</a>, pero en resumen, para este caso es:</p>
+
+<p><code>$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code> (con el correo reemplazado, obviamente).</p>
+
+<p>Esto generará dos archivos dentro de la VM: <code>~/.ssh/id_rsa</code> y <code>~/.ssh/id_rsa.pub</code>. Luego, se debe copiar el contenido de <code>id_rsa.pub</code> y guardarlo dentro de las SSH Keys autorizadas en tu propia cuenta de GitHub., estas están en: <a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>. Para copiar el contenido de este archivo, se puede hacer: <code>$ cat ~/.ssh/id_rsa.pub</code> y copiar este contenido en el portapapeles.
+Luego ir a las SSH Keys del perfil de GitHub y pegar este contenido guardándolo con un nombre que lo identifique.
+Para probar si el proceso quedó bien, se puede ejecutar: <code>$ ssh -T git@github.com</code>. Primero, pedirá permiso si se acepta agregar esa llave a la lista de <em>known hosts</em>, luego devolverá el nombre de usuario en un mensaje, con eso queda ya confirmada la conexión entre la VM y el usuario de GitHub.</p>
+
+<p><img src="/images/koding/add-ssh-key.png" title="&#34;Agregar Key a GitHub&#34;" alt="&#34;Agregar Key a GitHub&#34;"></p>
+
+<h4>4. Clonar el repositorio</h4>
+
+<p>Para clonar el repositorio, hay que ir a <code>~/Web</code> y hacer <code>$ git clone [URL DEL REPOSITORIO] .</code> (con un punto al final, para que quede el repositorio en la misma carpeta y no en una con el nombre del repositorio). Lo más posible es que Git imprima este error: <code>fatal: destination path '.' already exists and is not an empty directory.</code>, esto es porque Koding genera algunos archivos en <code>~/Web</code>, que es la raíz para lo que se ve en el dominio "desde afuera", por lo que un <code>$ rm *</code> y repetir el comando de clonación del repositorio será suficiente 👌</p>
+
+<h4>5. Rails Server</h4>
+
+<p>Koding siempre quedará como un entorno de desarrollo, por lo que uno normalmente ahora haría <code>$ rails s</code> para ver qué tal está el repositorio. Oh, cierto, falta el <code>$ bundle install</code>...
+En caso de existir un error con la instalación de la gema <code>pg</code>, es necesario instalar una librería adicional con este comando: <code>$ sudo apt-get install libpq-dev</code>.
+Luego de esto, ya será posible <code>$ bundle install</code> y <code>$ rails s</code>, sin embargo, para asegurar poder ver la VM públicamente, el comando debe ser <code>$ rails s -b 0.0.0.0</code>, con esto ya puede ser visto por cualquier persona, utilizando la IP pública que aparece en las <em>VM Settings</em> más el puerto por defecto que es normalmente el <code>3000</code>.
+Al intentarlo, probablemente aparezca un error relacionado con PostgreSQL.</p>
+
+<h4>6. Últimos detalles</h4>
+
+<p>Lo que falta configurar en PostgreSQL es el role con el nombre del usuario de Koding.</p>
+
+<ol>
+<li><code>sudo su - postgres</code></li>
+<li><code>psql template1</code></li>
+<li><code>CREATE ROLE [username] superuser;</code></li>
+<li><code>ALTER ROLE username WITH LOGIN;</code></li>
+</ol>
+
+
+<p>Luego de esto, es necesario recrear la base de datos con <code>$ bundle exec rake rake db:create:all</code> y luego <code>bundle exec rake db:migrate</code>.</p>
+
+<h4>7. Terminó</h4>
+
+<p>Luego de todos estos pasos, ya debe poder verse en la IP pública el servidor local. Los archivos se pueden editar a través de Koding y se pueden realizar commits con el usuario ya logueado.</p>
+
+<p>Ahora, todo está controlado.</p>
+
+<p><img src="http://media2.giphy.com/media/OCdsZb1Er6aeQ/giphy.gif" alt="Todo bajo control" /></p>
+]]></content>
+  </entry>
+  
+</feed>

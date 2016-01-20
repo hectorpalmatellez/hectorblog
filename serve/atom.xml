@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Héctor Palma Téllez]]></title>
+  <link href="http://hector.palmatellez.cl/atom.xml" rel="self"/>
+  <link href="http://hector.palmatellez.cl/"/>
+  <updated>2016-01-20T17:06:47-03:00</updated>
+  <id>http://hector.palmatellez.cl/</id>
+  <author>
+    <name><![CDATA[Héctor Palma Téllez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cómo usar Rails desde Koding]]></title>
+    <link href="http://hector.palmatellez.cl/rails/como-usar-rails-desde-koding/"/>
+    <updated>2015-07-11T15:07:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/rails/como-usar-rails-desde-koding</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/koding/create-vm.png" width="350" title="&#34;Crear VM&#34;" alt="&#34;Crear VM&#34;"> El problema inicial era cómo lograr instalar un entorno común de trabajo similar al que uno recrea en un Mac, pero desde Windows. Recordé que <a href="http://koding.com/">Koding</a> ofrece una <em>VM</em> gratis y se me ocurrió que podría funcionar, entonces algo así tuve que hacer:</p>
+
+<!-- more -->
+
+
+<p>En el plan gratuito de Koding se tiene libertad para instalar todo lo necesario. El tipo de aplicación a instalar demanda, además de Rails, tener instalado <a href="http://www.postgresql.org/">PostgreSQL</a>, que también coincide con ser lo gratuito que se puede tener en una aplicación en Heroku.</p>
+
+<p><img src="http://hector.palmatellez.cl/images/koding/create-new-vm.png" title="&#34;Crear nueva VM&#34;" alt="&#34;Crear nueva VM&#34;"></p>
+
+<h4>1. Instalar PostgreSQL</h4>
+
+<p>Koding tiene un manejador propio de paquetes, a prueba de tontos, por lo que instalar PostgreSQL es súper simple:</p>
+
+<p><code>$ kpm install postgresql</code></p>
+
+<h4>2. Instalar Ruby y Rails</h4>
+
+<p>La VM en Koding ya trae Ruby instalado, pero, ya que utilizaremos una versión más actual de Rails, es necesario actualizarla, los pasos para esto son:</p>
+
+<p><code>$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</code></p>
+
+<p>Luego:</p>
+
+<p><code>$ curl -sSL https://get.rvm.io | bash -s stable --rails</code> (este se demora un poco más que los otros).</p>
+
+<p>Al terminar:</p>
+
+<p><code>$ source ~/.rvm/scripts/rvm</code> para actualizar lo instalado.</p>
+
+<p><img src="http://hector.palmatellez.cl/images/koding/ruby-rails-installed.png" title="&#34;Ruby y Rails instalado&#34;" alt="&#34;Ruby y Rails instalado&#34;"></p>
+
+<h4>3. Configurar Git</h4>
+
+<p>El proyecto en Rails ya está alojado en GitHub, por lo que parte de lo pensado es realizar cambios y hacer <em>commits</em> desde Koding. Para identificarse en GitHub se utilizan los pasos que ellos detallan en <a href="https://help.github.com/articles/generating-ssh-keys/">Generating SSH Keys</a>, pero en resumen, para este caso es:</p>
+
+<p><code>$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code> (con el correo reemplazado, obviamente).</p>
+
+<p>Esto generará dos archivos dentro de la VM: <code>~/.ssh/id_rsa</code> y <code>~/.ssh/id_rsa.pub</code>. Luego, se debe copiar el contenido de <code>id_rsa.pub</code> y guardarlo dentro de las SSH Keys autorizadas en tu propia cuenta de GitHub., estas están en: <a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>. Para copiar el contenido de este archivo, se puede hacer: <code>$ cat ~/.ssh/id_rsa.pub</code> y copiar este contenido en el portapapeles.
+Luego ir a las SSH Keys del perfil de GitHub y pegar este contenido guardándolo con un nombre que lo identifique.
+Para probar si el proceso quedó bien, se puede ejecutar: <code>$ ssh -T git@github.com</code>. Primero, pedirá permiso si se acepta agregar esa llave a la lista de <em>known hosts</em>, luego devolverá el nombre de usuario en un mensaje, con eso queda ya confirmada la conexión entre la VM y el usuario de GitHub.</p>
+
+<p><img src="http://hector.palmatellez.cl/images/koding/add-ssh-key.png" title="&#34;Agregar Key a GitHub&#34;" alt="&#34;Agregar Key a GitHub&#34;"></p>
+
+<h4>4. Clonar el repositorio</h4>
+
+<p>Para clonar el repositorio, hay que ir a <code>~/Web</code> y hacer <code>$ git clone [URL DEL REPOSITORIO] .</code> (con un punto al final, para que quede el repositorio en la misma carpeta y no en una con el nombre del repositorio). Lo más posible es que Git imprima este error: <code>fatal: destination path '.' already exists and is not an empty directory.</code>, esto es porque Koding genera algunos archivos en <code>~/Web</code>, que es la raíz para lo que se ve en el dominio &#8220;desde afuera&#8221;, por lo que un <code>$ rm *</code> y repetir el comando de clonación del repositorio será suficiente 👌</p>
+
+<h4>5. Rails Server</h4>
+
+<p>Koding siempre quedará como un entorno de desarrollo, por lo que uno normalmente ahora haría <code>$ rails s</code> para ver qué tal está el repositorio. Oh, cierto, falta el <code>$ bundle install</code>&#8230;
+En caso de existir un error con la instalación de la gema <code>pg</code>, es necesario instalar una librería adicional con este comando: <code>$ sudo apt-get install libpq-dev</code>.
+Luego de esto, ya será posible <code>$ bundle install</code> y <code>$ rails s</code>, sin embargo, para asegurar poder ver la VM públicamente, el comando debe ser <code>$ rails s -b 0.0.0.0</code>, con esto ya puede ser visto por cualquier persona, utilizando la IP pública que aparece en las <em>VM Settings</em> más el puerto por defecto que es normalmente el <code>3000</code>.
+Al intentarlo, probablemente aparezca un error relacionado con PostgreSQL.</p>
+
+<h4>6. Últimos detalles</h4>
+
+<p>Lo que falta configurar en PostgreSQL es el role con el nombre del usuario de Koding.</p>
+
+<ol>
+<li><code>sudo su - postgres</code></li>
+<li><code>psql template1</code></li>
+<li><code>CREATE ROLE [username] superuser;</code></li>
+<li><code>ALTER ROLE username WITH LOGIN;</code></li>
+</ol>
+
+
+<p>Luego de esto, es necesario recrear la base de datos con <code>$ bundle exec rake rake db:create:all</code> y luego <code>bundle exec rake db:migrate</code>.</p>
+
+<h4>7. Terminó</h4>
+
+<p>Luego de todos estos pasos, ya debe poder verse en la IP pública el servidor local. Los archivos se pueden editar a través de Koding y se pueden realizar commits con el usuario ya logueado.</p>
+
+<p>Ahora, todo está controlado.</p>
+
+<p><img src="http://media2.giphy.com/media/OCdsZb1Er6aeQ/giphy.gif" alt="Todo bajo control" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lorem Ipsums bacanes]]></title>
+    <link href="http://hector.palmatellez.cl/lorem-ipsums-bacanes/"/>
+    <updated>2014-05-21T23:06:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/lorem-ipsums-bacanes</id>
+    <content type="html"><![CDATA[<p>Estuve haciendo <a href="https://github.com/hectorpalmatellez/emmstrap">una cosa</a> (que quizás luego amerite un post) y llegué a encontrar unos links interesantes para hacer texto simulado, dejando de lado el de <a href="http://lipsum.com/feed">lipsum.com</a>.</p>
+
+<!--more-->
+
+
+<p>Alternativas a <strong>lipsum.com</strong>:</p>
+
+<ul>
+<li><a href="chrisvalleskey.com/fillerama/"><strong>Fillerama</strong></a> es un generador de texto que hace párrafos con citas de series y películas, entre las que tiene de <em>Arrested Development</em>, <em>Star Wars</em>, <em>The Simpsons</em> … y otras cosas fomes.</li>
+<li><a href="http://veggieipsum.com"><strong>Veggie Ipsum</strong></a> tiene nombres de vegetales en latín e inglés. Entrete para generar párrafos como <em>«Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.»</em></li>
+<li><a href="http://www.cipsum.com/"><strong>Corporate Ipsum</strong></a> para generar textos que parecen ser corporativos e incluyen conceptos como <em>B2C</em>, <em>ROI</em> y esas leseras fomes.</li>
+</ul>
+
+
+<p>Espero tener oportunidad de usarlos todos algún día.
+O quizás no.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cosas que aprendí esta semana]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana/"/>
+    <updated>2014-03-22T21:16:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/cosas-que-aprendi-esta-semana</id>
+    <content type="html"><![CDATA[<p>Hay varias cosas que quizás debería haber aprendido antes sobre lo que hago, por varias razones las aprendí esta semana, que ya termina. Voy a tratar de enumerarlas para que no se me olvide que las aprendí esta semana:</p>
+
+<!--more-->
+
+
+<h4>PHP tiene un servidor de desarrollo que se puede abrir desde Terminal</h4>
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/php-dev-server.png" width="350" title="&#34;Servidor de desarrollo de PHP&#34;" alt="&#34;Servidor de desarrollo de PHP&#34;">
+ Este se abre así <code>$ php -S localhost:8000</code>. Va <code>localhost</code> porque eso es lo que vamos a escribir en el navegador cuando estemos probando esos PHP con includes penquitas. Lo que va después de los dos puntos es el puerto que le designemos. Funciona altiro (por lo menos con <code>PHP 5.4.24</code> que es el que tengo ahora).</p>
+
+<h4>Hay una herramienta bacán y gratuita para armar mails</h4>
+
+<p><img class="right" src="http://hector.palmatellez.cl/images/mailrox.png" width="350" title="&#34;Mailrox&#34;" alt="&#34;Mailrox&#34;">Está en Beta, por lo que probablemente algún día cercano cierre las cuentas existentes o las limite, por ahora, hay que aprovechar: <a href="https://www.mailrox.com/">Mailrox</a> se llama el servicio que permite en el mismo navegador hacer los cortes y arreglos necesarios para que el mail quede <em>armado</em> de acuerdo a los estándares necesarios para que se vea bien en todos lados. Además, tiene varias <em>features</em> que aún no he probado, como la de trabajo colaborativo. En caso de que uno sea fijón e incrédulo producto de haber trabajado con Dreamweaver, por poner un ejemplo traumático, también existe la posibilidad de meterle mano al código a través del <code>WYSIWYG</code>.</p>
+
+<h4>Sprites con SCSS</h4>
+
+<p>Entendía el concepto detrás de los sprites al usar <a href="http://compass-style.org/">Compass</a>, pero nunca me dediqué a entender cómo funcionaba y cómo y dónde aplicarlo. Creo ahora entenderlo y ya lo he usado en un par de miniproyectos personales. Porsiaca, se <a href="compass-style.org/help/tutorials/spriting/" title="Tutorial del uso de sprites en Compass">explica acá</a>.</p>
+
+<h4>Usar <em>includes</em> en HTML con Assemble</h4>
+
+<p>En los proyectos con <a href="http://yeoman.io/">Yeoman</a> siempre me daba un poquito de lata cuando necesitabas incluir el mismo header y el mismo footer en todas las páginas, después, si había una variación, había que andar buscando todos los <code>.html</code> para corregir. Una lata.
+Eso era al usar el generador llamado <code>webapp</code>, sin embargo, existen hartos <a href="http://yeoman.io/community-generators.html">generadores hechos por la comunidad</a>, además de <a href="http://yeoman.io/official-generators.html">los generadores oficiales</a>.</p>
+
+<p>Entre los de la comunidad se encuenta el <code>generator yawa</code><a href="https://github.com/p-j/generator-yawa">[1]</a>. Este incluye algo muy bonito llamado <a href="http://assemble.io/">Assemble</a>. <strong>Assemble</strong> hace algo similar a <a href="http://jekyllrb.com/">Jekyll</a>, pero utilizando magias de Javascript y no de Ruby. Lo más básico es la existencia de una carpeta dentro de <code>app</code> llamada <code>templates</code>, ahí hay: <code>layouts</code>, <code>pages</code> y <code>partials</code>.</p>
+
+<p>En <code>app/templates/layouts</code> estará la principal llamada <code>default.hbs</code>, en <code>app/templates/pages</code> debería estar <code>index.hbs</code> y las demás uno las va creando.</p>
+
+<p>Para llamar un <em>partial</em>, después de crearlo en su directorio correspondiente, debe hacerse el llamado desde la plantilla o página necesaria utilizando: &#8220;. O por lo menos así me funcionó a mí.</p>
+
+<hr />
+
+<p>De eso nomás me acuerdo que aprendí esta semana. No fue tan poco, ¿cierto?
+Ya, si fue poco, da lo mismo. Pa&#8217; mí fue harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usar Gmail para que Devise en Rails envíe correos]]></title>
+    <link href="http://hector.palmatellez.cl/ror/rails-mails-gmail/"/>
+    <updated>2013-09-07T12:41:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/ror/rails-mails-gmail</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/development.rb-mailer-gmail.png" width="400"> Estuve buscando una solución simple para crear un sistema que funcione bien y no tan complejo de entender en una aplicación hecha en <strong>Ruby on Rails</strong>, así es como llegué a <code>devise</code>. Esta parece tener un nivel alto de aceptación, aunque no tiene actualizaciones hace harto rato. Obvio que saltan problemas y soluciones pre-armadas, como lo que pasa cuando olvidas tu contraseña y deseas re-crearla. <code>devise</code> ya trae todas las <em>views</em> que uno podría necesitar (en <code>app/views/devise/</code>, si hiciste <code>$ rails generate devise:views</code>).</p>
+
+<!-- more -->
+
+
+<h2>«Todo está listo, pero no»</h2>
+
+<p>Sin problema pude generar el sistema de registro y logueo, un par de comandos y listo. Casi <em>a prueba de tontos</em>. Luego vino la parte donde me pregunté sobre el botón de <strong>Recuperar Contraseña</strong>, porque las <code>views</code> lo incluyen, lo probé y no funcionó :(</p>
+
+<h3>Recuperar contraseña con <code>devise</code></h3>
+
+<p>La vista está en <code>app/views/devise/passwords/new.html.erb</code> y casi no hay que tocar nada. Yo traduje un par de cuestiones nomás, aunque hay cosas que se traducen usando el <a href="" title="https://github.com/plataformatec/devise/wiki/I18n">i18n de devise</a>.</p>
+
+<p>En <code>config/environments/development.rb</code> van los datos que se usan para acceder a Gmail, utilizando los datos de acceso (la primera imagen de este post). Para que funcionase en local (obvio, porque es <code>development.rb</code>). De acuerdo a la teoría que busqué, era posible no tener que poner la información en texto plano explícito en ese archivo, usando <em>environmental variables</em>, como dice <a href="http://stevechristie.tumblr.com/post/35158776548/how-to-set-up-local-environmental-variables">Old Man Coder</a>, sin embargo, me fue más fácil que funcionara en Heroku (<code>production.rb</code>), que en el local. Pa&#8217; qué darle tanta vuelta, si la cosa anda.</p>
+
+<p>El de producción queda así:</p>
+
+<pre><code>config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+}
+</code></pre>
+
+<p>Algo útil es que no necesariamente tiene que ser un correo <em>@gmail.com</em>, ya que yo probé con uno que utiliza Google Apps y anda súper igual.</p>
+
+<h2>Crear <em>environmental variables</em> para Heroku</h2>
+
+<p><strong>Heroku</strong> lo explica súper bien en <a href="" title="https://devcenter.heroku.com/articles/config-vars">su Devcenter</a>, pero el paso exacto dado por mí fue el siguiente:</p>
+
+<pre><code>heroku config:add GMAIL_USERNAME=CORREO@GMAIL.COM GMAIL_DOMAIN=gmail.com GMAIL_PASSWORD=CONTRASEÑA
+</code></pre>
+
+<p>Se explica solito.</p>
+
+<h2>Ya, ¿y?</h2>
+
+<p>Después de esos pasos, falta revisar que nuestro <code>production.rb</code> tenga lo siguiente:</p>
+
+<pre><code>config.action_mailer.default_url_options = { :host =&gt; 'http://APP.herokuapp.com' }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+}
+</code></pre>
+
+<p>En la primera debe ir el nombre con la URL de tu aplicación. Si utilizas un dominio asignado, sin el <code>herokuapp.com</code>, debe ir ese dominio ahí.</p>
+
+<p>Con eso ya debería funcionar todo. Gracias a Google y a todos los amiguitos que lo hicieron posible n.n</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurar APN Entel]]></title>
+    <link href="http://hector.palmatellez.cl/celulares/configurar-apn-entel/"/>
+    <updated>2013-05-20T17:38:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/celulares/configurar-apn-entel</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
+
+<p>Como sea, el problema, al hacer restauración de fábrica, es que se pierden varios datos con una ROM no oficial, como el APN.</p>
+
+<!--more-->
+
+
+<h2>¿APN?</h2>
+
+<p>El <strong>APN</strong>, o <em>Access Point Name</em>, es la información con la que tu teléfono se conecta a Internet móvil de acuerdo a lo que tu proveedor de servicios da: Edge, 3G o alguna de esas que se parecen.</p>
+
+<h3>El problema</h3>
+
+<p>Al hacer la restauración de fábrica, el celular borra <strong>TODO</strong> y eso incluye la información que usaba para conectarse a Internet cuando uno anda en la micro. Para solucionarlo, hay que reingresar la información. El problema es que, por lo menos mi proveedor (<a href="http://www.entel.cl">Entel</a>), no entrega tan bien la información, según yo.</p>
+
+<p>Según Entel, la información a continuación es suficiente:</p>
+
+<ul>
+<li>Nombre: <strong>Internet Móvil</strong></li>
+<li>APN: <strong>bam.entelpcs.cl</strong></li>
+<li>Proxy: <strong>no definido</strong></li>
+<li>Puerto: <strong>no definido</strong></li>
+<li>Nombre de usuario: <strong>entelpcs</strong></li>
+<li>Contraseña: <strong>entelpcs</strong></li>
+<li>Servidor: no definido</li>
+<li>MMSC: no definido</li>
+<li>Proxy de mensaje multimedia: no definido</li>
+<li>Puerto de mensaje multimedia: no definido</li>
+<li>MCC: 730</li>
+<li>MNC: 01</li>
+<li>Tipo de autenticación: <strong>PAP</strong></li>
+<li>Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)</li>
+<li>Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</li>
+</ul>
+
+
+<p>Pero a mí no me funcionó.</p>
+
+<h2>Lo que me funcionó</h2>
+
+<p><img class="right" src="http://hector.palmatellez.cl/images/ss-apn2.png" title="imovil.entelpcs.cl" alt="APN que me funcionó">
+* Nombre: <strong>Internet Móvil</strong>
+* APN: <span style="color:red"><strong>imovil.entelpcs.cl</strong></span>
+* Proxy: <strong>no definido</strong>
+* Puerto: <strong>no definido</strong>
+* Nombre de usuario: <strong>entelpcs</strong>
+* Contraseña: <strong>entelpcs</strong>
+* Servidor: no definido
+* MMSC: no definido
+* Proxy de mensaje multimedia: no definido
+* Puerto de mensaje multimedia: no definido
+* MCC: 730
+* MNC: 01
+* Tipo de autenticación: <strong>PAP</strong>
+* Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)
+* Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</p>
+
+<p><strong>Bastó con poner imovil.entelpcs.cl en vez de bam.entelpcs.cl</strong></p>
+
+<p>Espero que a alguien del universo chileno le sirva alguna vez.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solucionando error H14 en Heroku]]></title>
+    <link href="http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku/"/>
+    <updated>2013-05-03T09:21:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/heroku/solucionando-error-h14-en-heroku</id>
+    <content type="html"><![CDATA[<p>Quería instalar <a href="http://rubyonrails.org/" title="Web Oficial">Ruby on Rails</a> en Heroku pa&#8217; hacer un par de pruebas en mi cerebro. Pero me encontré con un problema que deriva en otros problemas:</p>
+
+<ul>
+<li><strong>Heroku no tiene sqlite3</strong>, así que la base de datos no corre.</li>
+</ul>
+
+
+<p>La solución propuesta es utilizar la gema <code>pg</code>, de <a href="http://rubygems.org/gems/pg">PostgreSQL</a>. La explicación sobre cómo hacerlo la hallé en <a href="http://guides.railsgirls.com/heroku/" title="Instalar Ruby on Rails en Heroku">un tutorial de RailsGirls</a>.</p>
+
+<p><strong>Pero</strong> llegué a tener <strong>error H14</strong>, después de <code>heroku run rake db:migrate</code>. Y eso es&#8230;</p>
+
+<!--more-->
+
+
+<p><a href="https://devcenter.heroku.com/articles/error-codes#h14-no-web-processes-running">Según el DevCenter de Heroku</a> el Error H14 es:</p>
+
+<pre><code>This is most likely the result of scaling your web dynos down to 0 dynos. To fix it, scale your web dynos to 1 or more dynos.
+</code></pre>
+
+<p>Es decir, es porque no tiene suficiente «poder». Partamos con que Heroku entrega espacio y la capacidad para correr aplicaciones usando su sistema sin cobrarte. <strong>PERO</strong> si tu aplicación no es tan simple, hay que agregarle <em>dynos</em> a la ecuación y eso te cuesta plata. Lo gratuito es 1 <em>dyno</em> (los <em>dynos</em> son las «maquinitas» o <em>bots</em>, diría yo, que ejecutan tareas). Hay diferentes tipos, por lo que el de la base de datos no es el mismo que el que hace… otras cosas.</p>
+
+<h2>La solución</h2>
+
+<p>Lo que traté de hacer después de cachar lo que decía el log (<code>heroku logs</code>), fue, desde el panel de administración del navegador, editar la cantidad de <em>dynos</em>, pero el panel no funcionaba. Estuve a punto de borrar la aplicación nomás, pero probé el ejemplo:</p>
+
+<pre><code>$ heroku ps:scale web=1
+</code></pre>
+
+<p>Aunque resulta que yo necesitaba apagar el <code>worker</code> para prender el <code>web</code>, por lo que fue:</p>
+
+<pre><code>$ heroku ps:scale worker=0
+$ heroku ps:scale web=1
+</code></pre>
+
+<p>Confirmamos con un <code>heroku open</code>, que abre la aplicación en la que estamos trabajando y <em>listoco</em>.</p>
+
+<p>Por lo menos así solucioné mi problema.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Push desde diferentes remotes con Git]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git/"/>
+    <updated>2013-04-28T17:48:00-04:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/push-diferentes-remotes-git</id>
+    <content type="html"><![CDATA[<p>Actualmente este blog está <em>hosteado</em> en <a href="http://www.heroku.com/">Heroku</a>, eso quiere decir que los <em>commits</em> se hacen hacia allá, pero igual quería tener una copia con mayor visibilidad, por lo que se me ocurrió ver una forma donde pudiera hacer <em>commit</em> a más de una fuente (o <em>remote</em>).
+Actualmente puedo hacer <code>git push todo</code> para enviar las actualizaciones a Heroku y, al mismo tiempo, <a href="https://github.com/hectorpalmatellez/hectorblog">a GitHub</a>.</p>
+
+<p>No es tan difícil.</p>
+
+<!--more-->
+
+
+<h2>Preparación psicológica</h2>
+
+<p>Como ya se ha iniciado Git en tu proyecto (<strong>¿CIERTO?</strong>), es cosa de ir al Terminal, o <a href="http://iterm.sourceforge.net/">iTerm</a>, dependiendo de qué tan bacán erís. Allí veremos si existe <code>.git/config</code>. Si no existiera, hay que crearlo.</p>
+
+<p>En mi caso, el <code>.git/config</code> existía porque <a href="http://hector.palmatellez.cl/aprendiendo/heroku-accounts" title="Explicación sobre cómo ocupar Heroku Accounts">uso Heroku Accounts</a>, así que fue cosa de añadirle sólo lo siguiente:</p>
+
+<pre><code>[remote "todo"]
+url = https://github.com/USUARIO/REPOSITORIO.git
+url = git@heroku.USUARIO:REPOSITORIO.git
+</code></pre>
+
+<p>El segundo tiene la sintaxis que ocupa Heroku Accounts, por eso se ve así… creo.</p>
+
+<h2>Referencias</h2>
+
+<p>Por si no se entendiera, acá dejo dos referencias:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4255865/git-push-to-multiple-repositories-simultaneously/4255934#4255934"><strong>git to multiple repositories simultaneously</strong></a> en Stack Overflow.</li>
+<li><a href="http://stackoverflow.com/questions/165092/can-i-push-to-more-than-one-repository-in-a-single-command-in-git/166043#166043"><strong>Can I push to more than one repository in a single command in git?</strong></a>, en el mismo sitio del anterior.</li>
+</ul>
+
+
+<p>En el próximo capítulo haremos magia negra.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3 días sin AdBlock Plus]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus/"/>
+    <updated>2013-04-27T00:40:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/3-dias-sin-adblock-plus</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/abp.png" width="240" title="&#34;Logo de AdBlock Plus&#34;" alt="&#34;Logo de AdBlock Plus&#34;">A propósito de mi experimento, tuve que apagar AdBlock Plus, para poder ver los avisos y no tener problemas visualizando el panel de administración de los mismos.
+Este complemento lo utilizo por lo menos desde el 2009 sin interrupción (es de lo primero que instalo al configurar el navegador recién instalado), por lo que sí es chocante tener que <em>sobrevivir</em> en Internet sin él.</p>
+
+<!--more-->
+
+
+<h2>Las torturas</h2>
+
+<p>Creo que <strong>lo peor de la Internet sin AdBlock Plus es YouTube</strong>. Esos avisos por todos lados, más el video fome que te ponen antes de poder ver tu video es como recrear la experiencia de ver tele con comerciales. ¡Estamos en el 2013! Si quiero ver una serie, la veo de corrido, los capítulos que yo quiera y le pongo pausa cuando quiero. O así me acostumbré a que sea, quizás no tiene que ser así para todos.</p>
+
+<h2>La promesa</h2>
+
+<p>Creo que no vale la pena sufrir tanto navegando, es mejor usar AdBlock Plus siempre.
+Me gustó el resultado de mi experimento con Facebook Ads, pero no sé si toleraría estar siempre viendo banners y cosas que no necesito ver, como los mismos avisos que creé.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Comentarios finales sobre Facebook Ads]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads/"/>
+    <updated>2013-04-27T00:00:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/comentarios-finales-facebook-ads</id>
+    <content type="html"><![CDATA[<p>Terminó el experimento que comenté en dos posts anteriores (<a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/" title="Primer post sobre Facebook Ads">uno</a> y <a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/" title="Segundo post sobre ads para likes en Facebook">dos</a>).
+El resultado es el siguiente:</p>
+
+<p><img class="center" src="http://hector.palmatellez.cl/images/resultados-facebook-publicidad.png" title="Resultados del experimento con publicidad en Facebook" alt="Resultados minicampaña de publicidad pagada"></p>
+
+<p>Aunque mejor ahondar más, ¿cierto?</p>
+
+<!--more-->
+
+
+<h2>Resultados que importan</h2>
+
+<p>Como principiante en esta materia, los resultados que más me importan son:</p>
+
+<ul>
+<li>Cantidad de likes conseguidos.</li>
+<li>Aumento en el alcance de las publicaciones de la página.</li>
+<li>Crear mayor interacción con los seguidores (mensajes y consultas sobre el servicio).</li>
+</ul>
+
+
+<p>Desglosado y con números queda:</p>
+
+<ul>
+<li><p>Fans conseguidos por aviso en el sidebar: <strong>147</strong>. En promedio con 3 dólares conseguí 30 fans. Los avisos se dividen en:</p>
+
+<ul>
+<li>Aviso invitando a informarse por el curso: <strong>49 likes</strong>.</li>
+<li><em>Sponsored stories</em>, comunicando que un amigo sigue la página, por ejemplo: <strong>98 likes</strong>.</li>
+<li>Importante consignar que este ítem de avisaje tuvo un costo total de <strong>10 dólares</strong> y se ejecutó por <strong>5 días</strong> (durante la semana). Además, tuvo un alcance de <strong>24.774 usuarios</strong> dentro del <em>target</em> seleccionado.</li>
+</ul>
+</li>
+<li><p>Fans conseguidos difundiendo una publicación de la página: <strong>38</strong>. Aunque es importante destacar que el objetivo principal de la difusión de esta publicación era aumentar la cantidad de personas que la iban a leer, cosa que se hizo, llegando a <strong>9.804 usuarios</strong>, entre lo pagado, lo viral y lo orgánico.</p></li>
+<li>El post fue compartido <strong>40 veces</strong>.</li>
+<li>El post tiene <strong>87 likes</strong>.</li>
+<li><strong>11 comentarios</strong> de personas diferentes buscando más información.</li>
+<li>La inversión para este ítem corresponde a <strong>5 dólares</strong> en alrededor de 24 horas.</li>
+</ul>
+
+
+<h2>Situación actual</h2>
+
+<p><img class="center" src="http://hector.palmatellez.cl/images/aumento-alcance-curso-de-mapudungun-facebook.png" title="Aumento total de la actividad" alt="Resultados del experimento"></p>
+
+<p>Es importante poner énfasis en que el primer punto alto de la cadena del alcance corresponde al inicio de esta mini-campaña, es decir, el aviso y el post difundido con inversión. Luego de esto, sigue aumentando la visibilidad de la página.
+Antes del experimento, el alcance de la página llegaba a <strong>315 personas</strong>, el primer día de la campaña llegó a <strong>17.826</strong>, luego <strong>22.914</strong> y la última actualización muestra que ahora está en <strong>26.649</strong>.
+Destaquemos algo:</p>
+
+<pre><code>Según el reporte, el alcance de la página aumentó en un 3.790%
+</code></pre>
+
+<p>Me gustaría que a alguien le sirviera que yo comparta toda esta información. Si quedase alguna duda, <strong>los comentarios están para invocarme</strong>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Facebook ads para likes]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes/"/>
+    <updated>2013-04-24T02:51:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-para-likes</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/aviso-preview-curso-mapudungun.png"> <a href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/" title="Mi primer post sobre el uso de Facebook Ads">Como dije antes</a>, probé los avisos de Facebook, además de las publicaciones con difusión pagada. En el post anterior escribo más de las difusiones pagadas porque es lo que <strong>más resultado da si uno busca conseguir interesados en tu servicio o producto</strong>. Pensando en difundir un concurso que tienes, por ejemplo. Datos exactos a continuación.</p>
+
+<!--more-->
+
+
+<h2>Sobre el post difundido</h2>
+
+<p>Al final, cuando se agotó la plata, el post difundido fue visto por <strong>9.608 usuarios</strong>, de estos:</p>
+
+<ul>
+<li>7900 son pagados.</li>
+<li>1584 son virales.</li>
+<li>200 son orgánicos.</li>
+</ul>
+
+
+<p>El post ha sido <strong>compartido 39 veces</strong>, cuenta con <strong>87 <em>likes</em></strong> y casi 20 comentarios.</p>
+
+<h2>El aviso, no el post</h2>
+
+<p><img class="right" src="http://hector.palmatellez.cl/images/preview-sponsored-story.png"> El aviso fue creado enfocándose en generar más likes en base al tema de la página. Este se divide en dos modalidades:</p>
+
+<ul>
+<li><strong>Aviso corriente</strong>, esos del sidebar en Facebook.</li>
+<li><strong>Historia patrocinada</strong>, como la imagen de la derecha.</li>
+</ul>
+
+
+<p>La última es la que ha generado más <em>likes</em> (62), mientras que el aviso normal sólo ha atraído 3 personas a la página. Todo esto con un presupuesto máximo de 3 dólares los dos primeros días y 2 dólares de ahora en adelante.</p>
+
+<h2>Todo suma</h2>
+
+<p>En este momento, ya se superaron los 100 nuevos fans desde el inicio del experimento con Facebook (ahora hay 890 fans, cuando se empezó eran 777).</p>
+
+<p><img src="http://hector.palmatellez.cl/images/fans-por-dia-aviso-fb.png" title="Gráfico de fans por el aviso" alt="Avance en fans nuevos por aviso"></p>
+
+<p>Hasta ahora, creo que la inversión (o gasto) no ha sido lo suficiente como para considerar el experimento como fallido.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[#1 Aprendiendo a usar Facebook Ads]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1/"/>
+    <updated>2013-04-23T00:37:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/facebook-ads-dia-1</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/administrador.png" title="Así se ve el administrador" alt="Administrador de avisos en Facebook">Hace tiempo que quería saber cómo era lo de los avisos y los posts patrocinados en Facebook, así que llegó el día en que me decidí a invertir (o gastar) algunos dólares sólo para comprobar y entender qué tan difícil podría ser el sistemita.</p>
+
+<p>Viendo el <strong>crecimiento explosivo</strong> de la página <a href="https://www.facebook.com/somoslaspupas">Las Pupas</a>, se me ocurrió probar por mi cuenta en una donde tengo control, sin invertir mucho, obviamente, ya que es sólo para sacar algunas conclusiones y conocimiento en base a experiencia, porque ese es más lindo que el que se obtiene leyendo o escuchando a alguien.</p>
+
+<!--more-->
+
+
+<h2>El experimento</h2>
+
+<p>La página que escogí es <a href="http://fb.me/Cursodemapudungun" title="Página para difusión de un curso presencial de mapudungun en Santiago">Curso de mapudungun</a>, administrada por <a href="http://cursodemapudungun.cl/martin-raguileo/" title="Perfil del profesor">Martin Raguileo</a>, profesor de mapudungun desde hace algunos años en Santiago. Le he estado ayudando desde hace harto tiempo en la difusión mediante Internet de su curso, con el sitio, una cuenta de Twitter y el Facebook, siendo este último el que más resultados ha dado.</p>
+
+<h3>El aviso en cuestión</h3>
+
+<p>Escogí dos modadlidades:</p>
+
+<ul>
+<li><strong>Aviso de Facebook</strong>, de esos que yo considero <em>spam</em>. Y que, hasta ahora, no ha funcionado tanto.</li>
+<li>La magia de <strong>Boost</strong> o «difundir publicación», creo que se llama en castellano. Este es el que más me gustó y explicaré a continuación el porqué.</li>
+</ul>
+
+
+<h4>Difundiendo una publicación de la página</h4>
+
+<p><a href="https://www.facebook.com/Cursodemapudungun/posts/467500443319717" title="Enlace a la publicación"><img class="left" src="http://hector.palmatellez.cl/images/curso-de-mapudungun-boost.png" width="300" title="Publicación con difusión pagada" alt="Post con 5 dólares para difusión"></a> La publicación de la imagen a la izquierda es la que elegí, ya que es algo que merecía difusión y es algo que sucederá pronto.
+Los objetivos y sus resultados después de un día:</p>
+
+<ul>
+<li><strong>Aumentar la base de fans de la página</strong>: Se aumentó de 777 a 853, es decir, <strong>76 fans en menos de 1 día</strong>, con sólo una publicación, más 1 aviso.</li>
+<li><strong>Conseguir más contactos mediante Facebook o el sitio</strong>: Normalmente no se reciben muchos mensajes privados por la página, me aventuraría a decir que no superan los 3 semanales, pero esta vez conseguimos 3 en un día, más 12 contactos utilizando el formulario desde el sitio web. Para ser primer intento, lo consideramos un éxito en <em>leads</em>.</li>
+<li><img class="right" src="http://hector.palmatellez.cl/images/paid-reach-aviso.png" width="310"> <strong>Aumentar la difusión del contenido</strong>: Para este punto es mejor mirar la imagen a la derecha. Con sólo 5 dólares (el mínimo posible a invertir en este ítem), la publicación casi llegó a las 10.000 vistas (incluyendo lo pagado y lo orgánico). Yo creo que es súper bacán.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<ul>
+<li>En la historia de la página, nunca una publicación había sido tan vista, tan compartida, sumado tantos <em>likes</em> ni tantos comentarios. En total, 9.368 personas vieron el <em>post</em>. <a href="https://www.facebook.com/105913216145110/posts/453035444766217">El post con más visitas antes de este</a>, suma en total 726. Nada po&#8217;.</li>
+<li><strong>Si se inscribiera 1 alumno, la inversión se recupera en más de 200%</strong>.</li>
+<li>Intentaré hacer más posts con la evolución del aviso que queda todavía dando vueltas. Quizás todavía tenga esperanza y potencial.</li>
+</ul>
+
+
+<h2>Aparte</h2>
+
+<p>Escogí esta causa porque siempre me ha interesado que se difunda, ya que va más allá de ser un negocio. Es cultura que debería ser más compartida y conocida. Si bien yo hice el curso básico hace varios años, todavía recuerdo las historias explicadas en clases y algo de vocabulario. Me gustaría que más personas estuvieran interesadas en experimentar eso, por último para que sirva en alguna conversación entre jóvenes que tratan de decidir quién es más interesante y culto.
+<em>Peukayal</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando Heroku accounts]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/heroku-accounts/"/>
+    <updated>2013-04-21T17:21:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/heroku-accounts</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/ddollar/heroku-accounts"><img class="left" src="http://hector.palmatellez.cl/images/heroku-accounts.png" width="320" title="Heroku Accounts en GitHub" alt="Pantallazo a Heroku Accounts en GitHub"></a> Este blog está <em>hosteado</em> en <a href="https://www.heroku.com/" title="Ofrece hosting gratuito para aplicaciones en varios lenguajes">Heroku</a>. Heroku es bacán, <strong>pero</strong>, como es gratis, hay limitaciones. Dentro de la que más me llega, por ser principiante en estas cosas, está la de <strong>máximo de 5 aplicaciones por cuenta</strong>. Una vez hasta envié un correo a soporte preguntando cómo puedo hacer para poder tener más, pero ni me pescaron.
+Bueno, como sea, la opción existe y se llama <a href="https://github.com/ddollar/heroku-accounts" title="Heroku Accounts en GitHub">heroku accounts</a>.</p>
+
+<!--more-->
+
+
+<h2>Paso a paso</h2>
+
+<p>Entonces, el problema es el siguiente:</p>
+
+<p>Tienes una cuenta de Heroku, pero eres muy activo, así que ya ocupaste tu límite de aplicaciones. <strong>¿Qué hacer?</strong> Podría ser pagar para tener más aplicaciones, pero no encontré en el sitio dónde estaba eso más explícito, así que llegué a la herramienta que le da el título a este post.
+Lo que hace <code>heroku accounts</code> es dejarte usar más de una cuenta de Heroku, así tienes muchas posibilidades de 5 aplicaciones a la vez. Esta <em>partición</em> puede ser hecha por si tienes diferentes clientes o por si tienes varias aplicaciones que se quedan dentro de un mismo proyecto, por ejemplo.</p>
+
+<p>Luego de haberte creado las cuentas e instalado <code>heroku accounts</code>, debes tener ciertos archivos siempre en mente. Creo que el que más problemas me dio por haberlo olvidado fue <code>~/.ssh/config</code>, que es donde defines la información para cada cuenta:</p>
+
+<ul>
+<li>Cómo se llama la cuenta</li>
+<li>Dónde está la llave</li>
+<li>El Hostname</li>
+<li>El nombre de usuario</li>
+</ul>
+
+
+<p>Un ejemplo de cómo sería este archivo a continuación:</p>
+
+<figure class='code'><figcaption><span>Ejemplo de config para heroku accounts (config.rb)</span> <a href='http://hector.palmatellez.cl/downloads/code/config.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="no">Host</span> <span class="n">heroku</span><span class="o">.</span><span class="n">nombre</span>
+</span><span class='line'>  <span class="no">HostName</span> <span class="n">heroku</span><span class="o">.</span><span class="n">com</span>
+</span><span class='line'>  <span class="no">IdentityFile</span> <span class="o">~</span><span class="sr">/.ssh/</span><span class="n">dondevalallave</span>
+</span><span class='line'>  <span class="no">IdentitiesOnly</span> <span class="n">yes</span>
+</span><span class='line'>  <span class="no">User</span> <span class="n">nombredeusuario</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Me parece que es bastante claro qué va en qué lugar, ¿cierto?</p>
+
+<h2>Comandos útiles</h2>
+
+<ul>
+<li>Para saber qué cuentas tienes en tu archivo <code>config</code> (o sea, que ya has configurado). Debes escribir <code>heroku accounts</code>.</li>
+<li>Para cambiar de cuenta, simplemente debes utilizar <code>heroku accounts:set nombre-de-cuenta</code>.</li>
+<li>Más hay en <a href="https://github.com/ddollar/heroku-accounts">la documentación</a>.</li>
+</ul>
+
+
+<p>Con eso, ya hay para hacer los cambios pertinentes, tomando en cuenta que las autentificaciones funcionan. Si no funcionsen, es cosa de ir a <a href="https://devcenter.heroku.com/articles/keys" title="Sobre las llaves en Heroku">revisar la documentación de Heroku sobre las llaves</a>.</p>
+
+<p>¿Te sirve? ¿No? Puedes decirme algo en los comentarios, si toca.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[@font-face en Firefox]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox/"/>
+    <updated>2013-04-21T15:11:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/font-face-en-firefox</id>
+    <content type="html"><![CDATA[<p>Estaba revisando un sitio que armé en base a <a href="http://foundation.zurb.com/" title="Responsive Framework bacán">Foundation</a> y caché que en Firefox había un error: usé una fuente con íconos y en Chrome se veían bien, pero en Firefox sólo veía cuadraditos vacíos.
+Me puse a googlear un poco y llegué a <a href="http://stackoverflow.com/questions/11872404/font-awesome-not-properly-displaying-on-firefox-how-to-vend-via-cdn?lq=1">un artículo de Stack Overflow</a> donde se habla del uso de <strong>@font-face</strong> en Firefox cuando el sitio usa un CDN, como el prototipo que me dio el problema del que escribo ahora.</p>
+
+<!--more-->
+
+
+<h2>La solución</h2>
+
+<p>Resulta que cuando usas un CDN, como hago en el sitio que menciono, cambia la URL desde donde llamas a los archivos que crean y <em>pintan</em> la página que se visita, por lo que cuenta como un dominio externo, cosa que Firefox no permite.
+Para solucionarlo, debes crear un <code>.htaccess</code> en la carpeta donde están todas las fuentes que estés llamando, en todas sus extensiones (te apuesto que la tuya se llama <code>fonts</code>, como la mía).
+El contenido de este <code>.htaccess</code> es el siguiente:</p>
+
+<figure class='code'><figcaption><span>.htacccess a crear  (font-face-firefox.html)</span> <a href='http://hector.palmatellez.cl/downloads/code/font-face-firefox.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="nt">&lt;FilesMatch</span> <span class="s">&quot;\.(ttf|otf|eot|woff)$&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;IfModule</span> <span class="s">mod_headers.c</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nb">Header</span> set Access-Control-Allow-Origin <span class="s2">&quot;*&quot;</span>
+</span><span class='line'>  <span class="nt">&lt;/IfModule&gt;</span>
+</span><span class='line'><span class="nt">&lt;/FilesMatch&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Luego de eso, Firefox debería dejar que se haga <strong>@font-face</strong> desde cualquier dominio.
+Si no quedó claro, puede revisar <a href="http://www.red-team-design.com/firefox-doesnt-allow-cross-domain-fonts-by-default" title="Firefox doesn’t allow cross-domain fonts">en este otro artículo</a> (en inglés).</p>
+
+<h3>Recursos</h3>
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/fontello.png" width="240" title="Fontello" alt="Pantallazo de Fontello"> Si necesitas fuentes con íconos, recomiendo <a href="http://www.fontello.com/">Fontello</a> donde puedes crear un archivo con los caracteres que necesites. Después exportas lo necesario para hacer el proceso donde necesites.
+Por ejemplo, <a href="http://hector.palmatellez.cl/">en este mismo sitio</a> lo tengo para los íconos de redes donde tengo cuentas (visible a la derecha, en el <em>sidebar</em> y en el <em>footer</em>).</p>
+
+<h4>CDN</h4>
+
+<p>En CDN no tengo mucha experiencia, pero una vez leí que es bacán para sitios con harto tráfico. Otra vez, varios meses después, caché que había una oferta para comprar 1 TB de tráfico en MaxCDN por 1 dólar, así que usé algo de lo poquito que me quedaba en Paypal para eso. Meses después, me di cuenta que en realidad nunca lo necesité, porque no he gastado ni 1 GB. De todas maneras, lo tengo a mano para usarlo cuando me salga algo en donde necesite que se cargue todo más rápido (porque sí comprobé que acelera la descarga de un sitio).</p>
+
+<h2>Conclusión</h2>
+
+<p>Si queda alguna duda, están los comentarios y las otras vías por donde contactarme. Saludos cordiales y un abrazo a todos. <em>Carpe Diem</em>, <em>Memento mori</em>, <em>Wingardium leviosa</em> y esas cosas bonitas que dice la gente que lee harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cambio de URL]]></title>
+    <link href="http://hector.palmatellez.cl/blog/cambio-de-url/"/>
+    <updated>2013-04-11T02:23:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/blog/cambio-de-url</id>
+    <content type="html"><![CDATA[<p>Originalmente este blog estaba en cualquier subdominio de <strong>tiuque.cl</strong>. Lo configuré así después de ver el tutorial de Octopress alojado en Heroku.
+También en el principio la idea era usar el blog sólo para escribir de Octopress, pero eso es demasiado monotemático. Así que ahora está en <strong>hector.palmatellez.cl</strong> para que parezca que son pensamientos míos.</p>
+
+<!--more-->
+
+
+<p><img src="http://hector.palmatellez.cl/images/settings-heroku.png"></p>
+
+<h2>Detalles sobre el cambio de URL</h2>
+
+<p>Cosas a tomar en cuenta a la hora de cambiar de URL un Octopress alojado en Heroku:</p>
+
+<ul>
+<li>Cambio desde las <strong>opciones de la app en Heroku</strong>. En la sección <em>Domains</em> hay que agregar el subdominio que escojamos.</li>
+<li>Crear <a href="https://devcenter.heroku.com/articles/custom-domains" title="Documentación de Heroku explicando cambios en DNS para apuntar a Heroku">cambio en los DNS</a> de nuestro administrador del dominio. En mi caso, el hosting. Es fácil y rápido el cambio, pero no instantáneo. A mí me desesperó que fuera más de 6 horas. Obviamente, el sitio seguirá pudiendo ser visto desde <strong>[nombredelaapp].herokuapp.com</strong>.</li>
+<li><strong>Disqus</strong> — es importante porque los comentarios dejan de funcionar cuando estás en el nuevo dominio, por lo que hay que ir nuevamente.</li>
+</ul>
+
+
+<h2>¿Y ahora qué viene?</h2>
+
+<p>Ahora yo quiero tratar de escribir más. De cualquier cosa relacionada con lo que me tinque escribir.
+Espero publicar cuestiones seguido acá, aunque no consiga tantos millones de visitas.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprender de Gamification en Coursera]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/gamification-coursera/"/>
+    <updated>2013-04-03T09:07:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/gamification-coursera</id>
+    <content type="html"><![CDATA[<p><a href="https://www.coursera.org/course/gamification"><img class="left" src="http://hector.palmatellez.cl/images/gamification-coursera.png" width="350" title="Curso de Gamification en Coursera" alt="Plataforma del curso en Coursera"></a> Hace tiempo supe de la existencia de <a href="http://www.coursera.org/" title="Cursos de nivel universitario gratis">Coursera</a> por un curso de <em>Gamification</em>. Me registré y me inscribí en el curso que estaba en desarrollo. Lo dejé botao por un par de meses, hasta que me llegó la notificación de que el mismo curso había comenzado de nuevo. Así que, estando en sincronía con el avance normal, decidí tomarlo.</p>
+
+<!--more-->
+
+
+<h2>Dentro del curso</h2>
+
+<p>La modalidad se reparte entre muchos videos y <em>quizzes</em>. Los videos tienen el plus de poder reproducirse hasta en el doble de su velocidad normal, además de poder activar subtítulos que en casi todos los videos hay para castellano, entre otros idiomas. El inglés, por lo menos, está en todos. Yo decidí ver los videos en <em>2x</em> con subtítulos en inglés, para no perder ideas o palabritas. Así los de 14 minutos se pasan rápido. Además, <strong>como ningún video sobrepasa los 15 minutos, hasta ahora, no se complica tanto</strong>.</p>
+
+<p>Aún no he llegado a los <em>quizzes</em>, por lo que no puedo opinar de eso. En los videos, cada ciertos minutos, hay una pregunta sobre el contenido pasado en el video, lo que te ayuda a ir <em>aterrizando</em> el contenido recién visto.</p>
+
+<h2>Ya, pero, en serio, ¿qué es «gamification»?</h2>
+
+<p>La <em>Gamification</em> es la <strong>aplicación de elementos de juegos en contextos que no son juegos</strong>, esto se utiliza para perseguir objetivos que pueden ir desde mejorar la producción de una empresa en ventas, por ejemplo, o para generar cambios en la sociedad, como la <a href="http://www.centroamericainnova.com/contenido/la-loteria-con-camaras-de-trafico-que-premia-a-quienes-cumplen-las-normas.aspx" title="Concurso que premiaba a los conductores que cumplen las normas de velocidad">lotería de Volkswagen en Suecia</a>.</p>
+
+<p>La idea de la teoría es aprender de casos de éxito y ejemplos posibles, en base a diferentes contextos, cómo se aplica el concepto, cómo enfocarlo en resolver problemas que pueden variar de acuerdo al contexto. La utilización del objetivo de crear que las tareas se conviertan en algo entretenido para catalizar procesos como crear conciencia sobre algún problema mediante la entrega de premios que pueden ser físicos o virtuales, además de la creación de las ganas de competir con conocidos, es decir, integrando <em>lo social</em> en una dinámica orientada a la resolución de problemas mediante la búsqueda de premios o certificados de algún tipo.</p>
+
+<h2>Certificado de completez del curso</h2>
+
+<p>Desde hace un tiempo, Coursera ofrece <a href="pilartarrino.wordpress.com/2013/01/11/coursera-introduce-signatura-track-una-forma-de-obtener-un-certificado-que-verifica-la-identidad-del-alumno/#content" title="Sistema de certificación de Coursera">Signature Tracking</a> que es la forma de certificar que has completado el curso satisfactoriamente. Este consiste en un certificado donde se enlaza tu fotografía y tu nombre, más la certificación competente al término exitoso del curso desde la universidad que lo ofrece. Este método de certificación es algo adicional al curso, por lo que <strong>cae en ser de pago</strong>. Para el curso de Gamification, el <em>signature tracking</em> <strong>cuesta 39 dólares</strong>, aunque este valor aparece como promocional, ya que debería costar 30 dólares sobre este precio.</p>
+
+<p>Todavía no decido si lo pagaría o no, aunque es una buena opción para complementar la formalidad de tu formación curricular y poder pedir un aumento en la vida, porque todos quieren jugar en todos lados.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jekyll es el núcleo]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/jekyll/"/>
+    <updated>2013-03-21T20:55:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/jekyll</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://hector.palmatellez.cl/images/jekyll.png" width="280" title="Logo de Jekyll" alt="Jekyll logo"> Como dije en <a href="http://hector.palmatellez.cl/aprendiendo/octopress/">el primer post</a>, había <a href="http://ajipirijou.com/blog/ahora-usamos-jekyll" title="Artículo de @elJOjo cuando se pasó de WordPress a Jekyll">leído sobre Jekyll</a>, pero nunca llegué a entender de qué trataba realmente o cómo se hacían las cosas por dentro y resulta que <strong>hay haaaaaarto diferente a Octopress</strong>. Es más abstracto aún, por lo que necesitas +10 puntos de coeficiente intelectual que para entender Octopress.</p>
+
+<p><img class="left" src="http://www.your3dsource.com/images/redhandpointingdown.gif"> Como sea, me di el tiempo para entender lo básico como para echar a andar un sitio simplecito con Jekyll en base a un par de tutoriales, así que acá dejo mis impresiones.</p>
+
+<!--more-->
+
+
+<h3>Hay que estar preparado</h3>
+
+<p>Si probaste Octopress primero y después pruebas Jekyll, luego de la correcta ejecución del <code>gem install jekyll</code>, encontrarás que tu carpeta escogida tiene <strong>nada</strong>. Hay que aprenderse, por lo tanto, la estructura de Jekyll que básicamente es así:</p>
+
+<pre><code>[raíz]/index.html
+      /archive.html
+      /img/
+      /js/
+      /css/
+      /_posts/
+      /_includes/
+      /_layouts/
+      /_site/
+      /Rakefile
+      /_config.yml
+</code></pre>
+
+<p>La descripción sobre estos elementos a continuación:</p>
+
+<ul>
+<li>Así como en Octopress existe <code>rake generate</code> para regenerar el sitio de <code>source</code> a <code>public</code>, acá existe <code>jekyll --server</code>, que hace lo mismo, a diferencia que el <em>output</em> de la operación queda en <code>_site</code>.</li>
+<li>Entre <code>img</code>,<code>js</code> y <code>css</code> repartí los archivos de <a href="twitter.github.com/bootstrap/">Bootstrap</a> que escogí para el <em>front-end</em>.</li>
+<li>En <code>_posts</code> están los archivos en <code>.markdown</code> antes de ser generados como posts.</li>
+<li>La carpeta <code>_layouts</code>, al igual que en Octopress, guarda los <em>layouts</em> de publicaciones que uno genera.</li>
+<li>En <code>_includes</code> dejé todos los archivos que reutilizo cada vez que genero una página, como:
+
+<ul>
+<li>head.html</li>
+<li>header.html</li>
+<li>footer.html</li>
+<li>Entre otros.</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Recursos</h2>
+
+<p>En <a href="https://pinboard.in/search/u:hectorpalmatellez?query=jekyll" title="Recursos sobre Jekyll">mi Pinboard</a> estoy guardando todo lo que encuentre sobre Jekyll. La mayoría de lo listado acá lo he ido implementando de a poco en el proyecto que estoy armando, que todavía no haré público, hasta que se vea decente.</p>
+
+<h3>Agradecimientos</h3>
+
+<p>Gracias a <a href="http://joselbornoz.cl">@elJOjo</a> por su tiempo explicándome por correo temas conceptuales que me han servido harto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Custom fields o campos personalizados en Octopress]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/custom-fields/"/>
+    <updated>2013-03-19T02:00:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/custom-fields</id>
+    <content type="html"><![CDATA[<p>La pregunta que se me ocurrió era como:</p>
+
+<blockquote><p>¿Y cómo creo campos personalizados para hacer más bonitamente dinámicas las publicaciones?</p></blockquote>
+
+<p>Resulta que un poco de lógica y varios intentos de <em>googleo</em> me llevaron a intentar algo parecido a lo que sale <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter#custom-variables" title="YAML Front Matter en GitHub">acá</a>, en el apartado de «variables personalizadas» se explica con el siguiente ejemplo:</p>
+
+<figure class='code'><figcaption><span>Ejemplo  (custom.rb)</span> <a href='http://hector.palmatellez.cl/downloads/code/custom.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="sr">/title&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/campo-customizado.png" title="Ejemplo de campo personalizado" alt="Campo customizado en el header del archivo markdown"> Así que decidí probar un poquito y creé <code>customizado</code> en el encabezado del archivo .markdown
+El paso siguiente es hacer que desde la plantilla pueda ser visible, para esto hay que ir a <code>source/_layouts/post.html</code> (porque el layout que tengo para los posts es ese, obviamente). Eso se puede ver en la segunda imagen de este post.
+<img class="left" src="http://hector.palmatellez.cl/images/layout-customizado.png" title="Ubicación de donde se mostrará el campo" alt="Ubicación en post.html donde va el campo personalizado"></p>
+
+<p>Entonces, los pasos se reducen a lo siguiente:</p>
+
+<ul>
+<li>Definir el nombre y valor del campo en el encabezado del artículo <code>.markdown</code>.</li>
+<li>Editar el <em>layout</em> correspondiente para mostrar el valor del campo personalizado.</li>
+<li>Queda opcional, obviamente, el estilo que se le quiera dar, por si le querís poner una clase.</li>
+</ul>
+
+
+<h2>Probando</h2>
+
+<ul>
+<li>Si el campo personalizado va a tener HTML, como para darle una clase o alguna etiqueta específica (cosa que también se puede predefinir desde el <em>layout</em>), el valor debe ir entre apóstrofos:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Ejemplo  (custom-html.html)</span> <a href='http://hector.palmatellez.cl/downloads/code/custom-html.html'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>customizado: &#39;<span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;color: red&quot;</span><span class="nt">&gt;</span>las vacas son bonitas<span class="nt">&lt;/span&gt;</span>&#39;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Deben ser apóstrofos porque con comillas dobles no me funcionó. Quizás algún día sepa por qué).</p>
+
+<ul>
+<li>El campo puede ser utilizado en el cuerpo del artículo como se hace en el ejemplo en Ruby usado más arriba. Tan simple como añadir lo siguiente entre el texto escrito:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>customizado2  (customizado2.rb)</span> <a href='http://hector.palmatellez.cl/downloads/code/customizado2.rb'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">{{</span><span class="n">page</span><span class="o">.</span><span class="n">customizado2</span><span class="p">}}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta es la razón por la que encontré más fácil llamar los pedazos de código desde archivos externos a escribirlos de la forma corriente en la que se escribe código dentro de un post.</p>
+
+<h3>ALGO TERRIBLE</h3>
+
+<p>Todavía no hago funcionar los tags. Los agrego en cada post, pero quedan feítos. De ahí veo si los logro corregir de alguna forma más <em>kawaii</em>~</p>
+
+<p>Eso nomás por ahora–</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Poblando el sidebar con asides]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/asides/"/>
+    <updated>2013-03-16T16:31:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/asides</id>
+    <content type="html"><![CDATA[<h2>¿Qué son los asides?</h2>
+
+<p>Viniendo de la <em>cultura del WordPress</em>, siento que es acertado decir que los asides son como los <em>widgets</em> del sidebar. Espero que nadie se enoje conmigo por escribir eso.</p>
+
+<p>Se guardan en <code>source/_includes/asides</code>, pero los que uno crea están en <code>source/_includes/custom/asides</code>.</p>
+
+<p>Un ejemplo práctico es el widget del timeline de Twitter que está en el sidebar de <a href="http://hector.palmatellez.cl/">este blog</a>.</p>
+
+<!--more-->
+
+
+<h2>Paso a paso hacia un nuevo aside</h2>
+
+<p><img class="left" src="http://hector.palmatellez.cl/images/octopress-files.png" title="Archivos de Octopress" alt="Algunos de los archivos de Octopress">
+Si necesitamos añadir un <em>widget</em> que no ha sido agregado o no existe, basta con ir a <code>source/_includes/custom/asides</code> y crear un nuevo HTML con el contenido que queremos que se visualice.
+<span class='pullquote-right' data-pullquote='Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar'>
+ Crear asides no es algo tan mágico, como este blockquote que es en realidad un span que no se puede seleccionar
+</span></p>
+
+<p>Luego, en <code>_config.yml</code> en la línea <code>48</code> debería estar <code>default_asides</code> donde uno puede enlazarlos por nombre del <code>.html</code> que creamos.</p>
+
+<p>Eso nomás es–</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando Pinboard para la vida]]></title>
+    <link href="http://hector.palmatellez.cl/herramientas/pinboard/"/>
+    <updated>2013-03-15T21:35:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/herramientas/pinboard</id>
+    <content type="html"><![CDATA[<p>Para ser serio, voy a partir con una cita:</p>
+
+<blockquote><p>Pinboard es bacán</p>
+
+<p>– Yo, Santiago, 15 de marzo del 2013.</p></blockquote>
+
+<p><a href="http://pinboard.in" title="Ir a Pinboard"><img class="right" src="http://hector.palmatellez.cl/images/pinboard.png" width="400" title="Home de Pinboard" alt="Descripción del servicio"></a> Creo que es súper importante estar al día con las cosas que pasan, con lo que se dice sobre los temas que te interesan y también puede servir pa&#8217; tener algún tema de conversación y no quedarse callao con cara de no cachar na&#8217;. Hay que tener cara de que se cacha, aunque el tema sea medio fome.</p>
+
+<p><strong>Por eso siento que <a href="http://pinboard.in" title="Bookmarking for introverts">Pinboard</a> es un buen aliado para nunca estar desenchufao del mundo.</strong></p>
+
+<!--more-->
+
+
+<h2>«Ah, pero es pagao y yo soy pobre»</h2>
+
+<p>Sí, eso debe ser una de las cosas que hacen que no cualquiera llegue y se haga una cuenta, pero, al mismo tiempo, garantiza varias cosas como:</p>
+
+<ul>
+<li>Nada de publicidad</li>
+<li>Interfaz ultra rápida.</li>
+<li>La conexión con otras herramientas como:
+
+<ul>
+<li>Pocket (anteriormente conocido como <em>Read It Later</em>).</li>
+<li>Twitter</li>
+<li>Delicious</li>
+<li>Otros que no cacho ni uso como Instapaper.</li>
+</ul>
+</li>
+<li>Control sobre los datos, es decir, puedes exportarlos cuando quieras.</li>
+<li>No me ha tocado necesitarlo, pero he visto que <a href="http://twitter.com/Pinboard" title="@Pinboard en Twitter">la cuenta en Twitter</a> trata bien a sus usuarios respondiendo bien y a tiempo.</li>
+</ul>
+
+
+<p>El costo (10.05 USD, que equivale a 4738 pesos, <a href="https://www.google.cl/search?q=10.05+usd+in+clp&amp;aq=f&amp;oq=10.05+usd+in+clp&amp;aqs=chrome.0.57.3947&amp;sourceid=chrome&amp;ie=UTF-8">según Google hoy</a>) es bajito, considerando todo lo bacán que ofrece. Ese <strong>se paga una vez por vida</strong>. Tienen otro costo, si deseas consumir el siguiente servicio que ofrece que es <strong>guardar en caché todos tus marcadores</strong>, es decir, si por cualquier razón dejasen de estar ahí, puedes acceder a ellos mediante tu cuenta de Pinboard. <strong>Este último costo es anual y corresponde a 25 USD</strong> (~11786 pesos chilenos). Al terminar el año, si no quieres renovar, puedes descargar todo lo que hayas guardado y tengas en el caché. Así que igual bacán.</p>
+
+<h2>Siendo parte de Pinboard</h2>
+
+<p>Después de un par de días como usuario de Pinboard he llegado a las siguientes conclusiones sobre la plataforma y su método:</p>
+
+<ul>
+<li>Es muy rápido en indexar el contenido nuevo.</li>
+<li>La conexión con Twitter vale <strong>mucho</strong> la pena ya que se pueden conseguir cosas como:
+
+<ul>
+<li>Guardar en Pinboard todos los enlaces de los favoritos de Twitter.</li>
+<li>Guardar todos los enlaces compartidos por uno mismo. Esto incluye los RTs.</li>
+</ul>
+</li>
+<li>Puedo hacer RT si estoy de acuerdo o no, sólo pa&#8217; <em>recompartir</em> y además dejar el enlace guardado para el futuro, ese futuro donde todos los enlaces podrán ser leídos e interiorizados.</li>
+</ul>
+
+
+<h2>Como lector de Feeds</h2>
+
+<p>A propósito de <a href="http://tech.theswamp.in/post/2013/03/15/google-readers-forced-euthanasia/" title="Análisis en inglés sobre la eutanasia forzada en esa plataforma">la muerte de Google Reader</a>, he notado que también te sirve como lector de feeds. Esto yendo a <code>/popular</code> donde aparecen los más guardados. Confiando en el público objetivo de la plataforma, normalmente se encuentran buenas cosas ahí. Además, siempre se pueden hacer búsquedas por temas para encontrar sobre ciertas áreas de interés, aunque sean manuales, es bacán. Me recuerda mucho a <a href="http://rt.ly" title="Herramienta de bit.ly para buscar lo más compartido/acortado separado en temas varios de opción del usuario"><em>Realtime</em></a> de bit.ly.</p>
+
+<h2>Conclusión</h2>
+
+<p>Si le sobran 11 dólares por ahí, pague Pinboard y después de un tiempo me da las gracias por la recomendá en los comentarios de más abajito.</p>
+
+<p><em>Saludos Cordiales</em> <img src="http://static.timesjobs.com/images_cand//tj_images/insider_img/smiley_ico.gif" title="Chaíto" alt="Smiley"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usando imágenes en Octopress]]></title>
+    <link href="http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress/"/>
+    <updated>2013-03-15T00:08:00-03:00</updated>
+    <id>http://hector.palmatellez.cl/aprendiendo/usando-imagenes-en-octopress</id>
+    <content type="html"><![CDATA[<h2>La complicación</h2>
+
+<p>Resulta que al intentar agregarle imágenes al <a href="http://hector.palmatellez.cl/aprendiendo/octopress" title="Post sobre empezar a usar Octopress">post anterior</a> tuve problemas y sólo después de <strong>varios</strong> intentos caché que el problema era por un tema que creí haber solucionado al configurar el sistema por primera vez: <strong>la codificación</strong>.</p>
+
+<!--more-->
+
+
+<h3>Caracteres bonitos</h3>
+
+<p>Los hispanohablantes tenemos caracteres bonitos, como la todopoderosa <strong>eñe</strong>, <strong><em>las vocales con tilde</em></strong> y la <strong>u con cremillas</strong> (ü). Estos caracteres le hacen problema al universo en línea cuando se meten en nombres de archivos y… en todo. Por eso, al configurar el repositorio donde alojes Octopress debes adelantarte, querido hispanohablante. Esto se hace con lo siguiente:</p>
+
+<pre><code>export LANG=es_ES.utf8
+</code></pre>
+
+<p>Luego, para verificar que quedó bien, hay que darle a:</p>
+
+<pre><code>locale
+</code></pre>
+
+<p>Si el resultado se parece a lo siguiente, estamos bien:</p>
+
+<pre><code>LANG="es_ES.utf-8"
+LC_COLLATE="es_ES.utf-8"
+LC_CTYPE="es_ES.utf-8"
+LC_MESSAGES="es_ES.utf-8"
+LC_MONETARY="es_ES.utf-8"
+LC_NUMERIC="es_ES.utf-8"
+LC_TIME="es_ES.utf-8"
+LC_ALL=
+</code></pre>
+
+<p><img class="center" src="http://hector.palmatellez.cl/images/utf8-locale.png" title="Pantallazo al Terminal" alt="Pantallazo a lo ya comentado"></p>
+
+<h2>¿Y entonces? ¿Cómo se hace?</h2>
+
+<p>Luego de eso, podemos insertar imágenes, como la que está arriba de este párrafo. Para eso, hay que seguir lo que dicta el <em>plugin</em> que viene gratis dentro de Octopress desde su nacimiento. Esto se puede leer en <a href="http://octopress.org/docs/plugins/image-tag/" title="Explicación del uso del comando para insertar imágenes en el contenido del post en Octopress">su documentación</a>. Básicamente se trata de:</p>
+
+<pre><code>&lt;img class="[clases asignadas]" src="http://hector.palmatellez.cl/ruta/a/la/imagen" title="[ancho] [alto] [el title [alt de la imagen]]" &gt;
+</code></pre>
+
+<p>Fueron varias horas metido en el problema, aunque debo confesar que para matar la frustración jugué un rato al <a href="http://store.steampowered.com/app/440/" title="Juego muy bonito y enriquecedor">Team Fortress 2</a>.</p>
+
+<p>Eso nomás, por ahora.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Configurar APN Entel - Héctor Palma Téllez</title>
+  <meta name="author" content="Héctor Palma Téllez">
+
+  
+  <meta name="description" content="Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://hector.palmatellez.cl/celulares/configurar-apn-entel">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Héctor Palma Téllez" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39349715-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Héctor Palma Téllez</a></h1>
+  
+    <h2>Pensamientos en .markdown</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:hector.palmatellez.cl" />
+    <input class="search" type="text" name="q" results="0" placeholder="Buscar en Google para esta URL"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Inicio</a></li>
+  <li><a href="/blog/archives">Todos los posts</a></li>
+  <li><a href="/tiuque">¿Por qué hay un tiuque ahí arriba?</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Configurar APN Entel</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-20T17:38:00-04:00" pubdate data-updated="true">Monday 20 de May 2013</time>
+        
+         | <a href="#disqus_thread">Comentarios</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="/images/ss-apn1.png" width="280" title="Elección del APN" alt="APNs creados"> Después de varios meses, decidí volver a la configuración de fábrica de mi celular, que ya no tiene el sistema operativo con el que lo compré. El <strong>Sony Ericcson Live with Walkman</strong> (o <strong>WT19i</strong>) venía originalmente con Android Gingerbread (2.3.6) y a mí se me ocurrió <em>flashearlo</em>, es decir, cambiarle el sistema operativo a Ice Cream Sandwich (4.0.4) con una <a href="http://androidforums.com/ascend-all-things-root/339633-what-rom.html#post2712142" title="What is ROM? - Androidforums.com">ROM</a> oficial de Sony.</p>
+
+<p>Como sea, el problema, al hacer restauración de fábrica, es que se pierden varios datos con una ROM no oficial, como el APN.</p>
+
+<!--more-->
+
+
+<h2>¿APN?</h2>
+
+<p>El <strong>APN</strong>, o <em>Access Point Name</em>, es la información con la que tu teléfono se conecta a Internet móvil de acuerdo a lo que tu proveedor de servicios da: Edge, 3G o alguna de esas que se parecen.</p>
+
+<h3>El problema</h3>
+
+<p>Al hacer la restauración de fábrica, el celular borra <strong>TODO</strong> y eso incluye la información que usaba para conectarse a Internet cuando uno anda en la micro. Para solucionarlo, hay que reingresar la información. El problema es que, por lo menos mi proveedor (<a href="http://www.entel.cl">Entel</a>), no entrega tan bien la información, según yo.</p>
+
+<p>Según Entel, la información a continuación es suficiente:</p>
+
+<ul>
+<li>Nombre: <strong>Internet Móvil</strong></li>
+<li>APN: <strong>bam.entelpcs.cl</strong></li>
+<li>Proxy: <strong>no definido</strong></li>
+<li>Puerto: <strong>no definido</strong></li>
+<li>Nombre de usuario: <strong>entelpcs</strong></li>
+<li>Contraseña: <strong>entelpcs</strong></li>
+<li>Servidor: no definido</li>
+<li>MMSC: no definido</li>
+<li>Proxy de mensaje multimedia: no definido</li>
+<li>Puerto de mensaje multimedia: no definido</li>
+<li>MCC: 730</li>
+<li>MNC: 01</li>
+<li>Tipo de autenticación: <strong>PAP</strong></li>
+<li>Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)</li>
+<li>Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</li>
+</ul>
+
+
+<p>Pero a mí no me funcionó.</p>
+
+<h2>Lo que me funcionó</h2>
+
+<p><img class="right" src="/images/ss-apn2.png" title="imovil.entelpcs.cl" alt="APN que me funcionó">
+* Nombre: <strong>Internet Móvil</strong>
+* APN: <span style="color:red"><strong>imovil.entelpcs.cl</strong></span>
+* Proxy: <strong>no definido</strong>
+* Puerto: <strong>no definido</strong>
+* Nombre de usuario: <strong>entelpcs</strong>
+* Contraseña: <strong>entelpcs</strong>
+* Servidor: no definido
+* MMSC: no definido
+* Proxy de mensaje multimedia: no definido
+* Puerto de mensaje multimedia: no definido
+* MCC: 730
+* MNC: 01
+* Tipo de autenticación: <strong>PAP</strong>
+* Tipo de APN: <strong>Internet</strong> (en algunos Smartphones puede ser “Default” o “Default,supl”)
+* Nota: Si no logras conectarte y navegar deberás ingresar proxy 10.99.0.10 y puerto 8080.</p>
+
+<p><strong>Bastó con poner imovil.entelpcs.cl en vez de bam.entelpcs.cl</strong></p>
+
+<p>Espero que a alguien del universo chileno le sirva alguna vez.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Escrito por <span class="fn">Héctor Palma Téllez</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-20T17:38:00-04:00" pubdate data-updated="true">Monday 20 de May 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/c/celulares/'>celulares</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    APNentelInternet Móvil3G
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hector.palmatellez.cl/celulares/configurar-apn-entel/" data-via="Zentaurus" data-counturl="http://hector.palmatellez.cl/celulares/configurar-apn-entel/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/heroku/solucionando-error-h14-en-heroku/" title="Anterior: Solucionando error H14 en Heroku">&laquo; Solucionando error H14 en Heroku</a>
+      
+      
+        <a class="basic-alignment right" href="/ror/rails-mails-gmail/" title="Siguiente: Usar Gmail para que Devise en Rails envíe correos">Usar Gmail para que Devise en Rails envíe correos &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h4>Comentarios</h4>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section style="outline: 1px solid #000; background: #999999; color: #000; text-shadow: none; padding: 12px 8px 8px 8px; margin-top: 16px;">
+  <h2>Sobre el Héctor</h2>
+  <p>¡Hola! Este es mi blog aprendiendo a usar y manipular <a href="http://octopress.org/" title="Ir a la web de Octopress">Octopress</a>. Iré posteando sobre eso y lo que se relacione con lo que me interesa</p>
+	<h3>Contacto</h3>
+  <span>Si deseas contactarme, usa el botón de emergencia:</span>
+  <ul>
+  	<li>
+  		<a href="https://twitter.com/intent/tweet?screen_name=Zentaurus" class="twitter-mention-button" data-lang="es" data-related="Zentaurus">Tuitearle al @Zentaurus</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  	</li>
+  	<li>
+  		Escribe a mi <a href="mailto:hector@palmatellez.cl?subject=Contacto%20desde%20Octopress">correo electrónico</a>.
+  	</li>
+  </ul>
+  <section class="iconos">
+    <span>En las redes: </span>
+      <a href="http://twitter.com/Zentaurus">
+        <span class="icon-twitter" title="Twitter"></span>
+      </a>
+      <a href="http://facebook.com/Zentaurus">
+        <span class="icon-facebook" title="Facebook"></span>
+      </a>
+      <a href="http://foursquare.com/Zentaurus">
+        <span class="icon-foursquare" title="Foursquare"></span>
+      </a>
+      <a href="http://cl.linkedin.com/in/hectorpalmatellez">
+        <span class="icon-linkedin" title="LinkedIn"></span>
+      </a>
+      <a href="http://last.fm/user/zentaurus0">
+        <span class="icon-lastfm" title="Last FM"></span>
+      </a>
+      <a href="https://bitbucket.org/hectorpalmatellez">
+        <span class="icon-bitbucket" title="Bitbucket"></span>
+      </a>
+      <a href="https://github.com/hectorpalmatellez">
+        <span class="icon-github" title="GitHub"></span>
+      </a>
+    </section>
+</section>
+<section>
+  <h3>Últimos posts</h3>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/rails/como-usar-rails-desde-koding/">Cómo usar Rails desde Koding</a>
+      </li>
+    
+      <li class="post">
+        <a href="/lorem-ipsums-bacanes/">Lorem Ipsums bacanes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aprendiendo/cosas-que-aprendi-esta-semana/">Cosas que aprendí esta semana</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ror/rails-mails-gmail/">Usar Gmail para que Devise en Rails envíe correos</a>
+      </li>
+    
+      <li class="post">
+        <a href="/celulares/configurar-apn-entel/">Configurar APN Entel</a>
+      </li>
+    
+      <li class="post">
+        <a href="/heroku/solucionando-error-h14-en-heroku/">Solucionando error H14 en Heroku</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aprendiendo/push-diferentes-remotes-git/">Push desde diferentes remotes con Git</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aprendiendo/3-dias-sin-adblock-plus/">3 días sin AdBlock Plus</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aprendiendo/comentarios-finales-facebook-ads/">Comentarios finales sobre Facebook Ads</a>
+      </li>
+    
+      <li class="post">
+        <a href="/aprendiendo/facebook-ads-para-likes/">Facebook ads para likes</a>
+      </li>
+    
+  </ul>
+</section>
+
+<a class="twitter-timeline"  href="https://twitter.com/Zentaurus"  data-widget-id="312064282995068928">Tuiteos de @Zentaurus</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<section>
+  <h1>Mi Pinboard</h1>
+  <ul id="pinboard_linkroll">Llamando a los amiguitos...</ul>
+  <p><a href="http://pinboard.in/u:hectorpalmatellez">Mis enlaces guardados &raquo;</a></p>
+</section>
+<script type="text/javascript">
+  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
+  var pinboard_user = "hectorpalmatellez"; //id target for pinboard list
+  var pinboard_count = 3; //id target for pinboard list
+  (function(){
+    var pinboardInit = document.createElement('script');
+    pinboardInit.type = 'text/javascript';
+    pinboardInit.async = true;
+    pinboardInit.src = '/javascripts/pinboard.js';
+    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
+  })();
+</script>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo">	<section class="licencia left">
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_CL" style="text-decoration:none;">
+			<img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" />
+		</a>
+		<span class="left">Con licencia para matar contenidos.</span>
+	</section>
+  		<span class="credit">Usando <a href="http://octopress.org">Octopress</a>, como los que duermen poquito.</span>
+  	<section class="iconos right">
+  		<a href="http://twitter.com/Zentaurus">
+  			<span class="icon-twitter" title="Twitter"></span>
+  		</a>
+  		<a href="http://facebook.com/Zentaurus">
+  			<span class="icon-facebook" title="Facebook"></span>
+  		</a>
+  		<a href="http://foursquare.com/Zentaurus">
+  			<span class="icon-foursquare" title="Foursquare"></span>
+  		</a>
+  		<a href="http://cl.linkedin.com/in/hectorpalmatellez">
+  			<span class="icon-linkedin" title="LinkedIn"></span>
+  		</a>
+  		<a href="http://last.fm/user/zentaurus0">
+  			<span class="icon-lastfm" title="Last FM"></span>
+  		</a>
+  		<a href="https://bitbucket.org/hectorpalmatellez">
+  			<span class="icon-bitbucket" title="Bitbucket"></span>
+  		</a>
+      <a href="https://github.com/hectorpalmatellez">
+        <span class="icon-github" title="GitHub"></span>
+      </a>
+  	</section>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'tiuque';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hector.palmatellez.cl/celulares/configurar-apn-entel/';
+        var disqus_url = 'http://hector.palmatellez.cl/celulares/configurar-apn-entel/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+  <div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-39349715-1'}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
